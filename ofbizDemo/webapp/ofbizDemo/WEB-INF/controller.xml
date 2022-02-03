@@ -59,11 +59,34 @@ under the License.
         <response name="success" type="view" value="main"/>
     </request-map>
 
-    <!-- View Mapping -->
+    <request-map uri="createOfbizDemoEvent">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.companyname.ofbizdemo.Events.OfbizDemoEvents" invoke="createOfbizDemoEvent"/>
+        <response name="success" type="view" value="main"/>
+        <response name="error" type="view" value="main"/>
+    </request-map>
+
+    <request-map uri="AddOfbizDemoFtl">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="AddOfbizDemoFtl"/>
+    </request-map>
+
+    <request-map uri="FindOfbizDemo"><security https="true" auth="true"/><response name="success" type="view" value="FindOfbizDemo"/></request-map>
+
+
+    <!--View Mapping-->
+    <view-map name="AddOfbizDemoFtl" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#AddOfbizDemoFtl"/>
+
+
     <view-map name="FindOfbizDemo" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindOfbizDemo"/>
 
     <!-- View Mappings -->
     <view-map name="main" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#main"/>
+
+
+
+
+
 
 
 </site-conf>
