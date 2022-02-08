@@ -50,7 +50,7 @@ under the License.
                 <set field="layoutSettings.companyName" from-field="uiLabelMap.OfbizDemoCompanyName" global="true"/>
 
                 <!-- Including custom CSS Styles that you want to use in your application view. [] in field can be used to
-                                 set the order of loading CSS files to load if there are multiple -->
+                     set the order of loading CSS files to load if there are multiple -->
                 <set field="layoutSettings.styleSheets[]" value="/ofbizDemo/css/bootstrap.min.css"/>
 
                 <!-- Including custom JS that you want to use in your application view. [] in field can be used to
@@ -63,10 +63,10 @@ under the License.
                         <if-has-permission permission="OFBIZDEMO" action="_VIEW"/>
                     </condition>
                     <widgets>
-                        <platform-specific><html><html-template location="component://ofbizDemo/webapp/ofbizDemo/PreBody.ftl"/></html></platform-specific>
+                        <platform-specific><html><html-template location="component://ofbizDemo/webapp/ofbizDemo/includes/PreBody.ftl"/></html></platform-specific>
                         <decorator-section-include name="pre-body"/>
                         <decorator-section-include name="body"/>
-                        <platform-specific><html><html-template location="component://ofbizDemo/webapp/ofbizDemo/PostBody.ftl"/></html></platform-specific>
+                        <platform-specific><html><html-template location="component://ofbizDemo/webapp/ofbizDemo/includes/PostBody.ftl"/></html></platform-specific>
                     </widgets>
                     <fail-widgets>
                         <label style="h3">${uiLabelMap.OfbizDemoViewPermissionError}</label>
@@ -75,4 +75,4 @@ under the License.
             </widgets>
         </section>
     </screen>
-   </screens>
+</screens>
