@@ -1,0 +1,43 @@
+<!-- Product Demo Data -->
+<Product productId="Demo_ElectricBoard" productTypeId="FINISHED_GOOD" productName="ElectricBoard" internalName="ElectricBoard"/>
+<Product productId="Raw_Box" productName="PVCBOX" internalName="Box"/>
+<Product productId="Raw_Button" productName="Button" internalName="Button"/>
+<Product productId="Raw_Plug" productName="FivePin" internalName="FivePin"/>
+<Product productId="Raw_Wirs" productName="Wires" internalName="wires"/>
+
+<!-- Product Demo facility settings -->
+<ProductFacility productId="Demo_ElectricBoard" facilityId="WebStoreWarehouse" minimumStock="5" />
+<ProductFacility productId="Raw_Box" facilityId="WebStoreWarehouse" minimumStock="5" reorderQuantity="100"/>
+<ProductFacility productId="Raw_Button" facilityId="WebStoreWarehouse" minimumStock="20" reorderQuantity="500"/>
+<ProductFacility productId="Raw_Plug" facilityId="WebStoreWarehouse" minimumStock="20" reorderQuantity="500"/>
+<ProductFacility productId="Raw_Wirs" facilityId="WebStoreWarehouse" minimumStock="1" reorderQuantity="20"/>
+
+<!-- Product Demo Suppliers -->
+ <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Demo_ElectricBoard" lastPrice="75.00" supplierProductId="Board" supplierProductName="ElectricBoard" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+ <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Box" lastPrice="11.00" supplierProductId="Box" supplierProductName="PVCBox" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+ <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Button" lastPrice="4.00" supplierProductId="Button" supplierProductName="Button" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+ <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Plug" lastPrice="5.00" supplierProductId="plug" supplierProductName="FivePin" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+ <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Wirs" lastPrice="15.00" supplierProductId="Board" supplierProductName="ElectricBoard" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+
+<!-- Bill Of Material -->
+<ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Box" productAssocTypeId="MANUF_COMPONENT" quantity="5" fromDate="2007-12-27 12:00:00.0"/>
+<ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Button" productAssocTypeId="MANUF_COMPONENT" quantity="10" fromDate="2007-12-27 12:00:00.0"/>
+<ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Plug" productAssocTypeId="MANUF_COMPONENT" quantity="10" fromDate="2007-12-27 12:00:00.0"/>
+<ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Wirs" productAssocTypeId="MANUF_COMPONENT" quantity="1" fromDate="2007-12-27 12:00:00.0"/>
+
+<!-- Product Routing task -->
+<WorkEffort workEffortId="1001" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="PVCBOX" description="PVC Box for make Electric board" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
+<WorkEffort workEffortId="1002" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="Button" description="Button  for help make Electric board" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
+<WorkEffort workEffortId="1003" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="FivePin" description="insert a five in electric board" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
+<WorkEffort workEffortId="1004" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="Wires" description="Connect to electric" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
+
+<!-- Product Demo Routing -->
+  <WorkEffort workEffortId="9999" workEffortTypeId="ROUTING" currentStatusId="ROU_ACTIVE" workEffortName="Electric Board" description="Make Electric Board" revisionNumber="1" quantityToProduce="0"/>
+
+<!-- Routing Task Assoc -->
+  <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1001" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="10" fromDate="2011-01-01 00:00:00.0"/>
+  <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1002" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="20" fromDate="2011-01-01 00:00:00.0"/>
+  <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1003" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="30" fromDate="2011-01-01 00:00:00.0"/>
+  <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1004" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="0" fromDate="2011-01-01 00:00:00.0"/>
+  <!-- Product Link with Routing -->
+  <WorkEffortGoodStandard workEffortId="9999" productId="Demo_ElectricBoard" workEffortGoodStdTypeId="ROU_PROD_TEMPLATE" fromDate="2011-01-01 00:00:00.0"/>
