@@ -41,3 +41,6 @@
   <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1004" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="0" fromDate="2011-01-01 00:00:00.0"/>
   <!-- Product Link with Routing -->
   <WorkEffortGoodStandard workEffortId="9999" productId="Demo_ElectricBoard" workEffortGoodStdTypeId="ROU_PROD_TEMPLATE" fromDate="2011-01-01 00:00:00.0"/>
+
+   <!-- Production Order Header -->
+     <WorkEffort workEffortId="9999" workEffortTypeId="PROD_ORDER_HEADER" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortName="MRP_MRP1" facilityId="WebStoreWarehouse" quantityToProduce="5" />
