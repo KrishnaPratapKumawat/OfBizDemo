@@ -52,7 +52,7 @@
              
             <!-- Adding Production Good Standard in WorkEffortSoodStandard -->
             <WorkEffortGoodStandard workEffortId="9999" productId="Demo_ElectricBoard" workEffortGoodStdTypeId="PRUN_PROD_DELIV" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="5" />
-            <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Box" workEffortGoodStdTypeId="PRUN_PROD_DELIV" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="25" />
-            <WorkEffortGoodStandard workEffortId="1002" productId="Raw_Button" workEffortGoodStdTypeId="PRUN_PROD_DELIV" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="100" />
-            <WorkEffortGoodStandard workEffortId="1003" productId="Raw_Plug" workEffortGoodStdTypeId="PRUN_PROD_DELIV" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="100" />
-            <WorkEffortGoodStandard workEffortId="1004" productId="Raw_Wirs" workEffortGoodStdTypeId="PRUN_PROD_DELIV" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="5" />
+            <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Box" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="25" />
+            <WorkEffortGoodStandard workEffortId="1002" productId="Raw_Button" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="100" />
+            <WorkEffortGoodStandard workEffortId="1003" productId="Raw_Plug" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="100" />
+            <WorkEffortGoodStandard workEffortId="1004" productId="Raw_Wirs" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="5" />
