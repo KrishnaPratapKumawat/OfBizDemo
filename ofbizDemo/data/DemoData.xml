@@ -43,7 +43,7 @@
   <WorkEffortGoodStandard workEffortId="9999" productId="Demo_ElectricBoard" workEffortGoodStdTypeId="ROU_PROD_TEMPLATE" fromDate="2011-01-01 00:00:00.0"/>
 
    <!-- Production Order Header -->
-     <WorkEffort workEffortId="9999" workEffortTypeId="PROD_ORDER_HEADER" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortName="ElectricBoard" facilityId="WebStoreWarehouse" quantityToProduce="0" />
+     <WorkEffort workEffortId="9999" workEffortTypeId="PROD_ORDER_HEADER" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortName="ElectricBoard" facilityId="WebStoreWarehouse" quantityToProduce="5" />
       <WorkEffort workEffortId="1001" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="PVCBOX"  description="PVC Box for make Electric board" facilityId="WebStoreWarehouse" quantityToProduce="5" />
            <WorkEffort workEffortId="1002" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="Button"  description="Button for help make Electric board" facilityId="WebStoreWarehouse" quantityToProduce="5" />
            <WorkEffort workEffortId="1003" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="FivePin"  description="insert a five in electric board" facilityId="WebStoreWarehouse" quantityToProduce="5" />
