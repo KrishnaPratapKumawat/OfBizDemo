@@ -50,9 +50,34 @@
             <WorkEffort workEffortId="1004" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="Wires"  description="Connect to electric " facilityId="WebStoreWarehouse" quantityToProduce="5" />
 
              
-            <!-- Adding Production Good Standard in WorkEffortSoodStandard -->
+            <!--  Production Good Standard in WorkEffortSoodStandard -->
             <WorkEffortGoodStandard workEffortId="9999" productId="Demo_ElectricBoard" workEffortGoodStdTypeId="PRUN_PROD_DELIV" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="5" />
             <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Box" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="25" />
             <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Button" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="100" />
             <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Plug" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="100" />
             <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Wirs" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="5" />
+           
+            <!--Add new Item In Inventory in InventoryItem entity-->
+            <InventoryItem inventoryItemId="01" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Box" facilityId="WebStoreWarehouse" unitCost="1000" currencyUomId="USD" quantityOnHandTotal="200" availableToPromiseTotal="200"/>
+            <InventoryItem inventoryItemId="02" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Button" facilityId="WebStoreWarehouse" unitCost="1000" currencyUomId="USD" quantityOnHandTotal="500" availableToPromiseTotal="500"/>              
+             <InventoryItem inventoryItemId="03" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Button" facilityId="WebStoreWarehouse" unitCost="1000" currencyUomId="USD" quantityOnHandTotal="500" availableToPromiseTotal="500"/>
+            <InventoryItem inventoryItemId="04" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Button" facilityId="WebStoreWarehouse" unitCost="1000" currencyUomId="USD" quantityOnHandTotal="200" availableToPromiseTotal="200"/>
+
+              <!-- Add new item in InventoryItemDetail -->
+            <InventoryItemDetail inventoryItemId="01" inventoryItemDetailSeqId="INVIDSI1" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="200" availableToPromiseDiff="200" accountingQuantityDiff="200"/>
+            <InventoryItemDetail inventoryItemId="02" inventoryItemDetailSeqId="INVIDSI2" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="500" availableToPromiseDiff="500" accountingQuantityDiff="500"/>
+            <InventoryItemDetail inventoryItemId="03" inventoryItemDetailSeqId="INVIDSI3" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="500" availableToPromiseDiff="500" accountingQuantityDiff="500"/>
+            <InventoryItemDetail inventoryItemId="04" inventoryItemDetailSeqId="INVIDSI4" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="500" availableToPromiseDiff="200" accountingQuantityDiff="200"/>
+
+            <!-- Production run creating record in InventoryItemDetail entity -->
+
+            <InventoryItemDetail inventoryItemId="01" inventoryItemDetailSeqId="INVIDSI1" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-2" availableToPromiseDiff="-2" accountingQuantityDiff="0" workEffortId="9999" />
+            <InventoryItemDetail inventoryItemId="02" inventoryItemDetailSeqId="INVIDSI2" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-5" availableToPromiseDiff="-5" accountingQuantityDiff="0" workEffortId="9999" />
+            <InventoryItemDetail inventoryItemId="03" inventoryItemDetailSeqId="INVIDSI3" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-3" availableToPromiseDiff="-3" accountingQuantityDiff="0" workEffortId="9999" />
+            <InventoryItemDetail inventoryItemId="04" inventoryItemDetailSeqId="INVIDSI4" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-1" availableToPromiseDiff="-1" accountingQuantityDiff="0" workEffortId="9999" />
+        
+            <!-- Creating record for assigning material to a Production Run from inventory-->
+           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="01" quantity="2" />
+           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="02" quantity="5" />
+           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="03" quantity="3" />
+          <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="04" quantity="1" />
