@@ -1,3 +1,5 @@
+<entity-engine-xml>
+
 <!-- Product Demo Data -->
 <Product productId="Demo_ElectricBoard" productTypeId="FINISHED_GOOD" productName="ElectricBoard" internalName="ElectricBoard"/>
 <Product productId="Raw_Box" productName="PVCBOX" internalName="Box"/>
@@ -71,13 +73,56 @@
 
             <!-- Production run creating record in InventoryItemDetail entity -->
 
-            <InventoryItemDetail inventoryItemId="01" inventoryItemDetailSeqId="INVIDSI1" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-2" availableToPromiseDiff="-2" accountingQuantityDiff="0" workEffortId="9999" />
-            <InventoryItemDetail inventoryItemId="02" inventoryItemDetailSeqId="INVIDSI2" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-5" availableToPromiseDiff="-5" accountingQuantityDiff="0" workEffortId="9999" />
-            <InventoryItemDetail inventoryItemId="03" inventoryItemDetailSeqId="INVIDSI3" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-3" availableToPromiseDiff="-3" accountingQuantityDiff="0" workEffortId="9999" />
-            <InventoryItemDetail inventoryItemId="04" inventoryItemDetailSeqId="INVIDSI4" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-1" availableToPromiseDiff="-1" accountingQuantityDiff="0" workEffortId="9999" />
+            <InventoryItemDetail inventoryItemId="01" inventoryItemDetailSeqId="INVIDSI11" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-2" availableToPromiseDiff="-2" accountingQuantityDiff="0" workEffortId="9999" />
+            <InventoryItemDetail inventoryItemId="02" inventoryItemDetailSeqId="INVIDSI12" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-5" availableToPromiseDiff="-5" accountingQuantityDiff="0" workEffortId="9999" />
+            <InventoryItemDetail inventoryItemId="03" inventoryItemDetailSeqId="INVIDSI13" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-3" availableToPromiseDiff="-3" accountingQuantityDiff="0" workEffortId="9999" />
+            <InventoryItemDetail inventoryItemId="04" inventoryItemDetailSeqId="INVIDSI14" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-1" availableToPromiseDiff="-1" accountingQuantityDiff="0" workEffortId="9999" />
         
             <!-- Creating record for assigning material to a Production Run from inventory-->
-           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="01" quantity="2" />
-           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="02" quantity="5" />
-           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="03" quantity="3" />
-          <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="04" quantity="1" />
+           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="01" quantity="100" />
+           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="02" quantity="500" />
+           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="03" quantity="500" />
+           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="04" quantity="20" />
+            
+           <!-- Created WorkEffortStatus and Insert Data -->
+           <WorkEffortStatus workEffortId="9999" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+           <WorkEffortStatus workEffortId="9999" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+           <WorkEffortStatus workEffortId="9999" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+           <WorkEffortStatus workEffortId="9999" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+           <WorkEffortStatus workEffortId="9999" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+           
+           <WorkEffortStatus workEffortId="1001" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+           <WorkEffortStatus workEffortId="1001" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+           <WorkEffortStatus workEffortId="1001" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+           <WorkEffortStatus workEffortId="1001" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+           <WorkEffortStatus workEffortId="1001" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+           
+           <WorkEffortStatus workEffortId="1002" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+           <WorkEffortStatus workEffortId="1002" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+           <WorkEffortStatus workEffortId="1002" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+           <WorkEffortStatus workEffortId="1002" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+           <WorkEffortStatus workEffortId="1002" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+
+           <WorkEffortStatus workEffortId="1003" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+           <WorkEffortStatus workEffortId="1003" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+           <WorkEffortStatus workEffortId="1003" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+           <WorkEffortStatus workEffortId="1003" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+           <WorkEffortStatus workEffortId="1003" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+           
+           <WorkEffortStatus workEffortId="1004" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+           <WorkEffortStatus workEffortId="1004" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+           <WorkEffortStatus workEffortId="1004" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+           <WorkEffortStatus workEffortId="1004" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+           <WorkEffortStatus workEffortId="1004" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+
+           
+
+           <!--variableCost is (per MilliSeconds=60000) -->
+           <CostComponentCalc costComponentCalcId="COST_CALC_1" description="Indirect Cost Electric Box"  currencyUomId="USD" fixedCost="100" variableCost="200" perMilliSecond="60000"/>
+           <WorkEffortCostCalc workEffortId="9999" costComponentTypeId="OTHER_COST" costComponentCalcId="COST_CALC_1" fromDate="2022-02-21 2:45:00" />
+
+           <!-- General Cost for the finished product -->
+    <CostComponentCalc costComponentCalcId="GEN_COST_CALC_2" description="Cost For preparing Electric Box" currencyUomId="USD" fixedCost="50" costCustomMethodId="PROD_PERC_FORMULA"/>
+    <ProductCostComponentCalc productId="PROD_MANUF" costComponentTypeId="GEN_COST" costComponentCalcId="GEN_COST_CALC" fromDate="2022-02-21 00:03:09.0"/>
+  
+  </entity-engine-xml>
