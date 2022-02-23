@@ -122,7 +122,19 @@
            <WorkEffortCostCalc workEffortId="9999" costComponentTypeId="OTHER_COST" costComponentCalcId="COST_CALC_1" fromDate="2022-02-21 2:45:00" />
 
            <!-- General Cost for the finished product -->
-    <CostComponentCalc costComponentCalcId="GEN_COST_CALC_2" description="Cost For preparing Electric Box" currencyUomId="USD" fixedCost="50" costCustomMethodId="PROD_PERC_FORMULA"/>
-    <ProductCostComponentCalc productId="PROD_MANUF" costComponentTypeId="GEN_COST" costComponentCalcId="GEN_COST_CALC" fromDate="2022-02-21 00:03:09.0"/>
+          <CostComponentCalc costComponentCalcId="GEN_COST_CALC_2" description="Cost For preparing Electric Box" currencyUomId="USD" fixedCost="50" costCustomMethodId="PROD_PERC_FORMULA"/>
+          <ProductCostComponentCalc productId="PROD_MANUF" costComponentTypeId="GEN_COST" costComponentCalcId="GEN_COST_CALC" fromDate="2022-02-21 00:03:09.0"/>
+
+          <!-- Created CostComponent  -->
+          <CostComponent costComponentId="Cost_Component_1" costComponentTypeId="ACTUAL_MAT_COST" workEffortId="9999" cost="2450" costUomId="USD" />
+          <CostComponent costComponentId="Cost_Component_2" costComponentTypeId="GEN_COST" workEffortId="9999" cost="1300" costUomId="USD" />
+
+          <!-- Created InventoryItem and  InventoryItemDetail for Electric Board -->
+          <InventoryItem inventoryItemId="05" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Demo_ElectricBoard" datetimeReceived="2022-02-23 05:00:00" datetimeManufactured="2022-02-23 05:00:00" facilityId="WebStoreWarehouse" quantityOnHandTotal="200" availableToPromiseTotal="200" accountingQuantityTotal="200" unitCost="2450" currencyUomId="USD" />
+          <InventoryItemDetail inventoryItemId="05" inventoryItemDetailSeqId="INVIDSI15" effectiveDate="2021-09-02 09:00:00" quantityOnHandDiff="200" accountingQuantityTotal="200" accountingQuantityDiff="200" />
+      
+          <!-- Added WorkEffortInventoryProduced  -->
+          <WorkEffortInventoryProduced workEffortId="9999" inventoryItemId="05" />
+      
   
   </entity-engine-xml>
