@@ -29,5 +29,17 @@
         <override name="comments" optional="true"/>
     </service>
 
+    <service name="createProduction" engine="java"
+             location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProduction" auth="true">
 
+        <description>Create a production run service in java</description>
+        <attribute type="String" mode="IN" name="productId" optional="false"/>
+        <attribute type="BigDecimal" mode="IN" name="Quantity" optional="false"/>
+        <attribute type="java.sql.Timestamp" mode="IN" name="startDate" optional="false"/>
+        <attribute type="String" mode="IN" name="facilityId" optional="false"/>
+        <attribute type="String" mode="IN" name="routingId" optional="true"/>
+        <attribute type="String" mode="IN" name="workEffortName" optional="true"/>
+        <attribute type="String" mode="IN" name="description" optional="true"/>
+        <attribute type="String" mode="OUT" name="productionRunId" optional="false"/>
+    </service>
 </services>

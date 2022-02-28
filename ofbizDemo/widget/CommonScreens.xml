@@ -67,6 +67,7 @@ under the License.
                         <decorator-section-include name="pre-body"/>
                         <decorator-section-include name="body"/>
                         <platform-specific><html><html-template location="component://ofbizDemo/webapp/ofbizDemo/includes/PostBody.ftl"/></html></platform-specific>
+
                     </widgets>
                     <fail-widgets>
                         <label style="h3">${uiLabelMap.OfbizDemoViewPermissionError}</label>

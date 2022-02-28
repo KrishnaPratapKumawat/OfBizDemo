@@ -74,4 +74,64 @@
             </widgets>
         </section>
     </screen>
+<!--    CreateProductionRun Screen-->
+
+    <screen name="CreateProduction">
+        <section>
+            <actions>
+                <set field="headerItem" value="CreateProduction"/>
+                <set field="titleProperty" value="CreateProduction"/>
+
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <screenlet title="${uiLabelMap.CreateProduction}">
+                            <include-form name="CreateProduction" location="component://ofbizDemo/widget/OfbizDemoForms.xml"/>
+                        </screenlet>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <screenlet title="${uiLabelMap.CreateProduction}">
+                            <include-form name="CreateProduction" location="component://ofbizDemo/widget/OfbizDemoForms.xml"/>
+                        </screenlet>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+<!--        FindProductionRun-->
+    <screen name="FindProductionRun">
+        <section>
+            <actions>
+                <set field="headerItem" value="FindProductionRun"/>
+                <set field="titleProperty" value="findProductionRun"/>
+
+                <entity-and entity-name="Facility" list="facilities">
+                    <field-map field-name="facilityId" />
+                </entity-and>
+                <entity-and entity-name="StatusItem" list="statusItems">
+                    <field-map field-name="statusTypeId" value="PRODUCTION_RUN"/>
+                </entity-and>
+
+                <script location="component://ofbizDemo/groovyScripts/FindProductionRun.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/ProductionDemo/FindProductionRun.ftl"/></html>
+                        </platform-specific>
+
+                        <platform-specific>
+                            <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/ProductionDemo/ListProductionRun.ftl"/></html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
 </screens>

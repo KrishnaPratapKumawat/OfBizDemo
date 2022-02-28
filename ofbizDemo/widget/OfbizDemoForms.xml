@@ -50,4 +50,27 @@
         <field name="lastName" title="${uiLabelMap.OfbizDemoLastName}" sort-field="true"><display/></field>
         <field name="comments" title="${uiLabelMap.OfbizDemoComment}"><display/></field>
     </form>
+<!--        CreateProductionForm-->
+    <form name="CreateProduction" type="single" default-entity-name="WorkEffort" target="createProduction">
+        <field name="productId" title="${uiLabelMap.ProductId}"><lookup target-form-name="LookupProduct" /></field>
+        <field name="pRQuantity" title="${uiLabelMap.prQuantity}"><text/></field>
+        <field name="startDate" title="${uiLabelMap.StartDate}"><date-time/></field>
+        <field name="facilityId" title="${uiLabelMap.FacilityId}">
+            <drop-down allow-empty="false">
+                <entity-options description="${facilityName}[${facilityId}]" entity-name="Facility" key-field-name="facilityId">
+                </entity-options>
+            </drop-down>
+        </field>
+        <field name="routingId" title="${uiLabelMap.RoutingId}"><lookup target-form-name="LookupRouting" /></field>
+        <field name="WorkEffortName" title="${uiLabelMap.WorkEffortName}"><text/></field>
+        <field name="description" title="${uiLabelMap.Description}"><text/></field>
+        <field name="Create Dependent Production Runs" title="${uiLabelMap.CreateDependentProductionRuns}">
+            <drop-down allow-empty="false">
+                <option key="N" description="${uiLabelMap.CommonNo}"/>
+                <option key="Y" description="${uiLabelMap.CommonYes}"/>
+            </drop-down>
+        </field>
+        <field name="submitButton" title="Submit"><submit button-type="button"/></field>
+    </form>
+
 </forms>

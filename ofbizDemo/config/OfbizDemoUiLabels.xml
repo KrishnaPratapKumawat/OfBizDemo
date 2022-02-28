@@ -32,4 +32,10 @@
     <property key="OfbizDemoLastName">
         <value xml:lang="en">Last Name</value>
     </property>
+    <property key="CreateProduction">
+        <value xml:lang="en">Create Production</value>
+    </property>
+    <property key="FindProductionRun">
+        <value xml:lang="en">Find Production Run</value>
+    </property>
 </resource>

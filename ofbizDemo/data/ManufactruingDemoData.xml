@@ -1,0 +1,139 @@
+<entity-engine-xml>
+<!--Product Demo Data-->
+<Product productId="2000" productTypeId="FINISHED_GOOD" productName="Door" internalName="Door"/>
+<!--Raw Material-->
+<Product productId="2001" productName="PlyWood" internalName="PlyWood"/>
+<Product productId="2002" productName="Nails" internalName="Nails"/>
+<Product productId="2003" productName="Fevicol" internalName="Fevicol"/>
+<Product productId="2004" productName="SunMica" internalName="SunMica"/>
+
+<!--Added Facility for product-->
+<ProductFacility productId="2000" facilityId="WebStoreWarehouse" minimumStock="60"/>
+<ProductFacility productId="2001" facilityId="WebStoreWarehouse" minimumStock="120" reorderQuantity="100"/>
+<ProductFacility productId="2002" facilityId="WebStoreWarehouse" minimumStock="500" reorderQuantity="500"/>
+<ProductFacility productId="2003" facilityId="WebStoreWarehouse" minimumStock="60" reorderQuantity="500"/>
+<ProductFacility productId="2004" facilityId="WebStoreWarehouse" minimumStock="60" reorderQuantity="20"/>
+
+<!-- Created Suppliers -->
+<SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="2000" lastPrice="110.00" supplierProductId="Door_1" supplierProductName="Door" availableFromDate="2022-02-24 00:00:00.000" canDropShip="N"/>
+<SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="2001" lastPrice="235.00" supplierProductId="PlyWood_2" supplierProductName="PlyWood" availableFromDate="2022-02-24 00:00:00.000" canDropShip="N"/>
+<SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="2002" lastPrice="4.00" supplierProductId="Nails_3" supplierProductName="Nails" availableFromDate="2022-02-24 00:00:00.000" canDropShip="N"/>
+<SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="2003" lastPrice="195.00" supplierProductId="Fevicol_4" supplierProductName="Fevicol" availableFromDate="2022-02-24 00:00:00.000" canDropShip="N"/>
+<SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="2004" lastPrice="410.00" supplierProductId="SunMica_5" supplierProductName="SunMica" availableFromDate="2022-02-24 00:00:00.000" canDropShip="N"/>
+
+<!-- Bill Of Material -->
+<ProductAssoc productId="2000" productIdTo="2001" productAssocTypeId="MANUF_COMPONENT" quantity="2" fromDate="2022-02-24 04:58:00.0"/>
+<ProductAssoc productId="2000" productIdTo="2002" productAssocTypeId="MANUF_COMPONENT" quantity="25" fromDate="2022-02-24 04:58:00.0"/>
+<ProductAssoc productId="2000" productIdTo="2003" productAssocTypeId="MANUF_COMPONENT" quantity="1" fromDate="2022-02-24 04:58:00.0"/>
+<ProductAssoc productId="2000" productIdTo="2004" productAssocTypeId="MANUF_COMPONENT" quantity="2" fromDate="2022-02-24 04:58:00.0"/>
+
+<!-- Created Routing task for Product-->
+<WorkEffort workEffortId="3001" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="PlyWood" description="The main part of making the plywood door is" revisionNumber="1" createdDate="2022-02-24 04:52:00.0"/>
+<WorkEffort workEffortId="3002" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="Nails" description="Nail makes our door stronger" revisionNumber="1" createdDate="2022-02-24 04:52:00.0"/>
+<WorkEffort workEffortId="3003" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="Fevicol" description="We can make the door stronger with Fevicol" revisionNumber="1" createdDate="2022-02-24 04:52:00.0"/>
+<WorkEffort workEffortId="3004" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="SunMica" description="Sunmica enhances the beauty of the door" revisionNumber="1" createdDate="2022-02-24 04:52:00.0"/>
+
+ <!--Created Routing for Product-->
+ <WorkEffort workEffortId="3000" workEffortTypeId="ROUTING" currentStatusId="ROU_ACTIVE" workEffortName="Door" description="The door is used to put in the room" revisionNumber="1" quantityToProduce="0"/>
+
+  <!--Routing Task Assoc-->
+  <WorkEffortAssoc workEffortIdFrom="3000" workEffortIdTo="3001" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="10" fromDate="2022-02-24 11:05:00" />
+  <WorkEffortAssoc workEffortIdFrom="3000" workEffortIdTo="3002" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="20" fromDate="2022-02-24 11:05:00" />
+  <WorkEffortAssoc workEffortIdFrom="3000" workEffortIdTo="3003" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="30" fromDate="2022-02-24 11:05:00" />
+  <WorkEffortAssoc workEffortIdFrom="3000" workEffortIdTo="3004" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="40" fromDate="2022-02-24 11:05:00" />
+  
+
+<!-- Product Link with Routing -->
+<WorkEffortGoodStandard workEffortId="3000" productId="2000" workEffortGoodStdTypeId="ROU_PROD_TEMPLATE" fromDate="2022-02-24 00:00:00.0"/>
+
+<!-- Production Order Header -->
+<WorkEffort workEffortId="3000" workEffortTypeId="PROD_ORDER_HEADER" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortName="Door" facilityId="WebStoreWarehouse" quantityToProduce="1" />
+<WorkEffortStatus workEffortId="3000" statusId="PRUN_CREATED" statusDatetime="2022-02-24 5:45:00" />
+<WorkEffortStatus workEffortId="3000" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-24 5:46:00" />
+<WorkEffortStatus workEffortId="3000" statusId="PRUN_RUNNING" statusDatetime="2022-02-24 5:47:00" />
+<WorkEffortStatus workEffortId="3000" statusId="PRUN_COMPLETED" statusDatetime="2022-02-24 5:48:00"/>
+<WorkEffortStatus workEffortId="3000" statusId="PRUN_CLOSED" statusDatetime="2022-02-24 5:49:00"/>
+
+<WorkEffort workEffortId="3001" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="3000" workEffortName="PlyWood"  description="The main part of making the plywood door is" facilityId="WebStoreWarehouse" quantityToProduce="2" />
+<WorkEffortStatus workEffortId="3001" statusId="PRUN_CREATED" statusDatetime="2022-02-24 12:15:00" />
+<WorkEffortStatus workEffortId="3001" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-24 12:16:00" />
+<WorkEffortStatus workEffortId="3001" statusId="PRUN_RUNNING" statusDatetime="2022-02-24 12:17:00" />
+<WorkEffortStatus workEffortId="3001" statusId="PRUN_COMPLETED" statusDatetime="2022-02-24 12:18:00"/>
+<WorkEffortStatus workEffortId="3001" statusId="PRUN_CLOSED" statusDatetime="2022-02-24 12:19:00"/>
+
+<WorkEffort workEffortId="3002" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="3000" workEffortName="Nails"  description="Nail makes our door stronger" facilityId="WebStoreWarehouse" quantityToProduce="25"/>
+<WorkEffortStatus workEffortId="3002" statusId="PRUN_CREATED" statusDatetime="2022-02-24 12:15:00" />
+<WorkEffortStatus workEffortId="3002" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-24 12:16:00" />
+<WorkEffortStatus workEffortId="3002" statusId="PRUN_RUNNING" statusDatetime="2022-02-24 12:17:00" />
+<WorkEffortStatus workEffortId="3002" statusId="PRUN_COMPLETED" statusDatetime="2022-02-24 12:18:00"/>
+<WorkEffortStatus workEffortId="3002" statusId="PRUN_CLOSED" statusDatetime="2022-02-24 12:19:00"/>
+
+<WorkEffort workEffortId="3003" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="3000" workEffortName="Fevicol"  description="We can make the door stronger with Fevicol" facilityId="WebStoreWarehouse" quantityToProduce="1" />
+<WorkEffortStatus workEffortId="3003" statusId="PRUN_CREATED" statusDatetime="2022-02-24 12:15:00" />
+<WorkEffortStatus workEffortId="3003" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-24 12:16:00" />
+<WorkEffortStatus workEffortId="3003" statusId="PRUN_RUNNING" statusDatetime="2022-02-24 12:17:00" />
+<WorkEffortStatus workEffortId="3003" statusId="PRUN_COMPLETED" statusDatetime="2022-02-24 12:18:00"/>
+<WorkEffortStatus workEffortId="3003" statusId="PRUN_CLOSED" statusDatetime="2022-02-24 12:19:00"/>
+
+<WorkEffort workEffortId="3004" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="3000" workEffortName="SunMica"  description="Sunmica enhances the beauty of the door" facilityId="WebStoreWarehouse" quantityToProduce="2" />
+<WorkEffortStatus workEffortId="3004" statusId="PRUN_CREATED" statusDatetime="2022-02-24 12:15:00" />
+<WorkEffortStatus workEffortId="3004" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-24 12:16:00" />
+<WorkEffortStatus workEffortId="3004" statusId="PRUN_RUNNING" statusDatetime="2022-02-24 12:17:00" />
+<WorkEffortStatus workEffortId="3004" statusId="PRUN_COMPLETED" statusDatetime="2022-02-24 12:18:00"/>
+<WorkEffortStatus workEffortId="3004" statusId="PRUN_CLOSED" statusDatetime="2022-02-24 12:19:00"/>
+
+         
+<!--  Production Good Standard in WorkEffortSoodStandard -->
+<WorkEffortGoodStandard workEffortId="3000" productId="2000" workEffortGoodStdTypeId="PRUN_PROD_DELIV" fromDate="2022-02-24 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="1"/>
+<WorkEffortGoodStandard workEffortId="3001" productId="2001" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-24 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="2"/>
+<WorkEffortGoodStandard workEffortId="3001" productId="2002" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-24 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="25"/>
+<WorkEffortGoodStandard workEffortId="3001" productId="2003" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-24 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="1"/>
+<WorkEffortGoodStandard workEffortId="3001" productId="2004" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-24 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="2"/>
+       
+<!--Add new Item In Inventory in InventoryItem and InventoryItemDetail entity-->
+<InventoryItem inventoryItemId="4001" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="2001" facilityId="WebStoreWarehouse" unitCost="10" currencyUomId="USD"/>
+<InventoryItemDetail inventoryItemId="4001" inventoryItemDetailSeqId="5001" effectiveDate="2022-02-24 02:12:00" quantityOnHandDiff="2000" availableToPromiseDiff="2000" accountingQuantityDiff="2000"/>
+
+<InventoryItem inventoryItemId="4002" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="2002" facilityId="WebStoreWarehouse" unitCost="11" currencyUomId="USD"/>              
+<InventoryItemDetail inventoryItemId="4002" inventoryItemDetailSeqId="5001" effectiveDate="2022-02-24 02:12:00" quantityOnHandDiff="5000" availableToPromiseDiff="5000" accountingQuantityDiff="5000"/>
+
+<InventoryItem inventoryItemId="4003" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="2003" facilityId="WebStoreWarehouse" unitCost="12" currencyUomId="USD"/>
+<InventoryItemDetail inventoryItemId="4003" inventoryItemDetailSeqId="5001" effectiveDate="2022-02-24 02:12:00" quantityOnHandDiff="5000" availableToPromiseDiff="5000" accountingQuantityDiff="5000"/>
+
+<InventoryItem inventoryItemId="4004" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="2004" facilityId="WebStoreWarehouse" unitCost="5" currencyUomId="USD"/>
+<InventoryItemDetail inventoryItemId="4004" inventoryItemDetailSeqId="5001" effectiveDate="2022-02-24 02:12:00" quantityOnHandDiff="2000" availableToPromiseDiff="2000" accountingQuantityDiff="2000"/>
+
+<!-- Production run creating record in InventoryItemDetail entity -->
+<WorkEffortInventoryAssign workEffortId="3001" inventoryItemId="4001" quantity="2" />
+<InventoryItemDetail inventoryItemId="4001" inventoryItemDetailSeqId="5002" effectiveDate="2022-02-24 02:12:00" quantityOnHandDiff="-2" availableToPromiseDiff="-2" accountingQuantityDiff="-2" workEffortId="3001" />
+
+<WorkEffortInventoryAssign workEffortId="3001" inventoryItemId="4002" quantity="25" />
+<InventoryItemDetail inventoryItemId="4002" inventoryItemDetailSeqId="5002" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-25" availableToPromiseDiff="-25" accountingQuantityDiff="-25" workEffortId="3001" />
+
+<WorkEffortInventoryAssign workEffortId="3001" inventoryItemId="4003" quantity="5" />
+<InventoryItemDetail inventoryItemId="4003" inventoryItemDetailSeqId="5002" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-5" availableToPromiseDiff="-5" accountingQuantityDiff="-5" workEffortId="3001" />
+
+<WorkEffortInventoryAssign workEffortId="3001" inventoryItemId="4004" quantity="2" />
+<InventoryItemDetail inventoryItemId="4004" inventoryItemDetailSeqId="5004" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-2" availableToPromiseDiff="-2" accountingQuantityDiff="-2" workEffortId="3001" />
+    
+        
+<!--variableCost -->
+<CostComponentCalc costComponentCalcId="CCC01" description="Indirect Cost"  currencyUomId="USD" fixedCost="150" variableCost="300" perMilliSecond="60000"/>
+<WorkEffortCostCalc workEffortId="3001" costComponentTypeId="OTHER_COST" costComponentCalcId="CCC01" fromDate="2022-02-24 2:45:00" />
+
+<!-- General Cost for the finished product -->
+<CostComponentCalc costComponentCalcId="GENCC2" description="Cost For preparing Door" currencyUomId="USD" fixedCost="75"/>
+<ProductCostComponentCalc productId="2000" costComponentTypeId="GEN_COST" costComponentCalcId="GENCC2" fromDate="2022-02-24 00:03:09.0"/>
+
+<!-- Created CostComponent  -->
+<CostComponent costComponentId="CC1" costComponentTypeId="ACTUAL_MAT_COST" workEffortId="3001" cost="1225" costUomId="USD" />
+<CostComponent costComponentId="CC2" costComponentTypeId="ACTUAL_OTHER_COST" workEffortId="3001" cost="1300" costUomId="USD" />
+<CostComponent costComponentId="CC2" costComponentTypeId="ACTUAL_GEN_COST" workEffortId="3000" cost="50" costUomId="USD" />
+
+<!-- Created InventoryItem and  InventoryItemDetail for Electric Board -->
+<InventoryItem inventoryItemId="4005" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="2000" datetimeReceived="2022-02-24 05:00:00" datetimeManufactured="2022-02-23 05:00:00" facilityId="WebStoreWarehouse" quantityOnHandTotal="5" availableToPromiseTotal="5" accountingQuantityTotal="5" unitCost="515" currencyUomId="USD" />
+<InventoryItemDetail inventoryItemId="4005" inventoryItemDetailSeqId="5001" effectiveDate="2022-02-24 09:00:00" quantityOnHandDiff="5" availableToPromiseDiff="5" accountingQuantityDiff="5" workEffortId="3000"/>
+  
+<!-- Added WorkEffortInventoryProduced  -->
+<WorkEffortInventoryProduced workEffortId="3000" inventoryItemId="4005" />
+</entity-engine-xml>

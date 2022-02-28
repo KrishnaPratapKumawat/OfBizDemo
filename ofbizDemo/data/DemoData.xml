@@ -1,140 +1,138 @@
 <entity-engine-xml>
 
-<!-- Product Demo Data -->
-<Product productId="Demo_ElectricBoard" productTypeId="FINISHED_GOOD" productName="ElectricBoard" internalName="ElectricBoard"/>
-<Product productId="Raw_Box" productName="PVCBOX" internalName="Box"/>
-<Product productId="Raw_Button" productName="Button" internalName="Button"/>
-<Product productId="Raw_Plug" productName="FivePin" internalName="FivePin"/>
-<Product productId="Raw_Wirs" productName="Wires" internalName="wires"/>
+    <!-- Product Demo Data -->
+    <Product productId="Demo_ElectricBoard" productTypeId="FINISHED_GOOD" productName="ElectricBoard" internalName="ElectricBoard"/>
+    <Product productId="Raw_Box" productName="PVCBOX" internalName="Box"/>
+    <Product productId="Raw_Button" productName="Button" internalName="Button"/>
+    <Product productId="Raw_Plug" productName="FivePin" internalName="FivePin"/>
+    <Product productId="Raw_Wirs" productName="Wires" internalName="wires"/>
 
-<!-- Product Demo facility settings -->
-<ProductFacility productId="Demo_ElectricBoard" facilityId="WebStoreWarehouse" minimumStock="5" />
-<ProductFacility productId="Raw_Box" facilityId="WebStoreWarehouse" minimumStock="5" reorderQuantity="100"/>
-<ProductFacility productId="Raw_Button" facilityId="WebStoreWarehouse" minimumStock="20" reorderQuantity="500"/>
-<ProductFacility productId="Raw_Plug" facilityId="WebStoreWarehouse" minimumStock="20" reorderQuantity="500"/>
-<ProductFacility productId="Raw_Wirs" facilityId="WebStoreWarehouse" minimumStock="1" reorderQuantity="20"/>
+    <!-- Product Demo facility settings -->
+    <ProductFacility productId="Demo_ElectricBoard" facilityId="WebStoreWarehouse" minimumStock="5" />
+    <ProductFacility productId="Raw_Box" facilityId="WebStoreWarehouse" minimumStock="5" reorderQuantity="100"/>
+    <ProductFacility productId="Raw_Button" facilityId="WebStoreWarehouse" minimumStock="20" reorderQuantity="500"/>
+    <ProductFacility productId="Raw_Plug" facilityId="WebStoreWarehouse" minimumStock="20" reorderQuantity="500"/>
+    <ProductFacility productId="Raw_Wirs" facilityId="WebStoreWarehouse" minimumStock="1" reorderQuantity="20"/>
 
-<!-- Product Demo Suppliers -->
- <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Demo_ElectricBoard" lastPrice="75.00" supplierProductId="Board" supplierProductName="ElectricBoard" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
- <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Box" lastPrice="11.00" supplierProductId="Box" supplierProductName="PVCBox" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
- <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Button" lastPrice="4.00" supplierProductId="Button" supplierProductName="Button" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
- <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Plug" lastPrice="5.00" supplierProductId="plug" supplierProductName="FivePin" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
- <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Wirs" lastPrice="15.00" supplierProductId="Board" supplierProductName="ElectricBoard" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+    <!-- Product Demo Suppliers -->
+    <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Demo_ElectricBoard" lastPrice="75.00" supplierProductId="Board" supplierProductName="ElectricBoard" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+    <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Box" lastPrice="11.00" supplierProductId="Box" supplierProductName="PVCBox" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+    <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Button" lastPrice="4.00" supplierProductId="Button" supplierProductName="Button" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+    <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Plug" lastPrice="5.00" supplierProductId="plug" supplierProductName="FivePin" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
+    <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Raw_Wirs" lastPrice="15.00" supplierProductId="Board" supplierProductName="ElectricBoard" availableFromDate="2005-02-01 00:00:00.000" canDropShip="N"/>
 
-<!-- Bill Of Material -->
-<ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Box" productAssocTypeId="MANUF_COMPONENT" quantity="5" fromDate="2007-12-27 12:00:00.0"/>
-<ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Button" productAssocTypeId="MANUF_COMPONENT" quantity="10" fromDate="2007-12-27 12:00:00.0"/>
-<ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Plug" productAssocTypeId="MANUF_COMPONENT" quantity="10" fromDate="2007-12-27 12:00:00.0"/>
-<ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Wirs" productAssocTypeId="MANUF_COMPONENT" quantity="1" fromDate="2007-12-27 12:00:00.0"/>
+    <!-- Bill Of Material -->
+    <ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Box" productAssocTypeId="MANUF_COMPONENT" quantity="5" fromDate="2007-12-27 12:00:00.0"/>
+    <ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Button" productAssocTypeId="MANUF_COMPONENT" quantity="10" fromDate="2007-12-27 12:00:00.0"/>
+    <ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Plug" productAssocTypeId="MANUF_COMPONENT" quantity="10" fromDate="2007-12-27 12:00:00.0"/>
+    <ProductAssoc productId="Demo_ElectricBoard" productIdTo="Raw_Wirs" productAssocTypeId="MANUF_COMPONENT" quantity="1" fromDate="2007-12-27 12:00:00.0"/>
 
-<!-- Product Routing task -->
-<WorkEffort workEffortId="1001" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="PVCBOX" description="PVC Box for make Electric board" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
-<WorkEffort workEffortId="1002" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="Button" description="Button  for help make Electric board" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
-<WorkEffort workEffortId="1003" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="FivePin" description="insert a five in electric board" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
-<WorkEffort workEffortId="1004" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="Wires" description="Connect to electric" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
+    <!-- Product Routing task -->
+    <WorkEffort workEffortId="1001" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="PVCBOX" description="PVC Box for make Electric board" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
+    <WorkEffort workEffortId="1002" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="Button" description="Button  for help make Electric board" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
+    <WorkEffort workEffortId="1003" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="FivePin" description="insert a five in electric board" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
+    <WorkEffort workEffortId="1004" workEffortTypeId="ROU_TASK" workEffortPurposeTypeId="ROU_MANUFACTURING" currentStatusId="ROU_ACTIVE" workEffortName="Wires" description="Connect to electric" revisionNumber="1" createdDate="2001-05-13 12:00:00.0"/>
 
-<!-- Product Demo Routing -->
-  <WorkEffort workEffortId="9999" workEffortTypeId="ROUTING" currentStatusId="ROU_ACTIVE" workEffortName="Electric Board" description="Make Electric Board" revisionNumber="1" quantityToProduce="0"/>
+    <!-- Product Demo Routing -->
+    <WorkEffort workEffortId="9999" workEffortTypeId="ROUTING" currentStatusId="ROU_ACTIVE" workEffortName="Electric Board" description="Make Electric Board" revisionNumber="1" quantityToProduce="0"/>
 
-<!-- Routing Task Assoc -->
-  <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1001" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="10" fromDate="2011-01-01 00:00:00.0"/>
-  <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1002" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="20" fromDate="2011-01-01 00:00:00.0"/>
-  <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1003" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="30" fromDate="2011-01-01 00:00:00.0"/>
-  <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1004" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="0" fromDate="2011-01-01 00:00:00.0"/>
-  <!-- Product Link with Routing -->
-  <WorkEffortGoodStandard workEffortId="9999" productId="Demo_ElectricBoard" workEffortGoodStdTypeId="ROU_PROD_TEMPLATE" fromDate="2011-01-01 00:00:00.0"/>
+    <!-- Routing Task Assoc -->
+    <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1001" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="10" fromDate="2011-01-01 00:00:00.0"/>
+    <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1002" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="20" fromDate="2011-01-01 00:00:00.0"/>
+    <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1003" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="30" fromDate="2011-01-01 00:00:00.0"/>
+    <WorkEffortAssoc workEffortIdFrom="9999" workEffortIdTo="1004" workEffortAssocTypeId="ROUTING_COMPONENT" sequenceNum="40" fromDate="2011-01-01 00:00:00.0"/>
+    
+    <!-- Product Link with Routing -->
+    <WorkEffortGoodStandard workEffortId="9999" productId="Demo_ElectricBoard" workEffortGoodStdTypeId="ROU_PROD_TEMPLATE" fromDate="2011-01-01 00:00:00.0"/>
 
-   <!-- Production Order Header -->
-     <WorkEffort workEffortId="9999" workEffortTypeId="PROD_ORDER_HEADER" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortName="ElectricBoard" facilityId="WebStoreWarehouse" quantityToProduce="5" />
-      <WorkEffort workEffortId="1001" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="PVCBOX"  description="PVC Box for make Electric board" facilityId="WebStoreWarehouse" quantityToProduce="5" />
-           <WorkEffort workEffortId="1002" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="Button"  description="Button for help make Electric board" facilityId="WebStoreWarehouse" quantityToProduce="5" />
-           <WorkEffort workEffortId="1003" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="FivePin"  description="insert a five in electric board" facilityId="WebStoreWarehouse" quantityToProduce="5" />
-            <WorkEffort workEffortId="1004" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CREATED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="Wires"  description="Connect to electric " facilityId="WebStoreWarehouse" quantityToProduce="5" />
+    <!-- Production Order Header -->
+    <WorkEffort workEffortId="9999" workEffortTypeId="PROD_ORDER_HEADER" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortName="ElectricBoard" facilityId="WebStoreWarehouse" quantityToProduce="5" />
+    <WorkEffortStatus workEffortId="9999" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+    <WorkEffortStatus workEffortId="9999" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+    <WorkEffortStatus workEffortId="9999" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+    <WorkEffortStatus workEffortId="9999" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+    <WorkEffortStatus workEffortId="9999" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+    
+    <WorkEffort workEffortId="1001" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="PVCBOX"  description="PVC Box for make Electric board" facilityId="WebStoreWarehouse" quantityToProduce="5" />
+    <WorkEffortStatus workEffortId="1001" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+    <WorkEffortStatus workEffortId="1001" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+    <WorkEffortStatus workEffortId="1001" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+    <WorkEffortStatus workEffortId="1001" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+    <WorkEffortStatus workEffortId="1001" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+    
+    <WorkEffort workEffortId="1002" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="Button"  description="Button for help make Electric board" facilityId="WebStoreWarehouse" quantityToProduce="5" />
+    <WorkEffortStatus workEffortId="1002" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+    <WorkEffortStatus workEffortId="1002" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+    <WorkEffortStatus workEffortId="1002" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+    <WorkEffortStatus workEffortId="1002" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+    <WorkEffortStatus workEffortId="1002" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+
+    <WorkEffort workEffortId="1003" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="FivePin"  description="insert a five in electric board" facilityId="WebStoreWarehouse" quantityToProduce="5" />
+    <WorkEffortStatus workEffortId="1003" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+    <WorkEffortStatus workEffortId="1003" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+    <WorkEffortStatus workEffortId="1003" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+    <WorkEffortStatus workEffortId="1003" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+    <WorkEffortStatus workEffortId="1003" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+    
+    <WorkEffort workEffortId="1004" workEffortTypeId="PROD_ORDER_TASK" currentStatusId="PRUN_CLOSED" workEffortPurposeTypeId="WEPT_PRODUCTION_RUN" workEffortParentId="9999" workEffortName="Wires"  description="Connect to electric " facilityId="WebStoreWarehouse" quantityToProduce="5" />
+    <WorkEffortStatus workEffortId="1004" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
+    <WorkEffortStatus workEffortId="1004" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
+    <WorkEffortStatus workEffortId="1004" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
+    <WorkEffortStatus workEffortId="1004" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
+    <WorkEffortStatus workEffortId="1004" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
 
              
-            <!--  Production Good Standard in WorkEffortSoodStandard -->
-            <WorkEffortGoodStandard workEffortId="9999" productId="Demo_ElectricBoard" workEffortGoodStdTypeId="PRUN_PROD_DELIV" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="5" />
-            <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Box" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="25" />
-            <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Button" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="100" />
-            <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Plug" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="100" />
-            <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Wirs" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="5" />
+    <!--  Production Good Standard in WorkEffortSoodStandard -->
+    <WorkEffortGoodStandard workEffortId="9999" productId="Demo_ElectricBoard" workEffortGoodStdTypeId="PRUN_PROD_DELIV" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="5" />
+    <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Box" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="25" />
+    <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Button" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="50" />
+    <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Plug" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="50" />
+    <WorkEffortGoodStandard workEffortId="1001" productId="Raw_Wirs" workEffortGoodStdTypeId="PRUNT_PROD_NEEDED" fromDate="2022-02-21 12:01:00" statusId="WEGS_CREATED" estimatedQuantity="5" />
            
-            <!--Add new Item In Inventory in InventoryItem entity-->
-            <InventoryItem inventoryItemId="01" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Box" facilityId="WebStoreWarehouse" unitCost="1000" currencyUomId="USD" quantityOnHandTotal="200" availableToPromiseTotal="200"/>
-            <InventoryItem inventoryItemId="02" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Button" facilityId="WebStoreWarehouse" unitCost="1000" currencyUomId="USD" quantityOnHandTotal="500" availableToPromiseTotal="500"/>              
-             <InventoryItem inventoryItemId="03" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Button" facilityId="WebStoreWarehouse" unitCost="1000" currencyUomId="USD" quantityOnHandTotal="500" availableToPromiseTotal="500"/>
-            <InventoryItem inventoryItemId="04" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Button" facilityId="WebStoreWarehouse" unitCost="1000" currencyUomId="USD" quantityOnHandTotal="200" availableToPromiseTotal="200"/>
+    <!--Add new Item In Inventory in InventoryItem and InventoryItemDetail entity-->
+    <InventoryItem inventoryItemId="1001" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Box" facilityId="WebStoreWarehouse" unitCost="10" currencyUomId="USD"/>
+    <InventoryItemDetail inventoryItemId="1001" inventoryItemDetailSeqId="00001" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="2000" availableToPromiseDiff="2000" accountingQuantityDiff="2000"/>
+    
+    <InventoryItem inventoryItemId="1002" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Button" facilityId="WebStoreWarehouse" unitCost="11" currencyUomId="USD"/>              
+    <InventoryItemDetail inventoryItemId="1002" inventoryItemDetailSeqId="00001" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="5000" availableToPromiseDiff="5000" accountingQuantityDiff="5000"/>
+    
+    <InventoryItem inventoryItemId="1003" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Plug" facilityId="WebStoreWarehouse" unitCost="12" currencyUomId="USD"/>
+    <InventoryItemDetail inventoryItemId="1003" inventoryItemDetailSeqId="00001" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="5000" availableToPromiseDiff="5000" accountingQuantityDiff="5000"/>
+    
+    <InventoryItem inventoryItemId="1004" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Raw_Wirs" facilityId="WebStoreWarehouse" unitCost="5" currencyUomId="USD"/>
+    <InventoryItemDetail inventoryItemId="1004" inventoryItemDetailSeqId="00001" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="2000" availableToPromiseDiff="2000" accountingQuantityDiff="2000"/>
 
-              <!-- Add new item in InventoryItemDetail -->
-            <InventoryItemDetail inventoryItemId="01" inventoryItemDetailSeqId="INVIDSI1" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="200" availableToPromiseDiff="200" accountingQuantityDiff="200"/>
-            <InventoryItemDetail inventoryItemId="02" inventoryItemDetailSeqId="INVIDSI2" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="500" availableToPromiseDiff="500" accountingQuantityDiff="500"/>
-            <InventoryItemDetail inventoryItemId="03" inventoryItemDetailSeqId="INVIDSI3" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="500" availableToPromiseDiff="500" accountingQuantityDiff="500"/>
-            <InventoryItemDetail inventoryItemId="04" inventoryItemDetailSeqId="INVIDSI4" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="500" availableToPromiseDiff="200" accountingQuantityDiff="200"/>
-
-            <!-- Production run creating record in InventoryItemDetail entity -->
-
-            <InventoryItemDetail inventoryItemId="01" inventoryItemDetailSeqId="INVIDSI11" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-2" availableToPromiseDiff="-2" accountingQuantityDiff="0" workEffortId="9999" />
-            <InventoryItemDetail inventoryItemId="02" inventoryItemDetailSeqId="INVIDSI12" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-5" availableToPromiseDiff="-5" accountingQuantityDiff="0" workEffortId="9999" />
-            <InventoryItemDetail inventoryItemId="03" inventoryItemDetailSeqId="INVIDSI13" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-3" availableToPromiseDiff="-3" accountingQuantityDiff="0" workEffortId="9999" />
-            <InventoryItemDetail inventoryItemId="04" inventoryItemDetailSeqId="INVIDSI14" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-1" availableToPromiseDiff="-1" accountingQuantityDiff="0" workEffortId="9999" />
+    <!-- Production run creating record in InventoryItemDetail entity -->
+    <WorkEffortInventoryAssign workEffortId="1001" inventoryItemId="1001" quantity="25" />
+    <InventoryItemDetail inventoryItemId="1001" inventoryItemDetailSeqId="00002" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-5" availableToPromiseDiff="-5" accountingQuantityDiff="-5" workEffortId="1001" />
+    
+    <WorkEffortInventoryAssign workEffortId="1001" inventoryItemId="1002" quantity="50" />
+    <InventoryItemDetail inventoryItemId="1002" inventoryItemDetailSeqId="00002" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-50" availableToPromiseDiff="-50" accountingQuantityDiff="-50" workEffortId="1001" />
+    
+    <WorkEffortInventoryAssign workEffortId="1001" inventoryItemId="1003" quantity="50" />
+    <InventoryItemDetail inventoryItemId="1003" inventoryItemDetailSeqId="00002" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-50" availableToPromiseDiff="-50" accountingQuantityDiff="-50" workEffortId="1001" />
+    
+    <WorkEffortInventoryAssign workEffortId="1001" inventoryItemId="1004" quantity="5" />
+    <InventoryItemDetail inventoryItemId="1004" inventoryItemDetailSeqId="00002" effectiveDate="2022-02-22 02:12:00" quantityOnHandDiff="-5" availableToPromiseDiff="-5" accountingQuantityDiff="-5" workEffortId="1001" />
         
-            <!-- Creating record for assigning material to a Production Run from inventory-->
-           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="01" quantity="100" />
-           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="02" quantity="500" />
-           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="03" quantity="500" />
-           <WorkEffortInventoryAssign workEffortId="9999" inventoryItemId="04" quantity="20" />
             
-           <!-- Created WorkEffortStatus and Insert Data -->
-           <WorkEffortStatus workEffortId="9999" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
-           <WorkEffortStatus workEffortId="9999" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
-           <WorkEffortStatus workEffortId="9999" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
-           <WorkEffortStatus workEffortId="9999" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
-           <WorkEffortStatus workEffortId="9999" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
-           
-           <WorkEffortStatus workEffortId="1001" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
-           <WorkEffortStatus workEffortId="1001" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
-           <WorkEffortStatus workEffortId="1001" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
-           <WorkEffortStatus workEffortId="1001" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
-           <WorkEffortStatus workEffortId="1001" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
-           
-           <WorkEffortStatus workEffortId="1002" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
-           <WorkEffortStatus workEffortId="1002" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
-           <WorkEffortStatus workEffortId="1002" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
-           <WorkEffortStatus workEffortId="1002" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
-           <WorkEffortStatus workEffortId="1002" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+    <!--variableCost is (per MilliSeconds=60000) -->
+    <CostComponentCalc costComponentCalcId="COST_CALC_1" description="Indirect Cost Electric Box"  currencyUomId="USD" fixedCost="100" variableCost="200" perMilliSecond="60000"/>
+    <WorkEffortCostCalc workEffortId="1001" costComponentTypeId="OTHER_COST" costComponentCalcId="COST_CALC_1" fromDate="2022-02-21 2:45:00" />
 
-           <WorkEffortStatus workEffortId="1003" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
-           <WorkEffortStatus workEffortId="1003" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
-           <WorkEffortStatus workEffortId="1003" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
-           <WorkEffortStatus workEffortId="1003" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
-           <WorkEffortStatus workEffortId="1003" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
-           
-           <WorkEffortStatus workEffortId="1004" statusId="PRUN_CREATED" statusDatetime="2022-02-23 12:15:00" />
-           <WorkEffortStatus workEffortId="1004" statusId="PRUN_DOC_PRINTED" statusDatetime="2022-02-23 12:16:00" />
-           <WorkEffortStatus workEffortId="1004" statusId="PRUN_RUNNING" statusDatetime="2022-02-23 12:17:00" />
-           <WorkEffortStatus workEffortId="1004" statusId="PRUN_COMPLETED" statusDatetime="2022-02-23 12:18:00"/>
-           <WorkEffortStatus workEffortId="1004" statusId="PRUN_CLOSED" statusDatetime="2022-02-23 12:19:00"/>
+    <!-- General Cost for the finished product -->
+    <CostComponentCalc costComponentCalcId="GEN_COST_CALC_2" description="Cost For preparing Electric Box" currencyUomId="USD" fixedCost="50"/>
+    <ProductCostComponentCalc productId="Demo_ElectricBoard" costComponentTypeId="GEN_COST" costComponentCalcId="GEN_COST_CALC" fromDate="2022-02-21 00:03:09.0"/>
 
-           
+    <!-- Created CostComponent  -->
+    <CostComponent costComponentId="Cost_Component_1" costComponentTypeId="ACTUAL_MAT_COST" workEffortId="1001" cost="1225" costUomId="USD" />
+    <CostComponent costComponentId="Cost_Component_2" costComponentTypeId="ACTUAL_OTHER_COST" workEffortId="1001" cost="1300" costUomId="USD" />
+    <CostComponent costComponentId="Cost_Component_3" costComponentTypeId="ACTUAL_GEN_COST" workEffortId="9999" cost="50" costUomId="USD" />
 
-           <!--variableCost is (per MilliSeconds=60000) -->
-           <CostComponentCalc costComponentCalcId="COST_CALC_1" description="Indirect Cost Electric Box"  currencyUomId="USD" fixedCost="100" variableCost="200" perMilliSecond="60000"/>
-           <WorkEffortCostCalc workEffortId="9999" costComponentTypeId="OTHER_COST" costComponentCalcId="COST_CALC_1" fromDate="2022-02-21 2:45:00" />
-
-           <!-- General Cost for the finished product -->
-          <CostComponentCalc costComponentCalcId="GEN_COST_CALC_2" description="Cost For preparing Electric Box" currencyUomId="USD" fixedCost="50" costCustomMethodId="PROD_PERC_FORMULA"/>
-          <ProductCostComponentCalc productId="PROD_MANUF" costComponentTypeId="GEN_COST" costComponentCalcId="GEN_COST_CALC" fromDate="2022-02-21 00:03:09.0"/>
-
-          <!-- Created CostComponent  -->
-          <CostComponent costComponentId="Cost_Component_1" costComponentTypeId="ACTUAL_MAT_COST" workEffortId="9999" cost="2450" costUomId="USD" />
-          <CostComponent costComponentId="Cost_Component_2" costComponentTypeId="GEN_COST" workEffortId="9999" cost="1300" costUomId="USD" />
-
-          <!-- Created InventoryItem and  InventoryItemDetail for Electric Board -->
-          <InventoryItem inventoryItemId="05" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Demo_ElectricBoard" datetimeReceived="2022-02-23 05:00:00" datetimeManufactured="2022-02-23 05:00:00" facilityId="WebStoreWarehouse" quantityOnHandTotal="200" availableToPromiseTotal="200" accountingQuantityTotal="200" unitCost="2450" currencyUomId="USD" />
-          <InventoryItemDetail inventoryItemId="05" inventoryItemDetailSeqId="INVIDSI15" effectiveDate="2021-09-02 09:00:00" quantityOnHandDiff="200" accountingQuantityTotal="200" accountingQuantityDiff="200" />
+    <!-- Created InventoryItem and  InventoryItemDetail for Electric Board -->
+    <InventoryItem inventoryItemId="1005" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Demo_ElectricBoard" datetimeReceived="2022-02-23 05:00:00" datetimeManufactured="2022-02-23 05:00:00" facilityId="WebStoreWarehouse" quantityOnHandTotal="5" availableToPromiseTotal="5" accountingQuantityTotal="5" unitCost="515" currencyUomId="USD" />
+    <InventoryItemDetail inventoryItemId="1005" inventoryItemDetailSeqId="00001" effectiveDate="2021-09-02 09:00:00" quantityOnHandDiff="5" availableToPromiseDiff="5" accountingQuantityDiff="5" workEffortId="9999"/>
       
-          <!-- Added WorkEffortInventoryProduced  -->
-          <WorkEffortInventoryProduced workEffortId="9999" inventoryItemId="05" />
-      
-  
-  </entity-engine-xml>
+    <!-- Added WorkEffortInventoryProduced  -->
+    <WorkEffortInventoryProduced workEffortId="9999" inventoryItemId="1005" />
+</entity-engine-xml>
