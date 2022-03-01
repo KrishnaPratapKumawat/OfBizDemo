@@ -25,7 +25,8 @@
                         <td width="2%"></td>
                         <td width="83%">
                             <#list statusItems as statusItem >
-                            <input type="checkbox" name="currentStatusId" value="${statusItem.statusId!}"/>${statusItem.description!}
+                            <input type="checkbox" name="currentStatusId"  value="${statusItem.description!}" checked="${statusItem.statusId!}"/>
+                            ${statusItem.description!}
                         </#list>
                         </td>
                     </tr>

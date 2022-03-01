@@ -74,7 +74,7 @@
             </widgets>
         </section>
     </screen>
-<!--    CreateProductionRun Screen-->
+    <!--    CreateProductionRun Screen-->
 
     <screen name="CreateProduction">
         <section>
@@ -103,7 +103,7 @@
             </widgets>
         </section>
     </screen>
-<!--        FindProductionRun-->
+    <!--        FindProductionRun-->
     <screen name="FindProductionRun">
         <section>
             <actions>

@@ -50,7 +50,7 @@
         <field name="lastName" title="${uiLabelMap.OfbizDemoLastName}" sort-field="true"><display/></field>
         <field name="comments" title="${uiLabelMap.OfbizDemoComment}"><display/></field>
     </form>
-<!--        CreateProductionForm-->
+    <!--        CreateProductionForm-->
     <form name="CreateProduction" type="single" default-entity-name="WorkEffort" target="createProduction">
         <field name="productId" title="${uiLabelMap.ProductId}"><lookup target-form-name="LookupProduct" /></field>
         <field name="pRQuantity" title="${uiLabelMap.prQuantity}"><text/></field>

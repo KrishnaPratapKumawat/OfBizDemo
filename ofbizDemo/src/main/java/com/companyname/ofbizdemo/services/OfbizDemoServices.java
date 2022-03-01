@@ -33,27 +33,29 @@ public class OfbizDemoServices {
         }
         return result;
     }
-    public static Map<String, Object> createProduction(DispatchContext dctx, Map<String, ? extends Object> context) {
-        Debug.log("+++++++++++++++++++++++++++++++");
-        Map<String,Object> result = ServiceUtil.returnSuccess();
-        GenericValue userLogin = (GenericValue) context.get("userlogin");
-        LocalDispatcher localDispatcher = dctx.getDispatcher();
-        try{
-            Map<String, Object> createProductionRunMap = dctx.getModelService("createProduction").makeValid(context, ModelService.IN_PARAM);
-            createProductionRunMap.put("userLogin", userLogin);
-            Map<String,Object> resultMap = localDispatcher.runSync("createProduction",createProductionRunMap);
-            if (ServiceUtil.isError(resultMap)){
-                return ServiceUtil.returnError(ServiceUtil.getErrorMessage(resultMap));
-            }
-            String productionRunId = (String) resultMap.get("productionRunId");
-            result.put("productionRunId",productionRunId);
+    public static Map<String, Object> createProductionRunJava(DispatchContext dctx,
+                                                              Map<String, ? extends Object> context) {
+        Map<String, Object> result = ServiceUtil.returnSuccess();
+        GenericValue userLogin = (GenericValue) context.get("userLogin");
+        LocalDispatcher dispatcher = dctx.getDispatcher();
 
-        }catch (GenericServiceException e) {
+        try {
+            Map<String, Object> createProductionRunMap = new HashMap<>();
+            createProductionRunMap = dctx.getModelService("createProductionRun").makeValid(context,
+                    ModelService.IN_PARAM);
+            Map<String, Object> resultsMap = dispatcher.runSync("createProductionRun",
+                    createProductionRunMap);
+            if (ServiceUtil.isError(resultsMap)) {
+//                Debug.logInfo(ServiceUtil.getErrorMessage(resultsMap), module);
+                return ServiceUtil.returnError(ServiceUtil.getErrorMessage(resultsMap));
+            }
+            String productionRunId = (String) resultsMap.get("productionRunId");
+            result.put("productionRunId", productionRunId);
+        } catch (GenericServiceException e) {
             Debug.log(e, module);
-            Debug.log("+++++++++++++++++++++++++++++++");
-            return ServiceUtil.returnError("Error creating record......"+module);
+            return ServiceUtil.returnError("Error in creating record in WorkEffort entity ........" +
+                    module);
         }
         return result;
-
     }
 }
