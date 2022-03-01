@@ -38,4 +38,8 @@
     <property key="FindProductionRun">
         <value xml:lang="en">Find Production Run</value>
     </property>
+
+       <property key="CreateProductionRunJava">
+        <value xml:lang="en">Create Production Run Java</value>
+    </property>
 </resource>

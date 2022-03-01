@@ -103,6 +103,11 @@ under the License.
         <response name="success" type="view" value="FindOfbizDemo" />
     </request-map>
 
+    <request-map uri="CreateProductionRunJavaScreen">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="CreateProductionRunJavaScreen"/>
+    </request-map>
+
     <!--View Mapping-->
     <view-map name="AddOfbizDemoFtl" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#AddOfbizDemoFtl" />
     <view-map name="FindOfbizDemo" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindOfbizDemo" />
@@ -111,4 +116,5 @@ under the License.
     <view-map name="LookupProduct" type="screen" page="component://product/widget/catalog/LookupScreens.xml#LookupProduct" />
     <view-map name="LookupRouting" type="screen" page="component://manufacturing/widget/manufacturing/LookupScreens.xml#LookupRouting" />
     <view-map name="FindProductionRun" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindProductionRun" />
+    <view-map name="CreateProductionRunJavaScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunJava"/>
 </site-conf>

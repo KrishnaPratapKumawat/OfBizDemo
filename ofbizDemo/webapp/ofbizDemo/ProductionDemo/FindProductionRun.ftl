@@ -1,6 +1,6 @@
 <div>
     <h1>Find Production Run</h1>
-    <a href="<@ofbizUrl>CreateProduction</@ofbizUrl>" target="_blank"><button>Create a  Production Run</button></a>
+    <a href="<@ofbizUrl>createProduction</@ofbizUrl>" target="_blank"><button>Create a  Production Run</button></a>
     <br>
     <br>
 </div>
