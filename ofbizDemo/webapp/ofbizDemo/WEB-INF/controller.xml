@@ -56,7 +56,7 @@ under the License.
 
     <request-map uri="createOfbizDemoEvent">
         <security https="true" auth="true" />
-        <event type="java" path="com.companyname.ofbizdemo.Events.OfbizDemoEvents" invoke="createOfbizDemoEvent" />
+        <event type="java" path="com.companyname.ofbizdemo.Event.OfbizDemoEvents" invoke="createProductionRunEvent" />
         <response name="success" type="view" value="main" />
         <response name="error" type="view" value="main" />
     </request-map>
@@ -108,6 +108,41 @@ under the License.
         <response name="success" type="view" value="CreateProductionRunJavaScreen"/>
     </request-map>
 
+    <request-map uri="CreateProductionRunGroovyScreen">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="CreateProductionRunGroovyScreen"/>
+    </request-map>
+
+    <request-map uri="CreateProductionRunEventScreen">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="CreateProductionRunEventScreen"/>
+    </request-map>
+
+    <request-map uri="createProductionRunJavaService">
+        <security https="true" auth="true"/>
+        <event type="service" invoke="createProductionRunJavaService"/>
+        <response name="success" type="request-redirect" value="FindProductionRun">
+            <redirect-parameter name="workEffortId" from="productionRunId"/>
+        </response>
+        <response name="error" type="view" value="CreateProductionRunJavaScreen"/>
+    </request-map>
+
+    <request-map uri="createProductionRunGroovyService">
+        <security https="true" auth="true"/>
+        <event type="service" invoke="createProductionRunGroovyService"/>
+        <response name="success" type="request-redirect" value="FindProductionRun" >
+            <redirect-parameter name="workEffortId" from="productionRunId" />
+        </response>
+        <response name="error" type="view" value="CreateProductionRunGroovyScreen"/>
+    </request-map>
+    <request-map uri="createProductionRunEvent">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.companyname.ofbizdemo.Event.OfbizDemoEvents" invoke="createProductionRunEvent"/>
+        <response name="success" type="request-redirect" value="FindProductionRun" >
+            <redirect-parameter name="workEffortId" from="productionRunId"/>
+        </response>
+        <response name="error" type="view" value="CreateProductionRunEventScreen"/>
+    </request-map>
     <!--View Mapping-->
     <view-map name="AddOfbizDemoFtl" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#AddOfbizDemoFtl" />
     <view-map name="FindOfbizDemo" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindOfbizDemo" />
@@ -117,4 +152,7 @@ under the License.
     <view-map name="LookupRouting" type="screen" page="component://manufacturing/widget/manufacturing/LookupScreens.xml#LookupRouting" />
     <view-map name="FindProductionRun" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindProductionRun" />
     <view-map name="CreateProductionRunJavaScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunJava"/>
+    <view-map name="CreateProductionRunGroovyScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunGroovy"/>
+    <view-map name="CreateProductionRunEventScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunEvent"/>
+
 </site-conf>

@@ -102,8 +102,7 @@
                         </screenlet>
                     </decorator-section>
                 </decorator-screen>
-            </widgets>
-            <widgets>
+
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
                         <screenlet title="${uiLabelMap.CreateProduction}">
@@ -156,7 +155,7 @@
         <section>
             <actions>
                 <set field="titleProperty" value="CreateProductionRunjava"/>
-                <set field="headerItem" value="createproductionRunJava"/>
+                <set field="headerItem" value="createProductionRunJava"/>
                 <entity-and entity-name="Facility" list="facilities"/>
             </actions>
             <widgets>
@@ -167,6 +166,48 @@
                                 <html-template
                                         location="component://ofbizDemo/webapp/ofbizDemo/ProductionDemo/CreateProductionRunJava.ftl"/>
                             </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="CreateProductionRunGroovy">
+        <section>
+            <actions>
+                <set field="titleProperty" value="CreateProductionRunGroovy"/>
+                <set field="headerItem" value="CreateProductionRunGroovy"/>
+                <entity-and entity-name="Facility" list="facilities"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html>
+                                <html-template
+                                        location="component://ofbizDemo/webapp/ofbizDemo/ProductionDemo/CreateProductionRunGroovy.ftl"/>
+                            </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="CreateProductionRunEvent">
+        <section>
+            <actions>
+                <set field="titleProperty" value="CreateProductionRunEvent"/>
+                <set field="headerItem" value="createProductionRunEvent" />
+                <entity-and entity-name="Facility" list="facilities">
+                </entity-and>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/ProductionDemo/CreateProductionRunEvent.ftl"/></html>
                         </platform-specific>
                     </decorator-section>
                 </decorator-screen>

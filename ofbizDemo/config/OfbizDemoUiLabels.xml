@@ -42,4 +42,10 @@
        <property key="CreateProductionRunJava">
         <value xml:lang="en">Create Production Run Java</value>
     </property>
+    <property key="CreateProductionRunGroovy">
+        <value xml:lang="en">Create Production Run Groovy</value>
+    </property>
+    <property key="CreateProductionRunEvent">
+        <value xml:lang="en">Create Production Run  Event</value>
+    </property>
 </resource>

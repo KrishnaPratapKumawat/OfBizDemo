@@ -7,7 +7,9 @@
         <menu-item name="addOfbizDemoFtl" title="${uiLabelMap.OfbizDemoAddFtl}"><link target="AddOfbizDemoFtl"/></menu-item>
         <menu-item name="CreateProduction" title="${uiLabelMap.CreateProduction}"><link target="CreateProduction"/></menu-item>
         <menu-item name="FindProductionRun" title="${uiLabelMap.FindProductionRun}"><link target="FindProductionRun"/></menu-item>
-        <menu-item name="createproductionRunJava" title="${uiLabelMap.CreateProductionRunJava}" ><link target="CreateProductionRunJavaScreen" /></menu-item>
+        <menu-item name="createProductionRunJava" title="${uiLabelMap.CreateProductionRunJava}" ><link target="CreateProductionRunJavaScreen"/></menu-item>
+        <menu-item name="CreateProductionRunGroovy" title="${uiLabelMap.CreateProductionRunGroovy}" ><link target="CreateProductionRunGroovyScreen"/></menu-item>
+        <menu-item name="createProductionRunEvent" title="${uiLabelMap.CreateProductionRunEvent}" ><link target="CreateProductionRunEventScreen" /></menu-item>
 
     </menu>
 
