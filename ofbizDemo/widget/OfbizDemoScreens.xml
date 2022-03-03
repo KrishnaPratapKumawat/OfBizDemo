@@ -102,15 +102,6 @@
                         </screenlet>
                     </decorator-section>
                 </decorator-screen>
-
-                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
-                    <decorator-section name="body">
-                        <screenlet title="${uiLabelMap.CreateProduction}">
-                            <include-form name="CreateProduction"
-                                          location="component://ofbizDemo/widget/OfbizDemoForms.xml"/>
-                        </screenlet>
-                    </decorator-section>
-                </decorator-screen>
             </widgets>
         </section>
     </screen>
@@ -121,9 +112,7 @@
                 <set field="headerItem" value="FindProductionRun"/>
                 <set field="titleProperty" value="findProductionRun"/>
 
-                <entity-and entity-name="Facility" list="facilities">
-                    <field-map field-name="facilityId"/>
-                </entity-and>
+                <entity-and entity-name="Facility" list="facilities"></entity-and>
                 <entity-and entity-name="StatusItem" list="statusItems">
                     <field-map field-name="statusTypeId" value="PRODUCTION_RUN"/>
                 </entity-and>
@@ -156,7 +145,8 @@
             <actions>
                 <set field="titleProperty" value="CreateProductionRunjava"/>
                 <set field="headerItem" value="createProductionRunJava"/>
-                <entity-and entity-name="Facility" list="facilities"/>
+                <entity-and entity-name="Facility" list="facilities"></entity-and>
+
             </actions>
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
@@ -178,7 +168,10 @@
             <actions>
                 <set field="titleProperty" value="CreateProductionRunGroovy"/>
                 <set field="headerItem" value="CreateProductionRunGroovy"/>
-                <entity-and entity-name="Facility" list="facilities"/>
+                <entity-and entity-name="Facility" list="facilities">
+<!--                    <field-map field-name="facilityId"></field-map>-->
+                </entity-and>
+
             </actions>
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
@@ -186,7 +179,7 @@
                         <platform-specific>
                             <html>
                                 <html-template
-                                        location="component://ofbizDemo/webapp/ofbizDemo/ProductionDemo/CreateProductionRunGroovy.ftl"/>
+                                    location="component://ofbizDemo/webapp/ofbizDemo/ProductionDemo/CreateProductionRunGroovy.ftl"/>
                             </html>
                         </platform-specific>
                     </decorator-section>
@@ -200,8 +193,7 @@
             <actions>
                 <set field="titleProperty" value="CreateProductionRunEvent"/>
                 <set field="headerItem" value="createProductionRunEvent" />
-                <entity-and entity-name="Facility" list="facilities">
-                </entity-and>
+                <entity-and entity-name="Facility" list="facilities"></entity-and>
             </actions>
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">

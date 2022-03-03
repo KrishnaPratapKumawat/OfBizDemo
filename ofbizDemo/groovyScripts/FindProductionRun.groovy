@@ -18,7 +18,9 @@ condition = exprBuilder.AND() {
     }
     if (parameters.facilityId) {
         EQUALS(facilityId: parameters.facilityId)
+
     }
+
 
 }
 
@@ -31,5 +33,6 @@ workEffortAndGoods.each {
         statusItem = from("StatusItem").where(statusId: workEffortAndGood.currentStatusId).queryOne()
         workEffort.statusDescription = statusItem.description
         workEfforts.add(workEffort)
+
 }
 context.productionRunList = workEfforts

@@ -32,7 +32,7 @@
                     <td width="83%">
                         <select name="facilityId">
                             <#list facilities as facility>
-                            <option value="${facility.facilityId!}">${facility.facilityName}[${facility.facilityId}]</option>
+                            <option value="${facility.facilityId!}" <#if parameters.facilityId?has_content && parameters.facilityId == facility.facilityId>selected</#if>>${facility.facilityName}[${facility.facilityId}]</option>
                         </#list>
                         </select>
                     </td>
@@ -64,3 +64,5 @@
     </div>
 
 </div>
+
+

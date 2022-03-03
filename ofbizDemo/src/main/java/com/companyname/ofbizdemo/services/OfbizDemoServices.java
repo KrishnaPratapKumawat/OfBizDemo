@@ -1,13 +1,12 @@
 package com.companyname.ofbizdemo.services;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.apache.ofbiz.base.util.Debug;
 import org.apache.ofbiz.entity.Delegator;
 import org.apache.ofbiz.entity.GenericEntityException;
 import org.apache.ofbiz.entity.GenericValue;
 import org.apache.ofbiz.service.*;
-import org.apache.sis.util.Static;
+
 
 public class OfbizDemoServices {
 

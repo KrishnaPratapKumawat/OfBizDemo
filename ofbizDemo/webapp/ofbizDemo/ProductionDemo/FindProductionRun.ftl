@@ -1,9 +1,12 @@
 <div>
-    <h1>Find Production Run</h1>
-    <a href="<@ofbizUrl>createProduction</@ofbizUrl>" target="_blank"><button>Create a  Production Run</button></a>
-    <br>
-    <br>
+    <ul>
+        <li class="h1">${uiLabelMap.FindProductionRun}</li>
+    </ul>
+    <a href="<@ofbizUrl>CreateProduction</@ofbizUrl>" target="_blank">
+        <button>Create a Production Run</button>
+    </a>
 </div>
+<br/>
 <div class="screenlet">
     <div class="screenlet-title-bar">
         <ul>
@@ -25,7 +28,7 @@
                         <td width="2%"></td>
                         <td width="83%">
                             <#list statusItems as statusItem >
-                            <input type="checkbox" name="currentStatusId"  value="${statusItem.description!}" checked="${statusItem.statusId!}"/>
+                        <input type="checkbox" name="currentStatusId"  value="${statusItem.description!}" <#if parameters.currentStatusId?has_content && statusItem.statusId.contains(parameters.currentStatusId)>checked</#if>/>
                             ${statusItem.description!}
                         </#list>
                         </td>

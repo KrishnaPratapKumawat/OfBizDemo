@@ -6,12 +6,12 @@
         <br/>
     </div>
     <div class="screenlet-body">
-        <form name="CreateProductionRunGroovy" method="post" action="<@ofbizUrl>createProductionRunGroovy</@ofbizUrl>">
+        <form name="CreateProductionRunFromByJava" method="post" action="<@ofbizUrl>createProductionRunJavaService</@ofbizUrl>">
             <table width="100%">
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.ProductId}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><@htmlTemplate.lookupField value="" formName="CreateProductionRunGroovy" name="productId" id="productId" fieldFormName="LookupProduct"/></td>
+                    <td width="83%"><@htmlTemplate.lookupField value="" formName="CreateProductionRunFromByJava" name="productId" id="productId" fieldFormName="LookupProduct"/></td>
 
                 </tr>
                 <tr>
@@ -38,7 +38,7 @@
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.RoutingId}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><@htmlTemplate.lookupField value="${routingId!}" formName="CreateProductionRunGroovy" name="routingtId" id="routingId" fieldFormName="LookupRouting"/></td>
+                    <td width="83%"><@htmlTemplate.lookupField value="${routingId!}" formName="CreateProductionRunFromByJava" name="routingtId" id="routingId" fieldFormName="LookupRouting"/></td>
                     <!--                    <td width="83%"><input type="text"/></td>-->
                 </tr>
                 <tr>

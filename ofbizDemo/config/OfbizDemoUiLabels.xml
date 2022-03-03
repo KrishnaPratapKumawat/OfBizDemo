@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-properties.xsd">
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-properties.xsd">
     <property key="OfbizDemoApplication">
         <value xml:lang="en">OfbizDemo Application</value>
         <value xml:lang="zh">OfbizDemo应用程�?</value>
@@ -38,14 +39,49 @@
     <property key="FindProductionRun">
         <value xml:lang="en">Find Production Run</value>
     </property>
-
-       <property key="CreateProductionRunJava">
+    <property key="CreateProductionRunJava">
         <value xml:lang="en">Create Production Run Java</value>
     </property>
     <property key="CreateProductionRunGroovy">
         <value xml:lang="en">Create Production Run Groovy</value>
     </property>
     <property key="CreateProductionRunEvent">
-        <value xml:lang="en">Create Production Run  Event</value>
+        <value xml:lang="en">Create Production Run Event</value>
+    </property>
+    <property key="ProductionRunId">
+        <value xml:lang="en">Production Run ID</value>
+    </property>
+    <property key="Status">
+        <value xml:lang="en">Status</value>
+    </property>
+    <property key="ProductId">
+        <value xml:lang="en">Product ID</value>
+    </property>
+    <property key="ProductionRunName">
+        <value xml:lang="en">Production Run Name</value>
+    </property>
+    <property key="StartDate">
+        <value xml:lang="en">Start Date</value>
+    </property>
+    <property key="FacilityId">
+        <value xml:lang="en">Facility ID</value>
+    </property>
+    <property key="SearchOption">
+        <value xml:lang="en">Search Option</value>
+    </property>
+    <property key="SearchResult">
+        <value xml:lang="en">Search Result</value>
+    </property>
+    <property key="Description">
+        <value xml:lang="en">Description</value>
+    </property>
+    <property key="Status">
+        <value xml:lang="en">Status</value>
+    </property>
+    <property key="Quantity">
+        <value xml:lang="en">Quantity</value>
+    </property>
+    <property key="WorkEffortName">
+        <value xml:lang="en">Work Effort Name</value>
     </property>
 </resource>

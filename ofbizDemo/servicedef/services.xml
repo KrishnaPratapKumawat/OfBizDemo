@@ -55,8 +55,8 @@
         <attribute type="String" mode="OUT" name="productionRunId" optional="false"/>
     </service>
 
-    <service name="createProductionRunByGroovyService" engine="groovy"
-             location="component://ofbizDemo/groovyScripts/CreateProductionRun.groovy" invoke="createProductionRunGroovy"
+    <service name="createProductionRunGroovyService" engine="groovy"
+             location="component://ofbizDemo/groovyScripts/ ofbizDemo/CreateProductionRunGroovy.groovy" invoke="createProductionRunGroovy"
              auth="true">
         <description>Create a production run service in Groovy</description>
         <attribute type="String" mode="IN" name="productId" optional="false"/>
