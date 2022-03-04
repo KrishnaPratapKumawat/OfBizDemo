@@ -1,6 +1,6 @@
 import org.apache.ofbiz.entity.GenericEntityException
 import org.apache.ofbiz.entity.GenericValue
-import org.apache.ofbiz.service.ServiceUtil
+
 
 def createProductionRunGroovy() {
 

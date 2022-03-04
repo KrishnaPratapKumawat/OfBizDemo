@@ -143,6 +143,19 @@ under the License.
         </response>
         <response name="error" type="view" value="CreateProductionRunEventScreen"/>
     </request-map>
+
+    <request-map uri="EditProductionRun">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="EditProductionRun"/>
+    </request-map>
+    <request-map uri="updateProductionRun">
+        <security https="true" auth="true"/>
+        <event type="service" invoke="updateProductionRun"/>
+        <response name="success" type="view" value="EditProductionRun"/>
+        <response name="error" type="view" value="EditProductionRun"/>
+    </request-map>
+<!-- End Request Mapping-->
+
     <!--View Mapping-->
     <view-map name="AddOfbizDemoFtl" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#AddOfbizDemoFtl" />
     <view-map name="FindOfbizDemo" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindOfbizDemo" />
@@ -154,5 +167,6 @@ under the License.
     <view-map name="CreateProductionRunJavaScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunJava"/>
     <view-map name="CreateProductionRunGroovyScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunGroovy"/>
     <view-map name="CreateProductionRunEventScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunEvent"/>
+    <view-map name="EditProductionRun" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#EditProductionRun"/>
 
 </site-conf>

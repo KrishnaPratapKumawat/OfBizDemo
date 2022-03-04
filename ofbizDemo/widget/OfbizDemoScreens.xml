@@ -169,7 +169,6 @@
                 <set field="titleProperty" value="CreateProductionRunGroovy"/>
                 <set field="headerItem" value="CreateProductionRunGroovy"/>
                 <entity-and entity-name="Facility" list="facilities">
-<!--                    <field-map field-name="facilityId"></field-map>-->
                 </entity-and>
 
             </actions>
@@ -205,5 +204,56 @@
                 </decorator-screen>
             </widgets>
         </section>
+    </screen>
+<!--        Edit Screen Production-->
+    <screen name="EditProductionRun">
+    <section>
+    <actions>
+        <set field="titleProperty" value="EditProductionRun"/>
+        <set field="headerItem" value="EditProductionRun"/>
+        <entity-and entity-name="Facility" list="facilities"></entity-and>
+        <set field="viewIndex" from-field="parameters.VIEW_INDEX" type="Integer"/>
+        <set field="viewSizeDefaultValue" value="${groovy: modelTheme.getDefaultViewSize()}" type="Integer"/>
+        <set field="viewSize" from-field="parameters.VIEW_SIZE" type="Integer" default-value="${viewSizeDefaultValue}"/>
+        <script location="component://ofbizDemo/groovyScripts/editViewProductionRun.groovy"/>
+        <script location="component://ofbizDemo/groovyScripts/EditProductionRunAll.groovy"/>
+        <set field="productionRunId" from-field="parameters.productionRunId"/>
+        <entity-one entity-name="WorkEffort" value-field="productionRun">
+            <field-map field-name="workEffortId" from-field="productionRunId"/>
+        </entity-one>
+        <!-- Find all the work efforts that must be completed before this one. -->
+        <entity-condition entity-name="WorkEffortAssoc" list="mandatoryWorkEfforts">
+            <condition-list>
+                <condition-expr field-name="workEffortIdTo" from-field="productionRunId"/>
+                <condition-expr field-name="workEffortAssocTypeId" value="WORK_EFF_PRECEDENCY"/>
+            </condition-list>
+        </entity-condition>
+        <!-- Find all the work efforts that are dependent from this one. -->
+        <entity-condition entity-name="WorkEffortAssoc" list="dependentWorkEfforts">
+            <condition-list>
+                <condition-expr field-name="workEffortIdFrom" from-field="productionRunId"/>
+                <condition-expr field-name="workEffortAssocTypeId" value="WORK_EFF_PRECEDENCY"/>
+            </condition-list>
+        </entity-condition>
+    </actions>
+        <widgets>
+            <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+            <decorator-section name="body">
+                <platform-specific>
+
+                        <html>
+                            <html-template location="component://ofbizDemo/webapp/ofbizDemo/ProductionDemo/EditProductionRun.ftl"/>
+                        </html>
+                    </platform-specific>
+
+<!--                <screenlet title="${uiLabelMap.productionRunId}">-->
+<!--                    <include-form name="UpdateProductionRun" location="component://ofbizDemo/widget/OfbizDemoForms.xml"/>-->
+<!--                </screenlet>-->
+            </decorator-section>
+            </decorator-screen>
+        </widgets>
+
+
+    </section>
     </screen>
 </screens>

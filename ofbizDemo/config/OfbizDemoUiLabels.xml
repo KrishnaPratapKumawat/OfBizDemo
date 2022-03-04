@@ -57,7 +57,7 @@
     <property key="ProductId">
         <value xml:lang="en">Product ID</value>
     </property>
-    <property key="ProductionRunName">
+    <property key="productionRun">
         <value xml:lang="en">Production Run Name</value>
     </property>
     <property key="StartDate">
@@ -84,4 +84,30 @@
     <property key="WorkEffortName">
         <value xml:lang="en">Work Effort Name</value>
     </property>
+
+    <property key="EditProductionRun">
+        <value xml:lang="en">Edit Production Run</value>
+    </property>
+
+    <property key="estimatedStartDate">
+        <value xml:lang="en">Estimated Start Date</value>
+    </property>
+
+    <property key="estimatedCompletionDate">
+        <value xml:lang="en">Calculated Completion Date</value>
+    </property>
+
+    <property key="submitButton">
+        <value xml:lang="en">Update</value>
+    </property>
+
+    <property key="ProductName">
+        <value xml:lang="en">Product Name</value>
+    </property>
+
+    <property key="CurrentStatusId">
+        <value xml:lang="en">Current Status Id</value>
+    </property>
+
+
 </resource>
