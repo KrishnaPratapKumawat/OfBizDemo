@@ -52,8 +52,7 @@
                                 <option value="${facility.facilityId!}"
                                 <#if parameters.facilityId?has_content && parameters.facilityId ==
                                 facility.facilityId>selected</#if>>${facility.facilityName}[${facility.facilityId}]</option>
-                        </
-                        #list>
+                        </#list>
                         </select>
                         </td>
                     </tr>
@@ -96,10 +95,11 @@
                     <tr>
                         <td>
                             <a href="<@ofbizUrl>EditProductionRun</@ofbizUrl>" target="_blank">
-                                <button>Update</button>
+                                <button>Update</button></a>
                         </td>
                     </tr>
                 </table>
+            </form>
         </div>
     </div>
 </div>
