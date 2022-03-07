@@ -108,6 +108,8 @@
     <property key="CurrentStatusId">
         <value xml:lang="en">Current Status Id</value>
     </property>
-
+    <property key="createAProductionRun">
+        <value xml:lang="en">Create a Production Run</value>
+    </property>
 
 </resource>

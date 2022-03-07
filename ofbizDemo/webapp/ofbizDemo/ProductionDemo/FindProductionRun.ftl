@@ -63,7 +63,7 @@
                         <td width="15%" align="right">
                         <td width="2%"></td>
                         <td width="83%">
-                            <input type="submit" value="Find" />
+                            <input type="submit" value="${uiLabelMap.OfbizDemoFind}"/>
                         </td>
                     </tr>
                 </table>

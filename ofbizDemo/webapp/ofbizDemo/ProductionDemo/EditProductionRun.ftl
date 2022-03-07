@@ -13,26 +13,26 @@
             <br class="clear"/>
         </div>
         <br>
-        <div class="screenlet-body">
-            <div>
-                <button>Cancle</button>
-                <button>Quick CLose</button>
-                <button>Quick Complete</button>
-                <button>Confirm</button>
-                <button>Schedule</button>
-                <button>Link to Production Run</button>
-                <button>Printf(PDF)</button>
-            </div>
+<!--        <div class="screenlet-body">-->
+<!--            <div>-->
+<!--                <button>Cancle</button>-->
+<!--                <button>Quick CLose</button>-->
+<!--                <button>Quick Complete</button>-->
+<!--                <button>Confirm</button>-->
+<!--                <button>Schedule</button>-->
+<!--                <button>Link to Production Run</button>-->
+<!--                <button>Printf(PDF)</button>-->
+<!--            </div>-->
             <form name="EditProductionRun" method="post" action="<@ofbizUrl>updateProductionRun</@ofbizUrl>">
                 <table width="100%">
                     <tr>
-                        <td width="15%" align="right"><span class="label">${uiLabelMap.ProductName}</span></td>
+                        <td width="15%" align="right"><span class="label">${uiLabelMap.ProductName!}</span></td>
                         <td width="2%"></td>
-                        <td width="83%" align=""><span class="label"> ${productionRunData.productId}</span></td>
+                        <td width="83%" align=""><span class="label"> ${productionRunData.productId!}</span></td>
                     </tr>
 
                     <tr>
-                        <td width="15%" align="right"><span class="label">${uiLabelMap.CurrentStatusId}</span></td>
+                        <td width="15%" align="right"><span class="label">${uiLabelMap.CurrentStatusId!}</span></td>
                         <td width="2%"></td>
                         <td width="83%" align=""><span class="label"> ${productionRunData.currentStatusId}</span></td>
                     </tr>
@@ -64,9 +64,9 @@
                     <tr>
                         <td width="15%" align="right"><span class="label">${uiLabelMap.StartDate}</span></td>
                         <td width="2%"></td>
-                        <td width="83%" value="${productionRunData.estimatedStartDate}">
+                        <td width="83%" >
                             <@htmlTemplate.renderDateTimeField name="startDate" event="" action="" className="" alert=""
-                            title="Format: yyyy-MM-dd HH:mm:ss.SSS" value="${parameters.startDate!}" size=""
+                            title="Format: yyyy-MM-dd HH:mm:ss.SSS" value="${productionRunData.estimatedStartDate!}" size=""
                             maxlength="50"
                             id="fromDate_1" dateType="date" shortDateInput=false timeDropdownParamName=""
                             defaultDateTimeString=""
@@ -85,7 +85,7 @@
                     <tr>
                         <td width="15%" align="right"><span class="label">${uiLabelMap.productionRun}</span></td>
                         <td width="2%"></td>
-                        <td width="83%"><input type="text" value="${productionRunData.workEffortName}"/></td>
+                        <td width="83%"><input type="text" value="${productionRunData.workEffortName!}"/></td>
                     </tr>
                     <tr>
                         <td width="15%" align="right"><span class="label">${uiLabelMap.Description}</span></td>
@@ -94,7 +94,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <a href="<@ofbizUrl>EditProductionRun</@ofbizUrl>" target="_blank">
+                            <a href="<@ofbizUrl>FindProductionRun</@ofbizUrl>" target="_blank">
                                 <button>Update</button></a>
                         </td>
                     </tr>

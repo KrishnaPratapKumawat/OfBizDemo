@@ -29,11 +29,10 @@
         <override name="comments" optional="true"/>
     </service>
 <!--        This is a Production Screen Service-->
-    <service name="createProduction" engine="java"
-             location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProduction" auth="true">
-        <description>Create a production run service in java</description>
+    <service name="ProductionInterface" engine="interface">
+    <description>Interface to describe base parameters for  Calculation Services</description>
         <attribute type="String" mode="IN" name="productId" optional="false"/>
-        <attribute type="BigDecimal" mode="IN" name="Quantity" optional="false"/>
+        <attribute type="BigDecimal" mode="IN" name="quantity" optional="false"/>
         <attribute type="java.sql.Timestamp" mode="IN" name="startDate" optional="false"/>
         <attribute type="String" mode="IN" name="facilityId" optional="false"/>
         <attribute type="String" mode="IN" name="routingId" optional="true"/>
@@ -41,32 +40,23 @@
         <attribute type="String" mode="IN" name="description" optional="true"/>
         <attribute type="String" mode="OUT" name="productionRunId" optional="false"/>
     </service>
+    <service name="createProduction" engine="java"
+             location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProduction" auth="true">
+        <description>Create a production run service in java</description>
+        <implements service="ProductionInterface"/>
+    </service>
 
     <service name="createProductionRunJavaService" engine="java"
              location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProductionRunJava" auth="true">
         <description>Create a production run service in java</description>
-        <attribute type="String" mode="IN" name="productId" optional="false"/>
-        <attribute type="BigDecimal" mode="IN" name="pRQuantity" optional="false"/>
-        <attribute type="java.sql.Timestamp" mode="IN" name="startDate" optional="false"/>
-        <attribute type="String" mode="IN" name="facilityId" optional="false"/>
-        <attribute type="String" mode="IN" name="routingId" optional="true"/>
-        <attribute type="String" mode="IN" name="workEffortName" optional="true"/>
-        <attribute type="String" mode="IN" name="description" optional="true"/>
-        <attribute type="String" mode="OUT" name="productionRunId" optional="false"/>
+        <implements service="ProductionInterface"/>
     </service>
 
     <service name="createProductionRunGroovyService" engine="groovy"
              location="component://ofbizDemo/groovyScripts/ ofbizDemo/CreateProductionRunGroovy.groovy" invoke="createProductionRunGroovy"
              auth="true">
         <description>Create a production run service in Groovy</description>
-        <attribute type="String" mode="IN" name="productId" optional="false"/>
-        <attribute type="BigDecimal" mode="IN" name="pRQuantity" optional="false"/>
-        <attribute type="java.sql.Timestamp" mode="IN" name="startDate" optional="false"/>
-        <attribute type="String" mode="IN" name="facilityId" optional="false"/>
-        <attribute type="String" mode="IN" name="routingId" optional="true"/>
-        <attribute type="String" mode="IN" name="workEffortName" optional="true"/>
-        <attribute type="String" mode="IN" name="description" optional="true"/>
-        <attribute type="String" mode="OUT" name="productionRunId" optional="false"/>
+        <implements service="ProductionInterface"/>
     </service>
 
 </services>

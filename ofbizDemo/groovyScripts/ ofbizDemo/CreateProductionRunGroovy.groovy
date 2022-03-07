@@ -1,20 +1,20 @@
 import org.apache.ofbiz.entity.GenericEntityException
 import org.apache.ofbiz.entity.GenericValue
-
+import org.apache.ofbiz.service.ServiceUtil
 
 def createProductionRunGroovy() {
 
     Map result = success()
     createProductionRunMap = [:]
 
-    GenericValue userLogin = context.userLogin
-    String productId = context.productId
-    String pRQuantity = context.pRQuantity
-    String startDate = context.startDate
-    String facilityId = context.facilityId
-    String routingId = context.routingId
-    String workEffortName = context.workEffortName
-    String description = context.description
+    GenericValue userLogin = parameters.userLogin
+    productId = parameters.productId
+    pRQuantity = parameters.pRQuantity
+    startDate = parameters.startDate
+    facilityId = parameters.facilityId
+    routingId = parameters.routingId
+    workEffortName = parameters.workEffortName
+    description = parameters.description
 
 
     try {
