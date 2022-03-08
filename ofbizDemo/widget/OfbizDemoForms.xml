@@ -1,102 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns="http://ofbiz.apache.org/Widget-Form" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Form http://ofbiz.apache.org/dtds/widget-form.xsd">
-
+<forms xmlns="http://ofbiz.apache.org/Widget-Form" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Form http://ofbiz.apache.org/dtds/widget-form.xsd">
     <form name="AddOfbizDemo" type="single" target="createOfbizDemo">
         <!-- We have this utility in OFBiz to render form based on service definition.
-             Service attributes will automatically lookedup and will be shown on form
-        -->
-        <auto-fields-service service-name="createOfbizDemo"/>
+               Service attributes will automatically lookedup and will be shown on form
+          -->
+        <auto-fields-service service-name="createOfbizDemo" />
         <field name="ofbizDemoTypeId" title="${uiLabelMap.CommonType}">
             <drop-down allow-empty="false" current-description="">
                 <!---We have made this drop down options dynamic(Values from db) using this -->
                 <entity-options description="${description}" key-field-name="ofbizDemoTypeId" entity-name="OfbizDemoType">
-                    <entity-order-by field-name="description"/>
+                    <entity-order-by field-name="description" />
                 </entity-options>
             </drop-down>
         </field>
-        <field name="submitButton" title="${uiLabelMap.CommonAdd}"><submit button-type="button"/></field>
+        <field name="submitButton" title="${uiLabelMap.CommonAdd}">
+            <submit button-type="button" />
+        </field>
     </form>
     <form name="FindOfbizDemo" type="single" target="FindOfbizDemo" default-entity-name="OfbizDemo">
-        <field name="noConditionFind"><hidden value="Y"/> <!-- if this isn't there then with all fields empty no query will be done --></field>
-        <field name="ofbizDemoId" title="${uiLabelMap.OfbizDemoId}"><text-find/></field>
-        <field name="firstName" title="${uiLabelMap.OfbizDemoFirstName}"><text-find/></field>
-        <field name="lastName" title="${uiLabelMap.OfbizDemoLastName}"><text-find/></field>
+        <field name="noConditionFind">
+            <hidden value="Y" />
+            <!-- if this isn't there then with all fields empty no query will be done -->
+        </field>
+        <field name="ofbizDemoId" title="${uiLabelMap.OfbizDemoId}">
+            <text-find />
+        </field>
+        <field name="firstName" title="${uiLabelMap.OfbizDemoFirstName}">
+            <text-find />
+        </field>
+        <field name="lastName" title="${uiLabelMap.OfbizDemoLastName}">
+            <text-find />
+        </field>
         <field name="ofbizDemoTypeId" title="${uiLabelMap.OfbizDemoType}">
             <drop-down allow-empty="true" current-description="">
                 <entity-options description="${description}" key-field-name="ofbizDemoTypeId" entity-name="OfbizDemoType">
-                    <entity-order-by field-name="description"/>
+                    <entity-order-by field-name="description" />
                 </entity-options>
             </drop-down>
         </field>
-        <field name="searchButton" title="${uiLabelMap.CommonFind}" widget-style="smallSubmit"><submit button-type="button" image-location="/images/icons/magnifier.png"/></field>
+        <field name="searchButton" title="${uiLabelMap.CommonFind}" widget-style="smallSubmit">
+            <submit button-type="button" image-location="/images/icons/magnifier.png" />
+        </field>
     </form>
-
-    <form name="ListOfbizDemo" type="list" list-name="listIt" paginate-target="FindOfbizDemo" default-entity-name="OfbizDemo" separate-columns="true"
-          odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
+    <form name="ListOfbizDemo" type="list" list-name="listIt" paginate-target="FindOfbizDemo" default-entity-name="OfbizDemo" separate-columns="true" odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
         <actions>
             <!-- Preparing search results for user query by using OFBiz stock service to perform find operations on a single entity or view entity -->
             <service service-name="performFind" result-map="result" result-map-list="listIt">
-                <field-map field-name="inputFields" from-field="ofbizDemoCtx"/>
-                <field-map field-name="entityName" value="OfbizDemo"/>
-                <field-map field-name="orderBy" from-field="parameters.sortField"/>
-                <field-map field-name="viewIndex" from-field="viewIndex"/>
-                <field-map field-name="viewSize" from-field="viewSize"/>
+                <field-map field-name="inputFields" from-field="ofbizDemoCtx" />
+                <field-map field-name="entityName" value="OfbizDemo" />
+                <field-map field-name="orderBy" from-field="parameters.sortField" />
+                <field-map field-name="viewIndex" from-field="viewIndex" />
+                <field-map field-name="viewSize" from-field="viewSize" />
             </service>
         </actions>
-        <field name="ofbizDemoId" title="${uiLabelMap.OfbizDemoId}"><display/></field>
-        <field name="ofbizDemoTypeId" title="${uiLabelMap.OfbizDemoType}"><display-entity entity-name="OfbizDemoType"/></field>
-        <field name="firstName" title="${uiLabelMap.OfbizDemoFirstName}" sort-field="true"><display/></field>
-        <field name="lastName" title="${uiLabelMap.OfbizDemoLastName}" sort-field="true"><display/></field>
-        <field name="comments" title="${uiLabelMap.OfbizDemoComment}"><display/></field>
+        <field name="ofbizDemoId" title="${uiLabelMap.OfbizDemoId}">
+            <display />
+        </field>
+        <field name="ofbizDemoTypeId" title="${uiLabelMap.OfbizDemoType}">
+            <display-entity entity-name="OfbizDemoType" />
+        </field>
+        <field name="firstName" title="${uiLabelMap.OfbizDemoFirstName}" sort-field="true">
+            <display />
+        </field>
+        <field name="lastName" title="${uiLabelMap.OfbizDemoLastName}" sort-field="true">
+            <display />
+        </field>
+        <field name="comments" title="${uiLabelMap.OfbizDemoComment}">
+            <display />
+        </field>
     </form>
     <!--        CreateProductionForm-->
     <form name="CreateProduction" type="single" default-entity-name="WorkEffort" target="createProduction">
-        <field name="productId" title="${uiLabelMap.ProductId}"><lookup target-form-name="LookupProduct" /></field>
-        <field name="pRQuantity" title="${uiLabelMap.prQuantity}"><text/></field>
-        <field name="startDate" title="${uiLabelMap.StartDate}"><date-time/></field>
+        <field name="productId" title="${uiLabelMap.ProductId}">
+            <lookup target-form-name="LookupProduct" />
+        </field>
+        <field name="pRQuantity" title="${uiLabelMap.prQuantity}">
+            <text />
+        </field>
+        <field name="startDate" title="${uiLabelMap.StartDate}">
+            <date-time />
+        </field>
         <field name="facilityId" title="${uiLabelMap.FacilityId}">
             <drop-down allow-empty="false">
-                <entity-options description="${facilityName}[${facilityId}]" entity-name="Facility" key-field-name="facilityId">
-                </entity-options>
+                <entity-options description="${facilityName}[${facilityId}]" entity-name="Facility" key-field-name="facilityId" />
             </drop-down>
         </field>
-        <field name="routingId" title="${uiLabelMap.RoutingId}"><lookup target-form-name="LookupRouting" /></field>
-        <field name="WorkEffortName" title="${uiLabelMap.WorkEffortName}"><text/></field>
-        <field name="description" title="${uiLabelMap.Description}"><text/></field>
+        <field name="routingId" title="${uiLabelMap.RoutingId}">
+            <lookup target-form-name="LookupRouting" />
+        </field>
+        <field name="WorkEffortName" title="${uiLabelMap.WorkEffortName}">
+            <text />
+        </field>
+        <field name="description" title="${uiLabelMap.Description}">
+            <text />
+        </field>
         <field name="Create Dependent Production Runs" title="${uiLabelMap.CreateDependentProductionRuns}">
             <drop-down allow-empty="false">
-                <option key="N" description="${uiLabelMap.CommonNo}"/>
-                <option key="Y" description="${uiLabelMap.CommonYes}"/>
+                <option key="N" description="${uiLabelMap.CommonNo}" />
+                <option key="Y" description="${uiLabelMap.CommonYes}" />
             </drop-down>
         </field>
-        <field name="submitButton" title="Submit"><submit button-type="button"/></field>
+        <field name="submitButton" title="Submit">
+            <submit button-type="button" />
+        </field>
     </form>
-<!--editForm-->
-    <form name="UpdateProductionRun" type="single" target="updateProductionRun" title="" default-map-name="productionRunData"
-          header-row-style="header-row" default-table-style="basic-table">
-        <field name="productionRunId"><hidden/></field>
+    <!--            Edit Forms-->
+    <form name="UpdateProductionRun" type="single" target="updateProductionRun" title="" default-map-name="productionRunData" header-row-style="header-row" default-table-style="basic-table">
+        <field name="productionRunId">
+            <hidden />
+        </field>
         <field name="productId" title="${uiLabelMap.productId}">
-            <display-entity entity-name="Product" description="${internalName} [${productId}]"/>
+            <display-entity entity-name="Product" description="${internalName} [${productId}]" />
         </field>
         <field name="currentStatusId">
-            <display-entity entity-name="StatusItem" key-field-name="statusId"/>
+            <display-entity entity-name="StatusItem" key-field-name="statusId" />
         </field>
-<!--        <field name="manufacturerId">-->
-<!--            <display-entity entity-name="PartyNameView" key-field-name="partyId" description="${groupName} ${firstName} ${lastName} [${partyId}]"/>-->
-<!--        </field>-->
         <field name="facilityId" title="${uiLabelMap.facilityId}">
             <drop-down>
                 <entity-options entity-name="Facility" key-field-name="facilityId" description="${facilityName} [${facilityId}]">
-                    <entity-constraint name="facilityTypeId" value="WAREHOUSE"/>
+                    <entity-constraint name="facilityTypeId" value="WAREHOUSE" />
                 </entity-options>
             </drop-down>
         </field>
-        <field name="quantity"  title="${uiLabelMap.Quantity}"><text size="10"/></field>
-        <field name="estimatedStartDate"  title="${uiLabelMap.estimatedStartDate}"><date-time default-value="${nowTimestamp}"/></field>
-        <field name="estimatedCompletionDate" title="${uiLabelMap.ManufacturingEstimatedCompletionDate}"><display/></field>
-        <field name="workEffortName"  title="${uiLabelMap.workEffortName}"><text/></field>
-        <field name="description"><text/></field>
-        <field name="submitButton" title="${uiLabelMap.submitButton}"><submit/></field>
+        <field name="quantity" title="${uiLabelMap.Quantity}">
+            <text size="10" />
+        </field>
+        <field name="estimatedStartDate" title="${uiLabelMap.estimatedStartDate}">
+            <date-time default-value="${nowTimestamp}" />
+        </field>
+        <field name="estimatedCompletionDate" title="${uiLabelMap.ManufacturingEstimatedCompletionDate}">
+            <display />
+        </field>
+        <field name="workEffortName" title="${uiLabelMap.workEffortName}">
+            <text />
+        </field>
+        <field name="description">
+            <text />
+        </field>
+        <field name="submitButton" title="${uiLabelMap.submitButton}">
+            <submit />
+        </field>
     </form>
 </forms>

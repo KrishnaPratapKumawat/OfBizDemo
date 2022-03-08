@@ -15,7 +15,6 @@
                         formName="CreateProductionRunEvent" name="productId" id="productId"
                         fieldFormName="LookupProduct"/>
                     </td>
-
                 </tr>
                 <tr>
                     <td width="15%" align="right" value="parameters.pRQuantity"><span class="label">${uiLabelMap.Quantity}</span>
@@ -43,8 +42,7 @@
                             <option value="${facility.facilityId!}"
                             <#if parameters.facilityId?has_content && parameters.facilityId ==
                             facility.facilityId>selected</#if>>${facility.facilityName}[${facility.facilityId}]</option>
-                    </
-                    #list>
+                    </#list>
                     </select>
                     </td>
                 </tr>
@@ -54,7 +52,6 @@
                     <td width="83%"><@htmlTemplate.lookupField value="" formName="CreateProductionRunEvent"
                         name="routingtId" id="routingId" fieldFormName="LookupRouting"/>
                     </td>
-
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label">${uiLabelMap.WorkEffortName}</span></td>
@@ -72,10 +69,6 @@
                     <td width="83%" align="left"><input type="submit" value="Submit"/></td>
                 </tr>
             </table>
-
         </form>
     </div>
-
 </div>
-
-

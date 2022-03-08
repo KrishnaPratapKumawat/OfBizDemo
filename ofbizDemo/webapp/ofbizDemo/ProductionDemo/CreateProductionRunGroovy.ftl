@@ -6,13 +6,12 @@
         <br/>
     </div>
     <div class="screenlet-body">
-        <form name="CreateProductionRunFromByEvent" method="post" action="<@ofbizUrl>createProductionRunGroovyService</@ofbizUrl>">
+        <form name="CreateProductionRunGroovy" method="post" action="<@ofbizUrl>createProductionRunGroovyService</@ofbizUrl>">
             <table width="100%">
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.ProductId}</span></td>
                     <td width="2%"></td>
                     <td width="83%"><@htmlTemplate.lookupField value="${productId!}" formName="CreateProductionRunFromByJava" name="productId" id="productId" fieldFormName="LookupProduct"/></td>
-                    <!--                    <td width="83%"><input type="text"/></td>-->
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.Quantity}</span></td>
@@ -30,8 +29,8 @@
                     <td width="83%">
                         <select name="facilityId">
                             <#list facilities as facility>
-                                <option value="${facility.facilityId!}">${facility.facilityName}[${facility.facilityId}]</option>
-                            </#list>
+                            <option value="${facility.facilityId!}">${facility.facilityName}[${facility.facilityId}]</option>
+                        </#list>
                         </select>
                     </td>
                 </tr>
@@ -39,7 +38,6 @@
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.RoutingId}</span></td>
                     <td width="2%"></td>
                     <td width="83%"><@htmlTemplate.lookupField value="${routingId!}" formName="CreateProductionRunFromByJava" name="routingtId" id="routingId" fieldFormName="LookupRouting"/></td>
-
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.WorkEffortName}</span></td>
@@ -57,8 +55,6 @@
                     <td width="83%" align="left"><input type="submit" value="Submit"/></td>
                 </tr>
             </table>
-
         </form>
     </div>
-
 </div>

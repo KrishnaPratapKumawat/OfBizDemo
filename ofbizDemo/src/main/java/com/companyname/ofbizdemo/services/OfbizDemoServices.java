@@ -54,7 +54,6 @@ public class OfbizDemoServices {
             Map<String, Object> resultsMap = dispatcher.runSync("createProductionRun",
                     createProductionRunMap);
             if (ServiceUtil.isError(resultsMap)) {
-//                Debug.logInfo(ServiceUtil.getErrorMessage(resultsMap), module);
                 return ServiceUtil.returnError(ServiceUtil.getErrorMessage(resultsMap));
             }
             String productionRunId = (String) resultsMap.get("productionRunId");
@@ -66,7 +65,10 @@ public class OfbizDemoServices {
         }
         return result;
     }
+//    =============================================UpdateProductionRun==================================================
+
     public static Map<String, Object> updateProductionRun(DispatchContext ctx, Map<String, ? extends Object> context) {
+        Debug.log("=========================================================");
         Delegator delegator = ctx.getDelegator();
         LocalDispatcher dispatcher = ctx.getDispatcher();
         Locale locale = (Locale) context.get("locale");
@@ -79,30 +81,30 @@ public class OfbizDemoServices {
 
                 if (!"PRUN_CREATED".equals(productionRun.getGenericValue().getString("currentStatusId")) &&
                         !"PRUN_SCHEDULED".equals(productionRun.getGenericValue().getString("currentStatusId"))) {
-                    return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ManufacturingProductionRunPrinted", locale));
+                    return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ProductionRunPrinted", locale));
                 }
 
                 BigDecimal quantity = (BigDecimal) context.get("quantity");
-                if (quantity != null &&  quantity.compareTo(productionRun.getQuantity()) != 0) {
+                if (quantity != null && quantity.compareTo(productionRun.getQuantity()) != 0) {
                     productionRun.setQuantity(quantity);
                 }
 
-                Timestamp  estimatedStartDate =  (Timestamp) context.get("estimatedStartDate");
-                if (estimatedStartDate != null && ! estimatedStartDate.equals(productionRun.getEstimatedStartDate())) {
+                Timestamp estimatedStartDate = (Timestamp) context.get("estimatedStartDate");
+                if (estimatedStartDate != null && !estimatedStartDate.equals(productionRun.getEstimatedStartDate())) {
                     productionRun.setEstimatedStartDate(estimatedStartDate);
                 }
 
-                String  workEffortName = (String) context.get("workEffortName");
+                String workEffortName = (String) context.get("workEffortName");
                 if (workEffortName != null) {
                     productionRun.setProductionRunName(workEffortName);
                 }
 
-                String  description = (String) context.get("description");
+                String description = (String) context.get("description");
                 if (description != null) {
                     productionRun.setDescription(description);
                 }
 
-                String  facilityId = (String) context.get("facilityId");
+                String facilityId = (String) context.get("facilityId");
                 if (facilityId != null) {
                     productionRun.getGenericValue().set("facilityId", facilityId);
                 }
@@ -118,20 +120,19 @@ public class OfbizDemoServices {
                             }
                         } catch (GenericServiceException e) {
                             Debug.logError(e, "Problem calling the setEstimatedDeliveryDates service", module);
-                            return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ManufacturingProductionRunNotUpdated", locale));
+                            return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ProductionRunNotUpdated", locale));
                         }
                     }
                     return ServiceUtil.returnSuccess();
                 } else {
-                    Debug.logError("productionRun.store() fail for productionRunId ="+productionRunId,module);
-                    return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ManufacturingProductionRunNotUpdated", locale));
+                    Debug.logError("productionRun.store() fail for productionRunId =" + productionRunId, module);
+                    return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ProductionRunNotUpdated", locale));
                 }
             }
-            Debug.logError("no productionRun for productionRunId ="+productionRunId,module);
-            return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ManufacturingProductionRunNotUpdated", locale));
+            Debug.logError("no productionRun for productionRunId =" + productionRunId, module);
+            return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ProductionRunNotUpdated", locale));
         }
-        Debug.logError("service updateProductionRun call with productionRunId empty",module);
-        return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ManufacturingProductionRunNotUpdated", locale));
+        Debug.logError("service updateProductionRun call with productionRunId empty", module);
+        return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ProductionRunNotUpdated", locale));
     }
-
 }

@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns="http://ofbiz.apache.org/Widget-Menu" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Menu http://ofbiz.apache.org/dtds/widget-menu.xsd">
+<menus xmlns="http://ofbiz.apache.org/Widget-Menu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Menu http://ofbiz.apache.org/dtds/widget-menu.xsd">
     <menu name="MainAppBar" title="${uiLabelMap.OfbizDemoApplication}" extends="CommonAppBarMenu" extends-resource="component://common/widget/CommonMenus.xml">
-        <menu-item name="main" title="${uiLabelMap.CommonMain}"><link target="main"/></menu-item>
-        <menu-item name="findOfbizDemo" title="${uiLabelMap.OfbizDemoFind}"><link target="FindOfbizDemo"/></menu-item>
-        <menu-item name="addOfbizDemoFtl" title="${uiLabelMap.OfbizDemoAddFtl}"><link target="AddOfbizDemoFtl"/></menu-item>
-        <menu-item name="CreateProduction" title="${uiLabelMap.CreateProduction}"><link target="CreateProduction"/></menu-item>
-        <menu-item name="FindProductionRun" title="${uiLabelMap.FindProductionRun}"><link target="FindProductionRun"/></menu-item>
-        <menu-item name="createProductionRunJava" title="${uiLabelMap.CreateProductionRunJava}" ><link target="CreateProductionRunJavaScreen"/></menu-item>
-        <menu-item name="CreateProductionRunGroovy" title="${uiLabelMap.CreateProductionRunGroovy}" ><link target="CreateProductionRunGroovyScreen"/></menu-item>
-        <menu-item name="createProductionRunEvent" title="${uiLabelMap.CreateProductionRunEvent}" ><link target="CreateProductionRunEventScreen" /></menu-item>
-        <menu-item name="EditProductionRun" title="${uiLabelMap.EditProductionRun}" ><link target="EditVProductionRun" /></menu-item>
-
+        <menu-item name="main" title="${uiLabelMap.CommonMain}">
+            <link target="main" />
+        </menu-item>
+        <menu-item name="findOfbizDemo" title="${uiLabelMap.OfbizDemoFind}">
+            <link target="FindOfbizDemo" />
+        </menu-item>
+        <menu-item name="addOfbizDemoFtl" title="${uiLabelMap.OfbizDemoAddFtl}">
+            <link target="AddOfbizDemoFtl" />
+        </menu-item>
+        <menu-item name="CreateProduction" title="${uiLabelMap.CreateProduction}">
+            <link target="CreateProduction" />
+        </menu-item>
+        <menu-item name="FindProductionRun" title="${uiLabelMap.FindProductionRun}">
+            <link target="FindProductionRun" />
+        </menu-item>
+        <menu-item name="createProductionRunJava" title="${uiLabelMap.CreateProductionRunJava}">
+            <link target="CreateProductionRunJavaScreen" />
+        </menu-item>
+        <menu-item name="CreateProductionRunGroovy" title="${uiLabelMap.CreateProductionRunGroovy}">
+            <link target="CreateProductionRunGroovyScreen" />
+        </menu-item>
+        <menu-item name="createProductionRunEvent" title="${uiLabelMap.CreateProductionRunEvent}">
+            <link target="CreateProductionRunEventScreen" />
+        </menu-item>
+        <menu-item name="EditProductionRun" title="${uiLabelMap.EditProductionRun}">
+            <link target="EditProductionRun" />
+        </menu-item>
     </menu>
-
 </menus>

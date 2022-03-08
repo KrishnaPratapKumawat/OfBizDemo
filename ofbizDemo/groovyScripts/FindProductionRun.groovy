@@ -11,27 +11,26 @@ condition = exprBuilder.AND() {
         EQUALS(productId: parameters.productId)
     }
     if (parameters.currentStatusId) {
-        if (currentStatusId == 1) {
-            IN(currentStatusId: parameters.currentStatusId)
-        }
         EQUALS(currentStatusId: parameters.currentStatusId)
     }
-    if (parameters.workEffortName) {
-        EQUALS(workEffortName: parameters.workEffortName) LIKE(workEffortName: "%" + workEffortName + "%")
+//    }else{
+//        IN(currentStatusId: parameters.currentStatusId)
+//    }
+    if (parameters.workEffortName){
+        LIKE(parameters.workEffortName + "%")
     }
-    if (parameters.facilityId) {
+    if (parameters.facilityId){
         EQUALS(facilityId: parameters.facilityId)
     }
 }
+
 workEffortAndGoods = from("WorkEffortAndGoods").where(condition).queryList()
 workEfforts = []
-workEffortAndGoods.each {
-    workEffortAndGood ->
-        workEffort = [:]
-        workEffort.putAll(workEffortAndGood)
-        statusItem = from("StatusItem").where(statusId: workEffortAndGood.currentStatusId).queryOne()
-        workEffort.statusDescription = statusItem.description
-        workEfforts.add(workEffort)
-
+workEffortAndGoods.each {workEffortAndGood ->
+    workEffort = [:]
+    workEffort.putAll(workEffortAndGood)
+    statusItem = from("StatusItem").where(statusId: workEffortAndGood.currentStatusId).queryOne();
+    workEffort.statusDescription = statusItem.description
+    workEfforts.add(workEffort)
 }
 context.productionRunList = workEfforts

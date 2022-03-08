@@ -111,5 +111,8 @@
     <property key="createAProductionRun">
         <value xml:lang="en">Create a Production Run</value>
     </property>
+    <property key="manufacturerID">
+        <value xml:lang="en">Manufacturer ID</value>
+    </property>
 
 </resource>

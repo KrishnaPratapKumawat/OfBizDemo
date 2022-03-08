@@ -28,10 +28,10 @@
                         <td width="2%"></td>
                         <td width="83%">
                             <#list statusItems as statusItem >
-                        <input type="checkbox" name="currentStatusId"  value="${statusItem.description!}" <#if parameters.currentStatusId?has_content && statusItem.statusId.contains(parameters.currentStatusId)>checked</#if>/>
-                            ${statusItem.description!}
-                        </#list>
-                        </td>
+                            <input type="checkbox" name="currentStatusId"  value="${statusItem.description!}" <#if parameters.currentStatusId?has_content && statusItem.statusId.contains(parameters.currentStatusId)>checked</#if>/>
+                        ${statusItem.description!}
+                    </#list>
+                    </td>
                     </tr>
                     <tr>
                         <td width="15%" align="right"><span class="label">${uiLabelMap.ProductId}</span></td>

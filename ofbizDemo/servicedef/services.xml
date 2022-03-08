@@ -1,62 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
-
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
     <description>OfbizDemo Services</description>
-    <vendor></vendor>
+    <vendor />
     <version>1.0</version>
-
     <service name="createOfbizDemo" default-entity-name="OfbizDemo" engine="entity-auto" invoke="create" auth="true">
         <description>Create an Ofbiz Demo record</description>
-        <auto-attributes include="pk" mode="OUT" optional="false"/>
-        <auto-attributes include="nonpk" mode="IN" optional="false"/>
-        <override name="comments" optional="true"/>
+        <auto-attributes include="pk" mode="OUT" optional="false" />
+        <auto-attributes include="nonpk" mode="IN" optional="false" />
+        <override name="comments" optional="true" />
     </service>
-
-    <service name="createOfbizDemoByJavaService" default-entity-name="OfbizDemo" engine="java"
-             location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createOfbizDemo" auth="true">
+    <service name="createOfbizDemoByJavaService" default-entity-name="OfbizDemo" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createOfbizDemo" auth="true">
         <description>Create an Ofbiz Demo record using a service in Java</description>
-        <auto-attributes include="pk" mode="OUT" optional="false"/>
-        <auto-attributes include="nonpk" mode="IN" optional="false"/>
-        <override name="comments" optional="true"/>
+        <auto-attributes include="pk" mode="OUT" optional="false" />
+        <auto-attributes include="nonpk" mode="IN" optional="false" />
+        <override name="comments" optional="true" />
     </service>
-
-    <service name="createOfbizDemoByGroovyService" default-entity-name="OfbizDemo" engine="groovy"
-             location="component://ofbizDemo/groovyScripts/ ofbizDemo/OfbizDemoServices.groovy" invoke="createOfbizDemo" auth="true">
+    <service name="createOfbizDemoByGroovyService" default-entity-name="OfbizDemo" engine="groovy" location="component://ofbizDemo/groovyScripts/ ofbizDemo/OfbizDemoServices.groovy" invoke="createOfbizDemo" auth="true">
         <description>Create an Ofbiz Demo record using a service in Groovy</description>
-        <auto-attributes include="pk" mode="OUT" optional="false"/>
-        <auto-attributes include="nonpk" mode="IN" optional="false"/>
-        <override name="comments" optional="true"/>
+        <auto-attributes include="pk" mode="OUT" optional="false" />
+        <auto-attributes include="nonpk" mode="IN" optional="false" />
+        <override name="comments" optional="true" />
     </service>
-<!--        This is a Production Screen Service-->
+    <!--        This is a Production Screen Service-->
     <service name="ProductionInterface" engine="interface">
-    <description>Interface to describe base parameters for  Calculation Services</description>
-        <attribute type="String" mode="IN" name="productId" optional="false"/>
-        <attribute type="BigDecimal" mode="IN" name="quantity" optional="false"/>
-        <attribute type="java.sql.Timestamp" mode="IN" name="startDate" optional="false"/>
-        <attribute type="String" mode="IN" name="facilityId" optional="false"/>
-        <attribute type="String" mode="IN" name="routingId" optional="true"/>
-        <attribute type="String" mode="IN" name="workEffortName" optional="true"/>
-        <attribute type="String" mode="IN" name="description" optional="true"/>
-        <attribute type="String" mode="OUT" name="productionRunId" optional="false"/>
+        <description>Interface to describe base parameters for  Calculation Services</description>
+        <attribute type="String" mode="IN" name="productId" optional="false" />
+        <attribute type="BigDecimal" mode="IN" name="quantity" optional="false" />
+        <attribute type="java.sql.Timestamp" mode="IN" name="startDate" optional="false" />
+        <attribute type="String" mode="IN" name="facilityId" optional="false" />
+        <attribute type="String" mode="IN" name="routingId" optional="true" />
+        <attribute type="String" mode="IN" name="workEffortName" optional="true" />
+        <attribute type="String" mode="IN" name="description" optional="true" />
+        <attribute type="String" mode="INOUT" name="productionRunId" optional="false" />
     </service>
-    <service name="createProduction" engine="java"
-             location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProduction" auth="true">
+    <service name="createProduction" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProduction" auth="true">
         <description>Create a production run service in java</description>
-        <implements service="ProductionInterface"/>
+        <implements service="ProductionInterface" />
     </service>
-
-    <service name="createProductionRunJavaService" engine="java"
-             location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProductionRunJava" auth="true">
+    <service name="createProductionRunJavaService" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProductionRunJava" auth="true">
         <description>Create a production run service in java</description>
-        <implements service="ProductionInterface"/>
+        <implements service="ProductionInterface" />
     </service>
-
-    <service name="createProductionRunGroovyService" engine="groovy"
-             location="component://ofbizDemo/groovyScripts/ ofbizDemo/CreateProductionRunGroovy.groovy" invoke="createProductionRunGroovy"
-             auth="true">
+    <service name="createProductionRunGroovyService" engine="groovy" location="component://ofbizDemo/groovyScripts/ ofbizDemo/CreateProductionRunGroovy.groovy" invoke="createProductionRunGroovy" auth="true">
         <description>Create a production run service in Groovy</description>
-        <implements service="ProductionInterface"/>
+        <implements service="ProductionInterface" />
     </service>
-
+    <service name="updateProductionRun" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="updateProductionRun" auth="true">
+        <description>Update a Production Run</description>
+        <implements service="ProductionInterface" />
+    </service>
 </services>
