@@ -11,19 +11,20 @@ condition = exprBuilder.AND() {
         EQUALS(productId: parameters.productId)
     }
     if (parameters.currentStatusId) {
-        EQUALS(currentStatusId: parameters.currentStatusId)
+        if (parameters.currentStatusId.size() == 1) {
+            EQUALS(currentStatusId: parameters.currentStatusId)
+        } else {
+            IN(currentStatusId: parameters.currentStatusId)
+        }
     }
-//    }else{
-//        IN(currentStatusId: parameters.currentStatusId)
-//    }
     if (parameters.workEffortName){
-        LIKE(parameters.workEffortName + "%")
+        LIKE(workEffortName: parameters.workEffortName + "%")
     }
     if (parameters.facilityId){
         EQUALS(facilityId: parameters.facilityId)
     }
-}
 
+}
 workEffortAndGoods = from("WorkEffortAndGoods").where(condition).queryList()
 workEfforts = []
 workEffortAndGoods.each {workEffortAndGood ->

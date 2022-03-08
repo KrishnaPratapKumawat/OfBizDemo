@@ -56,12 +56,12 @@
                 <tr>
                     <td width="15%" align="right"><span class="label">${uiLabelMap.WorkEffortName}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><input type="text" name="workEffortName"/></td>
+                    <td width="83%"><input type="text" name="workEffortName"value="${uiLabelMap.WorkEffortName}"/></td>
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label">${uiLabelMap.Description}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><input type="text" name="description"/></td>
+                    <td width="83%"><input type="text" name="description" value="${uiLabelMap.description}"/></td>
                 </tr>
                 <tr>
                     <td width="15%"></td>

@@ -22,7 +22,7 @@
         <override name="comments" optional="true" />
     </service>
     <!--        This is a Production Screen Service-->
-    <service name="ProductionInterface" engine="interface">
+    <service name="productionInterface" engine="interface">
         <description>Interface to describe base parameters for  Calculation Services</description>
         <attribute type="String" mode="IN" name="productId" optional="false" />
         <attribute type="BigDecimal" mode="IN" name="quantity" optional="false" />
@@ -35,18 +35,18 @@
     </service>
     <service name="createProduction" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProduction" auth="true">
         <description>Create a production run service in java</description>
-        <implements service="ProductionInterface" />
+        <implements service="productionInterface" />
     </service>
     <service name="createProductionRunJavaService" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProductionRunJava" auth="true">
         <description>Create a production run service in java</description>
-        <implements service="ProductionInterface" />
+        <implements service="productionInterface" />
     </service>
     <service name="createProductionRunGroovyService" engine="groovy" location="component://ofbizDemo/groovyScripts/ ofbizDemo/CreateProductionRunGroovy.groovy" invoke="createProductionRunGroovy" auth="true">
         <description>Create a production run service in Groovy</description>
-        <implements service="ProductionInterface" />
+        <implements service="productionInterface" />
     </service>
     <service name="updateProductionRun" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="updateProductionRun" auth="true">
         <description>Update a Production Run</description>
-        <implements service="ProductionInterface" />
+        <implements service="productionInterface" />
     </service>
 </services>

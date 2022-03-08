@@ -101,7 +101,7 @@
             <actions>
                 <set field="headerItem" value="FindProductionRun" />
                 <set field="titleProperty" value="findProductionRun" />
-                <entity-and entity-name="Facility" list="facilities" >
+                <entity-and entity-name="Facility" list="facilities"/>
                         <field-map field-name="facilityId" value=""/>
                 </entity-and>
                 <entity-and entity-name="StatusItem" list="statusItems">
@@ -154,7 +154,7 @@
             <actions>
                 <set field="titleProperty" value="CreateProductionRunGroovy" />
                 <set field="headerItem" value="CreateProductionRunGroovy" />
-                <entity-and entity-name="Facility" list="facilities" >
+                <entity-and entity-name="Facility" list="facilities"/>
                     <field-map field-name="facilityId" value=""/>
                 </entity-and>
             </actions>
@@ -176,7 +176,7 @@
             <actions>
                 <set field="titleProperty" value="CreateProductionRunEvent" />
                 <set field="headerItem" value="createProductionRunEvent" />
-                <entity-and entity-name="Facility" list="facilities" >
+                <entity-and entity-name="Facility" list="facilities"/>
                     <field-map field-name="facilityId" value=""/>
                 </entity-and>
             </actions>

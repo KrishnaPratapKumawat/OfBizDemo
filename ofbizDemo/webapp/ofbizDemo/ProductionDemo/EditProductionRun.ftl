@@ -57,7 +57,7 @@
                        timeMinutesName="" minutes="" isTwelveHour="" ampmName="" amSelected="" pmSelected=""
                        compositeType=""
                        formName=""/>
-               </td>
+                   </td>
            </tr>
             <tr>
                    <td width="15%" align="right"><span class="label">${uiLabelMap.estimatedCompletionDate}</span>
@@ -71,13 +71,12 @@
                    <td width="83%"><input name="workEffortName" type="text" value="${productionRunData.workEffortName!}"/></td>
            </tr>
             <tr>
-                   <td width="15%" align="right"><span class="label">${uiLabelMap.Description}</span></td>
+                  <td width="15%" align="right"><span class="label">${uiLabelMap.Description}</span></td>
                    <td width="2%"></td>
                    <td width="83%"><input type="text" name="description"value="${productionRun.description}"/></td>
            </tr>
             <td width="15%"align="center"><a href="<@ofbizUrl>FindProductionRun</@ofbizUrl>"><input type="Button" value="${uiLabelMap.submitButton}"/></a></td>
     </table>
         </form-name>
-
     </div>
 </div>

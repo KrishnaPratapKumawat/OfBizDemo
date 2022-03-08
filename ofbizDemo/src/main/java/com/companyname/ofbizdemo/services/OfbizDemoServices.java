@@ -129,10 +129,14 @@ public class OfbizDemoServices {
                     return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ProductionRunNotUpdated", locale));
                 }
             }
-            Debug.logError("no productionRun for productionRunId =" + productionRunId, module);
+            else {
+                Debug.logError("no productionRun for productionRunId =" + productionRunId, module);
+                return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ProductionRunNotUpdated", locale));
+            }
+        }
+        else {
+            Debug.logError("service updateProductionRun call with productionRunId empty", module);
             return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ProductionRunNotUpdated", locale));
         }
-        Debug.logError("service updateProductionRun call with productionRunId empty", module);
-        return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ProductionRunNotUpdated", locale));
     }
 }
