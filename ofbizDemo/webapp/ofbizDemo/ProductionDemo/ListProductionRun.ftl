@@ -15,10 +15,10 @@
                     <th width="15%">${uiLabelMap.ProductionRunName}</th>
                     <th width="10%">${uiLabelMap.ProductId}</th>
                     <th width="10%">${uiLabelMap.Quantity}</th>
-                    <th width="10%">${uiLabelMap.Status}</th>
+                    <th width="15%">${uiLabelMap.Status}</th>
                     <th width="10%">${uiLabelMap.StartDate}</th>
                     <th width="15%">${uiLabelMap.Description}</th>
-                    <th width="10%">${uiLabelMap.FacilityId}</th>
+                    <th width="15%">${uiLabelMap.FacilityId}</th>
                 </tr>
             </thead>
             <tbody >
@@ -26,7 +26,7 @@
             <tr>
                 <td width="10%"><a href="<@ofbizUrl controlPath='/manufacturing/control'>EditProductionRun?productionRunId=${productionRun.workEffortId!}</@ofbizUrl>" class="smallSubmit">${productionRun.workEffortId!}</a></td>
                 <td width="15%">${productionRun.workEffortName!}</td>
-                <td width="10%"><a href="<@ofbizUrl controlPath='/catalog/control'>EditProduct?productId=${productionRun.productId!}</@ofbizUrl>" class="smallSubmit">${productionRun.productId!}</a></td>
+                <td width="15%"><a href="<@ofbizUrl controlPath='/catalog/control'>EditProduct?productId=${productionRun.productId!}</@ofbizUrl>" class="smallSubmit">${productionRun.productId!}</a></td>
                 <td width="10%">${productionRun.estimatedQuantity!}</td>
                 <td width="10%">${productionRun.statusDescription}</td>
                 <td width="10%">${productionRun.estimatedStartDate!}</td>

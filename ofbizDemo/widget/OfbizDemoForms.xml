@@ -128,7 +128,7 @@
         <field name="estimatedStartDate" title="${uiLabelMap.estimatedStartDate}">
             <date-time default-value="${nowTimestamp}" />
         </field>
-        <field name="estimatedCompletionDate" title="${uiLabelMap.ManufacturingEstimatedCompletionDate}">
+        <field name="estimatedCompletionDate" title="${uiLabelMap.EstimatedCompletionDate}">
             <display />
         </field>
         <field name="workEffortName" title="${uiLabelMap.workEffortName}">
