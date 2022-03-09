@@ -19,143 +19,125 @@ under the License.
 -->
 <site-conf xmlns="http://ofbiz.apache.org/Site-Conf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ofbiz.apache.org/Site-Conf http://ofbiz.apache.org/dtds/site-conf.xsd">
     <!-- The controller elements that are common to all OFBiz components
-          can be found in the following xml file. A component can override the
-          elements found in the common-controller.xml file. -->
+           can be found in the following xml file. A component can override the
+           elements found in the common-controller.xml file. -->
     <include location="component://common/webcommon/WEB-INF/common-controller.xml" />
     <description>OfbizDemo Component Site Configuration File</description>
     <!-- Events to run on every request before security (chains exempt) -->
     <!--
-     <preprocessor>
-     </preprocessor>
-     -->
+      <preprocessor>
+      </preprocessor>
+      -->
     <!-- Events to run on every request after all other processing (chains exempt) -->
     <!--
-     <postprocessor>
-         <event name="test" type="java" path="org.apache.ofbiz.webapp.event.TestEvent" invoke="test"/>
-     </postprocessor>
-     -->
+      <postprocessor>
+          <event name="test" type="java" path="org.apache.ofbiz.webapp.event.TestEvent" invoke="test"/>
+      </postprocessor>
+      -->
     <!-- Request Mappings -->
-
     <request-map uri="createOfbizDemo">
         <security https="true" auth="true" />
         <event type="service" invoke="createOfbizDemo" />
         <response name="success" type="view" value="main" />
     </request-map>
-
     <request-map uri="createOfbizDemoByJavaService">
         <security https="true" auth="true" />
         <event type="service" invoke="createOfbizDemoByJavaService" />
         <response name="success" type="view" value="main" />
     </request-map>
-
     <request-map uri="createOfbizDemoByGroovyService">
         <security https="true" auth="true" />
         <event type="service" invoke="createOfbizDemoByGroovyService" />
         <response name="success" type="view" value="main" />
     </request-map>
-
     <request-map uri="createOfbizDemoEvent">
         <security https="true" auth="true" />
         <event type="java" path="com.companyname.ofbizdemo.Event.OfbizDemoEvents" invoke="createProductionRunEvent" />
         <response name="success" type="view" value="main" />
         <response name="error" type="view" value="main" />
     </request-map>
-
     <request-map uri="AddOfbizDemoFtl">
         <security https="true" auth="true" />
         <response name="success" type="view" value="AddOfbizDemoFtl" />
     </request-map>
     <!--=============================================CreateProductionRequest========================================================-->
-
     <request-map uri="CreateProduction">
         <security https="true" auth="true" />
         <response name="success" type="view" value="CreateProduction" />
     </request-map>
-
     <request-map uri="createProduction">
         <security https="true" auth="true" />
         <event type="service" invoke="createProductionRun" />
         <response name="success" type="view" value="FindProductionRun" />
-        <response name="error" type="view" value="CreateProductionRun"/>
+        <response name="error" type="view" value="CreateProductionRun" />
     </request-map>
-
     <request-map uri="CreateProductionRunJavaScreen">
-        <security https="true" auth="true"/>
-        <response name="success" type="view" value="CreateProductionRunJavaScreen"/>
+        <security https="true" auth="true" />
+        <response name="success" type="view" value="CreateProductionRunJavaScreen" />
     </request-map>
-
     <request-map uri="FindProductionRun">
         <security https="true" auth="true" />
         <response name="success" type="view" value="FindProductionRun" />
     </request-map>
-
     <request-map uri="CreateProductionRunGroovyScreen">
-        <security https="true" auth="true"/>
-        <response name="success" type="view" value="CreateProductionRunGroovyScreen"/>
+        <security https="true" auth="true" />
+        <response name="success" type="view" value="CreateProductionRunGroovyScreen" />
     </request-map>
-
     <request-map uri="CreateProductionRunEventScreen">
-        <security https="true" auth="true"/>
-        <response name="success" type="view" value="CreateProductionRunEventScreen"/>
+        <security https="true" auth="true" />
+        <response name="success" type="view" value="CreateProductionRunEventScreen" />
     </request-map>
-
     <request-map uri="createProductionRunJavaService">
-        <security https="true" auth="true"/>
-        <event type="service" invoke="createProductionRunJavaService"/>
+        <security https="true" auth="true" />
+        <event type="service" invoke="createProductionRunJavaService" />
         <response name="success" type="request-redirect" value="FindProductionRun">
-            <redirect-parameter name="workEffortId" from="productionRunId"/>
-        </response>
-        <response name="error" type="view" value="CreateProductionRunJavaScreen"/>
-    </request-map>
-
-    <request-map uri="createProductionRunGroovyService">
-        <security https="true" auth="true"/>
-        <event type="service" invoke="createProductionRunGroovyService"/>
-        <response name="success" type="request-redirect" value="FindProductionRun" >
             <redirect-parameter name="workEffortId" from="productionRunId" />
         </response>
-        <response name="error" type="view" value="CreateProductionRunGroovyScreen"/>
+        <response name="error" type="view" value="CreateProductionRunJavaScreen" />
+    </request-map>
+    <request-map uri="createProductionRunGroovyService">
+        <security https="true" auth="true" />
+        <event type="service" invoke="createProductionRunGroovyService" />
+        <response name="success" type="request-redirect" value="FindProductionRun">
+            <redirect-parameter name="workEffortId" from="productionRunId" />
+        </response>
+        <response name="error" type="view" value="CreateProductionRunGroovyScreen" />
     </request-map>
     <request-map uri="createProductionRunEvent">
-        <security https="true" auth="true"/>
-        <event type="java" path="com.companyname.ofbizdemo.Event.OfbizDemoEvents" invoke="createProductionRunEvent"/>
-        <response name="success" type="request-redirect" value="FindProductionRun"/>
-        <response name="error" type="view" value="CreateProductionRunEventScreen"/>
+        <security https="true" auth="true" />
+        <event type="java" path="com.companyname.ofbizdemo.Event.OfbizDemoEvents" invoke="createProductionRunEvent" />
+        <response name="success" type="request-redirect" value="FindProductionRun" />
+        <response name="error" type="view" value="CreateProductionRunEventScreen" />
     </request-map>
-
     <request-map uri="EditProductionRun">
-        <security https="true" auth="true"/>
-        <response name="success" type="view" value="EditProductionRun"/>
+        <security https="true" auth="true" />
+        <response name="success" type="view" value="EditProductionRun" />
     </request-map>
     <request-map uri="updateProductionRunDemo">
-        <security https="true" auth="true"/>
-        <event type="service" invoke="updateProductionRunDemo"/>
+        <security https="true" auth="true" />
+        <event type="service" invoke="updateProductionRunDemo" />
         <response name="success" type="view" value="FindProductionRun">
-        <redirect-parameter name="workEffortId" from="productionRunId"/>
+            <redirect-parameter name="workEffortId" from="productionRunId" />
         </response>
-        <response name="error" type="view" value="EditProductionRun"/>
+        <response name="error" type="view" value="EditProductionRun" />
     </request-map>
     <request-map uri="LookupRouting">
         <security https="true" auth="true" />
         <response name="success" type="view" value="LookupRouting" />
     </request-map>
-
     <request-map uri="LookupProduct">
         <security auth="true" https="true" />
         <response name="success" type="view" value="LookupProduct" />
     </request-map>
-
     <request-map uri="main">
         <security https="true" auth="true" />
         <response name="success" type="view" value="main" />
     </request-map>
-
     <request-map uri="FindOfbizDemo">
         <security https="true" auth="true" />
         <response name="success" type="view" value="FindOfbizDemo" />
     </request-map>
     <!-- End Request Mapping-->
-
     <!--View Mapping-->
     <view-map name="AddOfbizDemoFtl" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#AddOfbizDemoFtl" />
     <view-map name="FindOfbizDemo" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindOfbizDemo" />
@@ -164,9 +146,8 @@ under the License.
     <view-map name="LookupProduct" type="screen" page="component://product/widget/catalog/LookupScreens.xml#LookupProduct" />
     <view-map name="LookupRouting" type="screen" page="component://manufacturing/widget/manufacturing/LookupScreens.xml#LookupRouting" />
     <view-map name="FindProductionRun" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindProductionRun" />
-    <view-map name="CreateProductionRunJavaScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunJava"/>
-    <view-map name="CreateProductionRunGroovyScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunGroovy"/>
-    <view-map name="CreateProductionRunEventScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunEvent"/>
-    <view-map name="EditProductionRun" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#EditProductionRun"/>
-
+    <view-map name="CreateProductionRunJavaScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunJava" />
+    <view-map name="CreateProductionRunGroovyScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunGroovy" />
+    <view-map name="CreateProductionRunEventScreen" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#CreateProductionRunEvent" />
+    <view-map name="EditProductionRun" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#EditProductionRun" />
 </site-conf>

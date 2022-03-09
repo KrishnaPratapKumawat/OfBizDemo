@@ -23,7 +23,6 @@ condition = exprBuilder.AND() {
     if (parameters.facilityId){
         EQUALS(facilityId: parameters.facilityId)
     }
-
 }
 workEffortAndGoods = from("WorkEffortAndGoods").where(condition).queryList()
 workEfforts = []

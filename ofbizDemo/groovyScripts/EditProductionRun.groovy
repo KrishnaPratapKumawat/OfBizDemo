@@ -1,5 +1,4 @@
 import org.apache.ofbiz.manufacturing.jobshopmgt.ProductionRun
-
 productionRunId = parameters.productionRunId
 if (productionRunId) {
     ProductionRun productionRun = new ProductionRun(productionRunId, delegator, dispatcher)

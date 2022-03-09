@@ -7,7 +7,6 @@
     </div>
 
     <div class="screenlet-body">
-
         <table width="100%" class="basic-table hover-bar" cellspacing="0">
             <thead>
                 <tr class="header-row">

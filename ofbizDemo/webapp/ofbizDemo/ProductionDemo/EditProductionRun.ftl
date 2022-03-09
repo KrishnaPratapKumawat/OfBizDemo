@@ -79,7 +79,6 @@
                     </td>
                 </tr>
                 </td>
-
                 <td width="15%" align="center"><input type="submit" value="${uiLabelMap.submitButton!}"/></td>
             </table>
         </form>

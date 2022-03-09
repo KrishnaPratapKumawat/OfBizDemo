@@ -16,7 +16,6 @@ def createProductionRunGroovy() {
     workEffortName = parameters.workEffortName
     description = parameters.description
 
-
     try {
         createProductionRunMap.userLogin = userLogin
         createProductionRunMap.productId = productId

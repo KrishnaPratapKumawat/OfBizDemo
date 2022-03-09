@@ -1,27 +1,16 @@
 package com.companyname.ofbizdemo.services;
-
-import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
 import org.apache.ofbiz.base.util.Debug;
-import org.apache.ofbiz.base.util.UtilMisc;
-import org.apache.ofbiz.base.util.UtilProperties;
-import org.apache.ofbiz.base.util.UtilValidate;
 import org.apache.ofbiz.entity.Delegator;
 import org.apache.ofbiz.entity.GenericEntityException;
 import org.apache.ofbiz.entity.GenericValue;
-import org.apache.ofbiz.manufacturing.jobshopmgt.ProductionRun;
 import org.apache.ofbiz.service.*;
 
-
 public class OfbizDemoServices {
-
     public static final String module = OfbizDemoServices.class.getName();
     public static final String resource = "ofbizDemoUiLabels.xml";
-
     public static Map<String, Object> createOfbizDemo(DispatchContext dctx, Map<String, ? extends Object> context) {
         Map<String, Object> result = ServiceUtil.returnSuccess();
         Delegator delegator = dctx.getDelegator();
