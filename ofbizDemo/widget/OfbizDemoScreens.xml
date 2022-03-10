@@ -130,9 +130,7 @@
             <actions>
                 <set field="titleProperty" value="CreateProductionRunjava" />
                 <set field="headerItem" value="createProductionRunJava" />
-                <entity-and entity-name="Facility" list="facilities" >
-                    <field-map field-name="facilityId" value=""/>
-                </entity-and>
+                <entity-and entity-name="Facility" list="facilities"/>
             </actions>
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
