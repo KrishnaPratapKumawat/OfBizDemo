@@ -7,7 +7,9 @@
     </div>
     <div class="screenlet-body">
         <form name="CreateProductionRunFromByJava" method="post"
-              action="<@ofbizUrl>createProductionRunJava</@ofbizUrl>">
+              action="<@ofbizUrl>createProductionRunJavaService</@ofbizUrl>">
+            <input name="productionRunId" type="hidden" value="${productionRunId!}"/>
+
             <table width="100%">
                 <tr>
                     <td width="15%" align="right"><span class="label">${uiLabelMap.ProductId}</span></td>
@@ -40,7 +42,7 @@
                             <#list facilities as facility>
                             <option value="${facility.facilityId!}">${facility.facilityName}[${facility.facilityId}]
                             </option>
-                            </#list>
+                        </#list>
                         </select>
                     </td>
                 </tr>
@@ -65,7 +67,7 @@
                 <tr>
                     <td width="15%"></td>
                     <td width="2%"></td>
-                    <td width="83%" align="left"><input type="submit" value="Submit"/></td>
+                    <td width="83%" align="left"><input type="submit" value="${uiLabelMap.CreateButton}"/></td>
                 </tr>
             </table>
         </form>

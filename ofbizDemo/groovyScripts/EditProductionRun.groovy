@@ -19,7 +19,6 @@ if (productionRunId) {
         productionRunData.estimatedCompletionDate = productionRun.getEstimatedCompletionDate()
         product = from("Product").where("productId",productId).queryOne()
         productionRunData.productName = product?.productName
-          context.productionRunData = productionRunData
+        context.productionRunData = productionRunData
     }
 }
-

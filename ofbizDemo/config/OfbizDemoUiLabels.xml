@@ -92,8 +92,11 @@
     <property key="estimatedCompletionDate">
         <value xml:lang="en">Calculated Completion Date</value>
     </property>
-    <property key="submitButton">
-        <value xml:lang="en">Update</value>
+    <property key="CreateButton">
+        <value xml:lang="en">Create</value>
+    </property>
+    <property key="saveButton">
+        <value xml:lang="en">Save</value>
     </property>
     <property key="ProductName">
         <value xml:lang="en">Product Name</value>

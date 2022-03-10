@@ -44,11 +44,9 @@ public class OfbizDemoServices {
                     ModelService.IN_PARAM);
             Map<String, Object> resultsMap = dispatcher.runSync("createProductionRun",
                     createProductionRunMap);
-            if (ServiceUtil.isError(resultsMap)) {
-                return ServiceUtil.returnError(ServiceUtil.getErrorMessage(resultsMap));
+            if (ServiceUtil.isSuccess(result)) {
+                return ServiceUtil.returnSuccess("Created Your Production ...................");
             }
-            String productionRunId = (String) resultsMap.get("productionRunId");
-            result.put("productionRunId", productionRunId);
         } catch (GenericServiceException e) {
             Debug.log(e, module);
             return ServiceUtil.returnError("Error in creating record in WorkEffort entity ........" +
@@ -70,10 +68,8 @@ public class OfbizDemoServices {
             productionRunData = ctx.getModelService("updateProductionRun").makeValid(context,
                     ModelService.IN_PARAM);
             Map<String, Object> resultsMap = dispatcher.runSync("updateProductionRun", productionRunData);
-            if (ServiceUtil.isError(resultsMap)) {
-                return ServiceUtil.returnError(ServiceUtil.getErrorMessage(resultsMap));
-            } else {
-                productionRunId = (String) resultsMap.get("productionRunId");
+            if (ServiceUtil.isSuccess(resultsMap)) {
+                return ServiceUtil.returnSuccess("SuccessFully UpdateRecord..........");
             }
         } catch (GenericServiceException e) {
             Debug.log(e, module);

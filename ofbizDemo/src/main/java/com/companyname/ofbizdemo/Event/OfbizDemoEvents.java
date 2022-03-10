@@ -113,4 +113,3 @@ public class OfbizDemoEvents {
         return "success";
     }
 }
-

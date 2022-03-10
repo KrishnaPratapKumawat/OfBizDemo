@@ -16,7 +16,7 @@
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.Quantity!}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><input type="text" name="pRQuantity" value="${parameters.pRQuantity!    }"/></td>
+                    <td width="83%"><input type="text" name="pRQuantity" value="${parameters.pRQuantity!}"/></td>
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.StartDate!}</span></td>
@@ -52,7 +52,7 @@
                 <tr>
                     <td width="15%"></td>
                     <td width="2%"></td>
-                    <td width="83%" align="left"><input type="submit" value="Submit"/></td>
+                    <td width="83%" align="left"><input type="submit" value="${uiLabelMap.CreateButton}"/></td>
                 </tr>
             </table>
         </form>

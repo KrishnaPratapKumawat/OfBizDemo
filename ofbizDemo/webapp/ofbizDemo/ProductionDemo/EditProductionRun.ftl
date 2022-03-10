@@ -9,19 +9,18 @@
             </ul>
         </div>
         <form name="EditProductionRun" method="post" action="<@ofbizUrl>updateProductionRunDemo</@ofbizUrl>">
+            <input name="productionRunId" type="hidden" value="${productionRunData.productionRunId!}"/>
             <table>
                 <tr>
                     <td width="15%" align="right"><span class="label">${uiLabelMap.ProductName!}</span></td>
                     <td width="2%"></td>
-                    <td width="83%" align=""><span class="label">${productionRunData.productName} [${productionRunData.productId}]</span><input
-                            type="hidden" name="${productionRunData.productId!}"/></td>
+                    <td width="83%" align=""><span class="label">${productionRunData.productName} [${productionRunData.productId}]</span><input type="hidden" name="${productionRunData.productId!}"/></td>
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label">${uiLabelMap.CurrentStatusId!}</span></td>
                     <td width="2%"></td>
                     <td width="83%" align=""><span class="label"> ${productionRun.currentStatusId!}</span></td>
                 </tr>
-                <input name="productionRunId" type="hidden" value="${productionRunData.productionRunId!}"/>
                 <tr>
                     <td width="15%" align="right"><span class="label">${uiLabelMap.manufacturerID!}</span></td>
                     <td width="2%"></td>
@@ -69,8 +68,7 @@
                 <tr>
                     <td width="15%" align="right"><span class="label">${uiLabelMap.productionRun!}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><input name="workEffortName" type="text"
-                                           value="${productionRunData.workEffortName!}"/></td>
+                    <td width="83%"><input name="workEffortName" type="text" value="${productionRunData.workEffortName!}"/></td>
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label">${uiLabelMap.Description!}</span></td>
@@ -79,7 +77,7 @@
                     </td>
                 </tr>
                 </td>
-                <td width="15%" align="center"><input type="submit" value="${uiLabelMap.submitButton!}"/></td>
+                <td width="15%" align="center"><input type="submit" value="${uiLabelMap.saveButton!}"/></td>
             </table>
         </form>
     </div>
