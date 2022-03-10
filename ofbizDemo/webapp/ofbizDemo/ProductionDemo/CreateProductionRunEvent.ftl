@@ -5,17 +5,16 @@
         </ul>
         <br/>
     </div>
-    <div class="screenlet-body">
-        <form name="CreateProductionRunFromByEvent" method="post" action="<@ofbizUrl>createProductionRunEvent</@ofbizUrl>">
+     <div class="screenlet-body">
+         <form name="CreateProductionRunFromByEvent" method="post" action="<@ofbizUrl>createProductionRunEvent</@ofbizUrl>">
             <table width="100%">
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.ProductId}</span></td>
                     <td width="2%"></td>
                     <td width="83%"><@htmlTemplate.lookupField value="${productId!}" formName="CreateProductionRunFromByEvent" name="productId" id="productId" fieldFormName="LookupProduct"/></td>
-
                 </tr>
                 <tr>
-                    <td width="15%" align="right"><span class="label" >${uiLabelMap.Quantity!}</span></td>
+                    <td width="15%" align="right"><span class="label" >${uiLabelMap.Quantity}</span></td>
                     <td width="2%"></td>
                     <td width="83%"><input type="text" name="pRQuantity" value="${pRQuantity!}"/></td>
                 </tr>
@@ -29,27 +28,26 @@
                     <td width="2%"></td>
                     <td width="83%">
                         <select name="facilityId">
-                            <#list facilities as facility>
-                            <option value="${facility.facilityId!}">${facility.facilityName}[${facility.facilityId}]</option>
-                        </#list>
+                          <#list facilities as facility>
+                            <option value="${facility.facilityId!}">${facility.facilityName!}[${facility.facilityId!}]</option>
+                          </#list>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.RoutingId}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><@htmlTemplate.lookupField value="" formName="CreateProductionRunFromByEvent" name="routingtId" id="routingId" fieldFormName="LookupRouting"/></td>
-                    <!--                    <td width="83%"><input type="text"/></td>-->
+                    <td width="83%"><@htmlTemplate.lookupField value="${routingId!}" formName="CreateProductionRunFromByEvent" name="routingtId" id="routingId" fieldFormName="LookupRouting"/></td>
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.WorkEffortName}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><input type="text" name="workEffortName"/></td>
+                    <td width="83%"><input type="text" name="workEffortName" value="${workEffortName!}"/></td>
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.Description}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><input type="text" name="description"/></td>
+                    <td width="83%"><input type="text" name="description" value="${description!}"/></td>
                 </tr>
                 <tr>
                     <td width="15%"></td>

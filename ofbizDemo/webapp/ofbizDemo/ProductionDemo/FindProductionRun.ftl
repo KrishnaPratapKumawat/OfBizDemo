@@ -1,13 +1,13 @@
 <div>
     <ul>
-        <li class="h1">${uiLabelMap.FindProductionRun!}</li>
+        <li class="h1">${uiLabelMap.FindProductionRun}</li>
     </ul>
 </div>
 <br/>
 <div class="screenlet">
     <div class="screenlet-title-bar">
         <ul>
-            <li class="h3">${uiLabelMap.SearchOption!}</li>
+            <li class="h3">${uiLabelMap.SearchOption}</li>
         </ul>
         <br class="clear"/>
     </div>
@@ -22,7 +22,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td width="15%" align="right"><span class="label">${uiLabelMap.Status!}</span></td>
+                        <td width="15%" align="right"><span class="label">${uiLabelMap.Status}</span></td>
                         <td width="2%"></td>
                         <td width="83%">
                             <#list statusItems as statusItem>
