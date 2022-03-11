@@ -36,23 +36,23 @@
     </service>
     <service name="createProduction" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProduction" auth="true">
         <description>Create a production run service in java</description>
-        <implements service="productionInterface" />
+        <implements service="productionInterface"/>
     </service>
     <service name="createProductionRunJavaService" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createProductionRunJava" auth="true">
         <description>Create a production run service in java</description>
-        <implements service="productionInterface" />
+        <implements service="productionInterface"/>
     </service>
     <service name="createProductionRunGroovyService" engine="groovy" location="component://ofbizDemo/groovyScripts/ ofbizDemo/CreateProductionRunGroovy.groovy" invoke="createProductionRunGroovy" auth="true">
         <description>Create a production run service in Groovy</description>
-        <implements service="productionInterface" />
+        <implements service="productionInterface"/>
     </service>
     <service name="updateProductionRunDemo" engine="java" location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="updateProductionRunDemo" auth="true">
         <description>Update a Production Run</description>
-        <attribute name="productionRunId" type="String" mode="IN" optional="false" />
-        <attribute name="quantity" type="BigDecimal" mode="IN" optional="true" />
-        <attribute name="estimatedStartDate" type="Timestamp" mode="IN" optional="true" />
-        <attribute name="workEffortName" type="String" mode="IN" optional="true" />
-        <attribute name="description" type="String" mode="IN" optional="true" />
-        <attribute name="facilityId" type="String" mode="IN" optional="true" />
+        <attribute name="productionRunId" type="String" mode="IN" optional="false"/>
+        <attribute name="quantity" type="BigDecimal" mode="IN" optional="true"/>
+        <attribute name="estimatedStartDate" type="Timestamp" mode="IN" optional="true"/>
+        <attribute name="workEffortName" type="String" mode="IN" optional="true"/>
+        <attribute name="description" type="String" mode="IN" optional="true"/>
+        <attribute name="facilityId" type="String" mode="IN" optional="true"/>
     </service>
 </services>

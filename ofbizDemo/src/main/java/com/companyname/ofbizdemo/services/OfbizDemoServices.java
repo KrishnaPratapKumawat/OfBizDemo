@@ -34,33 +34,31 @@ public class OfbizDemoServices {
 
     public static Map<String, Object> createProductionRunJava(DispatchContext dctx,
                                                               Map<String, ? extends Object> context) {
-        Map<String, Object> result = ServiceUtil.returnSuccess();
+        Map<String, Object> result = ServiceUtil.returnSuccess("Created");
         GenericValue userLogin = (GenericValue) context.get("userLogin");
         LocalDispatcher dispatcher = dctx.getDispatcher();
-
+        String productionRunId;
         try {
-            Map<String, Object> createProductionRunMap = new HashMap<>();
-            createProductionRunMap = dctx.getModelService("createProductionRun").makeValid(context,
+            Map<String, Object> createProductionRunMap = dctx.getModelService("createProductionRun").makeValid(context,
                     ModelService.IN_PARAM);
-            Map<String, Object> resultsMap = dispatcher.runSync("createProductionRun",
-                    createProductionRunMap);
-            if (ServiceUtil.isSuccess(result)) {
-                return ServiceUtil.returnSuccess("Created Your Production ...................");
+            Map<String, Object> resultsMap = dispatcher.runSync("createProductionRun",createProductionRunMap);
+            if (ServiceUtil.isSuccess(resultsMap)) {
+                productionRunId = (String) resultsMap.get("productionRunId");
+                result.put("productionRunId", productionRunId);
             }
         } catch (GenericServiceException e) {
             Debug.log(e, module);
-            return ServiceUtil.returnError("Error in creating record in WorkEffort entity ........" +
+            return ServiceUtil.returnError("Error in creating record........................." +
                     module);
         }
+
         return result;
     }
 //    =============================================UpdateProductionRun==================================================
 
     public static Map<String, Object> updateProductionRunDemo(DispatchContext ctx, Map<String, ? extends Object> context) {
         Map<String, Object> result = ServiceUtil.returnSuccess();
-        Delegator delegator = ctx.getDelegator();
         LocalDispatcher dispatcher = ctx.getDispatcher();
-        Locale locale = (Locale) context.get("locale");
         GenericValue userLogin = (GenericValue) context.get("userLogin");
         String productionRunId = (String) context.get("productionRunId");
         try {
@@ -69,12 +67,15 @@ public class OfbizDemoServices {
                     ModelService.IN_PARAM);
             Map<String, Object> resultsMap = dispatcher.runSync("updateProductionRun", productionRunData);
             if (ServiceUtil.isSuccess(resultsMap)) {
+                 productionRunId = (String) resultsMap.get("productionRunId");
+                result.put("productionRunId", productionRunId);
                 return ServiceUtil.returnSuccess("SuccessFully UpdateRecord..........");
             }
         } catch (GenericServiceException e) {
             Debug.log(e, module);
             return ServiceUtil.returnError("Error in UpdateRecord............");
         }
+        result.put("productionRunId", productionRunId);
         return result;
     }
 }

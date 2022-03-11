@@ -8,7 +8,7 @@
     <div class="screenlet-body">
         <form name="CreateProductionRunFromByJava" method="post"
               action="<@ofbizUrl>createProductionRunJavaService</@ofbizUrl>">
-            <input name="productionRunId" type="hidden" value="${productionRunId!}"/>
+            <input name="productionRunId" type="hidden" value="${parameters.productionRunId!}"/>
 
             <table width="100%">
                 <tr>

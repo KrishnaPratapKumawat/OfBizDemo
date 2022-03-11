@@ -11,7 +11,7 @@
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.ProductId}</span></td>
                     <td width="2%"></td>
-                    <td width="83%"><@htmlTemplate.lookupField value="${parameters.productId}" formName="CreateProductionRunFromByJava" name="productId" id="productId" fieldFormName="LookupProduct"/></td>
+                    <td width="83%"><@htmlTemplate.lookupField value="${parameters.productId!}" formName="CreateProductionRunFromByJava" name="productId" id="productId" fieldFormName="LookupProduct"/></td>
                 </tr>
                 <tr>
                     <td width="15%" align="right"><span class="label" >${uiLabelMap.Quantity}</span></td>

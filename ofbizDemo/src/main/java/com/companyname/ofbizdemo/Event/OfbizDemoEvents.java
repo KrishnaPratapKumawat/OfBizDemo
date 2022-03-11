@@ -59,7 +59,6 @@ public class OfbizDemoEvents {
         GenericValue userLogin = (GenericValue) request.getSession().getAttribute("userLogin");
         String productId = request.getParameter("productId");
         int pRQuantity = Integer.parseInt(request.getParameter("pRQuantity"));
-        /*Debug.log("=================="+pRQuantity);*/
         String startDate = request.getParameter("startDate");
         String facilityId = request.getParameter("facilityId");
         String routingId = request.getParameter("routingId");
@@ -68,6 +67,7 @@ public class OfbizDemoEvents {
 
         List<String> errorMsgList = new ArrayList<>();
         String errorMsg;
+        String productionRunId;
 
         if (UtilValidate.isEmpty(productId)) {
             errorMsg = "Product Id is Missing";
@@ -99,12 +99,12 @@ public class OfbizDemoEvents {
             createProductionRunMap.put("workEffortName", workEffortName);
             createProductionRunMap.put("description", description);
             Map<String, Object> resultsMap = dispatcher.runSync("createProductionRunJavaService", createProductionRunMap);
-            if (ServiceUtil.isError(resultsMap)) {
-                request.setAttribute("_ERROR_MESSAGE_", ServiceUtil.getErrorMessage(resultsMap));
-                return "error";
+            if (ServiceUtil.isSuccess(resultsMap)) {
+                productionRunId = (String) resultsMap.get("productionRunId");
+                request.setAttribute("productionRunId", productionRunId);
             }
-            String productionRunId = (String) resultsMap.get("productionRunId");
-            request.setAttribute("productionRunId", productionRunId);
+
+            Debug.log("==========================Event==================================");
         } catch (GenericServiceException e) {
             Debug.logInfo("Error", module, e);
             request.setAttribute("_ERROR_MESSAGE_", e.getMessage());
