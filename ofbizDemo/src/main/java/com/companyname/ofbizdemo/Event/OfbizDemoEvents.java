@@ -104,12 +104,13 @@ public class OfbizDemoEvents {
                 request.setAttribute("productionRunId", productionRunId);
             }
 
-            Debug.log("==========================Event==================================");
+
         } catch (GenericServiceException e) {
             Debug.logInfo("Error", module, e);
             request.setAttribute("_ERROR_MESSAGE_", e.getMessage());
             return "error";
         }
-        return "success";
+        request.setAttribute("_EVENT_MESSAGE_", "Created Your Record SuccessFully.");
+        return "Success";
     }
 }
