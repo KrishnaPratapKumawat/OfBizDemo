@@ -110,7 +110,7 @@ public class OfbizDemoEvents {
             request.setAttribute("_ERROR_MESSAGE_", e.getMessage());
             return "error";
         }
-        request.setAttribute("_EVENT_MESSAGE_", "Created Your Record SuccessFully.");
+        request.setAttribute("_EVENT_MESSAGE_", "Created Your Record SuccessFully.....................");
         return "Success";
     }
 }

@@ -18,7 +18,7 @@ condition = exprBuilder.AND() {
         }
     }
     if (parameters.workEffortName){
-        LIKE(workEffortName: parameters.workEffortName + "%")
+        LIKE(workEffortName: "%"+parameters.workEffortName + "%")
     }
     if (parameters.facilityId){
         EQUALS(facilityId: parameters.facilityId)
