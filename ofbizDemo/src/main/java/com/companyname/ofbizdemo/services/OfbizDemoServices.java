@@ -1,6 +1,4 @@
 package com.companyname.ofbizdemo.services;
-import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import org.apache.ofbiz.base.util.Debug;
 import org.apache.ofbiz.entity.Delegator;
