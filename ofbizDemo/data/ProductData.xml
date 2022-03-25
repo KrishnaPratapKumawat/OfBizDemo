@@ -1,0 +1,101 @@
+<entity-engine-xml>
+    <!--=================================================New Product Data======================================================-->
+
+    <!--=================================================Cretae Product Data======================================================-->
+    <Product productId="Demo_Shirt" productTypeId="FINISHED_GOOD" productName="Shirt" internalName="Shirt" description="DEMO SHIRT" isVirtual="Y" isVariant="N"/>
+    <Product productId="DEMO_SHIRT_M_B" productTypeId="FINISHED_GOOD" internalName="Shirt Medium Black" productName="Shirt Medium Black" description="Shirt Medium Black" isVirtual="N" isVariant="Y" />
+    <Product productId="DEMO_SHIRT_M_W" productTypeId="FINISHED_GOOD" internalName="Shirt Medium White" productName="Shirt Medium White" description="Shirt Medium White" isVirtual="N" isVariant="Y" />
+    <Product productId="DEMO_SHIRT_M_R" productTypeId="FINISHED_GOOD" internalName="Shirt Medium Red" productName="Shirt Medium Red" description="Shirt Medium Red" isVirtual="N" isVariant="Y" />
+
+    <Product productId="DEMO_SHIRT_L_B" productTypeId="FINISHED_GOOD" internalName="Shirt Medium Black" productName="Shirt Medium Black" description="Shirt Medium Black" isVirtual="N" isVariant="Y" />
+    <Product productId="DEMO_SHIRT_L_W" productTypeId="FINISHED_GOOD" internalName="Shirt Medium White" productName="Shirt Medium White" description="Shirt Medium White" isVirtual="N" isVariant="Y" />
+    <Product productId="DEMO_SHIRT_L_R" productTypeId="FINISHED_GOOD" internalName="Shirt Medium Red" productName="Shirt Medium Red" description="Shirt Medium Red" isVirtual="N" isVariant="Y" />
+
+    <Product productId="DEMO_SHIRT_XL_B" productTypeId="FINISHED_GOOD" internalName="Shirt Medium Black" productName="Shirt Medium Black" description="Shirt Medium Black" isVirtual="N" isVariant="Y" />
+    <Product productId="DEMO_SHIRT_XL_W" productTypeId="FINISHED_GOOD" internalName="Shirt Medium White" productName="Shirt Medium White" description="Shirt Medium White" isVirtual="N" isVariant="Y" />
+    <Product productId="DEMO_SHIRT_XL_R" productTypeId="FINISHED_GOOD" internalName="Shirt Medium Red" productName="Shirt Medium Red" description="Shirt Medium Red" isVirtual="N" isVariant="Y" />
+    <!--==========================================================Productfacilities==========================================================================-->
+    <ProductFacility productId="Demo_Shirt" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7" />
+    <ProductFacility productId="DEMO_SHIRT_M_B" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7"/>
+    <ProductFacility productId="DEMO_SHIRT_M_W" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7"/>
+    <ProductFacility productId="DEMO_SHIRT_M_R" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7"/>
+    <ProductFacility productId="DEMO_SHIRT_L_B" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7"/>
+    <ProductFacility productId="DEMO_SHIRT_L_W" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7"/>
+    <ProductFacility productId="DEMO_SHIRT_L_R" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7"/>
+    <ProductFacility productId="DEMO_SHIRT_XL_B" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7"/>
+    <ProductFacility productId="DEMO_SHIRT_XL_W" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7"/>
+    <ProductFacility productId="DEMO_SHIRT_XL_R" facilityId="WebStoreWarehouse" minimumStock="10" reorderQuantity="10" daysToShip="7"/>
+    <!--==========================================================ProductFacilitiesLocation==========================================================================-->
+    <FacilityLocation facilityId="WebStoreWarehouse" locationSeqId="TLTLTLLL01" locationTypeEnumId="FLT_PICKLOC" areaId="TL" aisleId="TL" sectionId="TL" levelId="LL" positionId="01"/>
+    <ProductFacilityLocation productId="Demo_Shirt" facilityId="WebStoreWarehouse" locationSeqId="TLTLTLLL01"/>
+    <ProductFacilityLocation productId="Demo_Shirt" facilityId="WebStoreWarehouse" locationSeqId="TLTLTLLL01" minimumStock="10" moveQuantity="5"/>
+    <!--==========================================================ProductSupplier==================================================================================================================================================================-->
+    <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Demo_Shirt" lastPrice="14.00" supplierProductId="Shirt" supplierProductName="Shirt" availableFromDate="2022-03-17 00:00:00.000" canDropShip="N"/>
+    <!--========================================================ProductPrice===========================================================================================================================================================================================================-->
+    <ProductPrice productId="Demo_Shirt" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2022-03-17 12:00:00.0" price="15.00" createdDate="2022-03-17 12:00:00.0"  lastModifiedDate="2022-03-17 12:00:00.0"/>
+    <!--========================================================ProductFeaturesCategory==================================================================-->
+    <ProductFeatureCategory productFeatureCategoryId="SHIRT_FEATURE" description="shirt features" />
+    <ProductFeature productFeatureId="SIZE_MEDIUM" productFeatureTypeId="SIZE" productFeatureCategoryId="SHIRT_FEATURE" description="MEDIUM" />
+    <ProductFeature productFeatureId="SIZE_LARGE" productFeatureTypeId="SIZE" productFeatureCategoryId="SHIRT_FEATURE" description="LARGE" />
+    <ProductFeature productFeatureId="SIZE_EXTRA_SMALL" productFeatureTypeId="SIZE" productFeatureCategoryId="SHIRT_FEATURE" description="EXTRA LARGE" />
+    <!--========================================================ProductFeatures==================================================================-->
+    <ProductFeature productFeatureId="COLOR_BLACK_" productFeatureTypeId="COLOR" productFeatureCategoryId="SHIRT_FEATURE" description="Black" />
+    <ProductFeature productFeatureId="COLOR_WHITE_" productFeatureTypeId="COLOR" productFeatureCategoryId="SHIRT_FEATURE" description="White"/>
+    <ProductFeature productFeatureId="COLOR_RED_" productFeatureTypeId="COLOR" productFeatureCategoryId="SHIRT_FEATURE" description="Red" />
+    <!--========================================================ProductAssoc==================================================================-->
+    <ProductAssoc productId="Demo_Shirt" productIdTo="DEMO_SHIRT_M_B" productAssocTypeId="PRODUCT_VARIANT" fromDate="2022-03-24 12:29:54.794"/>
+    <ProductAssoc productId="Demo_Shirt" productIdTo="DEMO_SHIRT_M_W" productAssocTypeId="PRODUCT_VARIANT" fromDate="2022-03-24 12:29:54.794"/>
+    <ProductAssoc productId="Demo_Shirt" productIdTo="DEMO_SHIRT_M_R" productAssocTypeId="PRODUCT_VARIANT" fromDate="2022-03-24 12:29:54.794"/>
+
+    <ProductAssoc productId="Demo_Shirt" productIdTo="DEMO_SHIRT_L_B" productAssocTypeId="PRODUCT_VARIANT" fromDate="2022-03-24 12:29:54.794"/>
+    <ProductAssoc productId="Demo_Shirt" productIdTo="DEMO_SHIRT_L_W" productAssocTypeId="PRODUCT_VARIANT" fromDate="2022-03-24 12:29:54.794"/>
+    <ProductAssoc productId="Demo_Shirt" productIdTo="DEMO_SHIRT_L_R" productAssocTypeId="PRODUCT_VARIANT" fromDate="2022-03-24 12:29:54.794"/>
+
+    <ProductAssoc productId="Demo_Shirt" productIdTo="DEMO_SHIRT_XL_B" productAssocTypeId="PRODUCT_VARIANT" fromDate="2022-03-24 12:29:54.794"/>
+    <ProductAssoc productId="Demo_Shirt" productIdTo="DEMO_SHIRT_XL_W" productAssocTypeId="PRODUCT_VARIANT" fromDate="2022-03-24 12:29:54.794"/>
+    <ProductAssoc productId="Demo_Shirt" productIdTo="DEMO_SHIRT_XL_R" productAssocTypeId="PRODUCT_VARIANT" fromDate="2022-03-24 12:29:54.794"/>
+    <!--========================================================ProductFeatureAppl==================================================================-->
+    <ProductFeatureAppl productId="Demo_Shirt" productFeatureId="SIZE_MEDIUM" productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2022-03-24 12:52:54.794"/>
+    <ProductFeatureAppl productId="Demo_Shirt" productFeatureId="SIZE_LARGE" productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2022-03-24 12:52:54.794"/>
+    <ProductFeatureAppl productId="Demo_Shirt" productFeatureId="SIZE_EXTRA_SMALL" productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2022-03-24 12:52:54.794"/>
+
+    <ProductFeatureAppl productId="Demo_Shirt" productFeatureId="COLOR_BLACK_" productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2022-03-24 12:52:54.794"/>
+    <ProductFeatureAppl productId="Demo_Shirt" productFeatureId="COLOR_WHITE_" productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2022-03-24 12:52:54.794"/>
+    <ProductFeatureAppl productId="Demo_Shirt" productFeatureId="COLOR_RED_" productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2022-03-24 12:52:54.794"/>
+
+    <ProductFeatureAppl productId="DEMO_SHIRT_M_B" productFeatureId="SIZE_MEDIUM" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_M_W" productFeatureId="SIZE_MEDIUM" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_M_R" productFeatureId="SIZE_MEDIUM" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+
+    <ProductFeatureAppl productId="DEMO_SHIRT_M_B" productFeatureId="COLOR_BLACK_" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_M_W" productFeatureId="COLOR_WHITE_" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_M_R" productFeatureId="COLOR_RED_" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+
+    <ProductFeatureAppl productId="DEMO_SHIRT_L_B" productFeatureId="SIZE_LARGE" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_L_W" productFeatureId="SIZE_LARGE" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_L_R" productFeatureId="SIZE_LARGE" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+
+    <ProductFeatureAppl productId="DEMO_SHIRT_L_B" productFeatureId="COLOR_BLACK_" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_L_W" productFeatureId="COLOR_WHITE_" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_L_R" productFeatureId="COLOR_RED_" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+
+    <ProductFeatureAppl productId="DEMO_SHIRT_XL_R" productFeatureId="SIZE_EXTRA_SMALL" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_XL_W" productFeatureId="SIZE_EXTRA_SMALL" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_XL_R" productFeatureId="SIZE_EXTRA_SMALL" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+
+    <ProductFeatureAppl productId="DEMO_SHIRT_XL_R" productFeatureId="COLOR_BLACK_" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_XL_W" productFeatureId="COLOR_WHITE_" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <ProductFeatureAppl productId="DEMO_SHIRT_XL_R" productFeatureId="COLOR_RED_" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2022-03-24 12:52:54.794" />
+    <!--========================================================ProductCatalog==================================================================-->
+    <ProdCatalog prodCatalogId="DemoCatalog" catalogName="Demo Catalog"/>
+    <ProductCategory categoryName="Browse Root" longDescription="Browse Root Category" productCategoryId="CATALOG_ID_1" productCategoryTypeId="CATALOG_CATEGORY" />
+    <ProductCategory categoryName="Demo Clothes" longDescription="long description of Gizmos" primaryParentCategoryId="CATALOG_ID_1" productCategoryId="DEMO_CLOTHES" productCategoryTypeId="CATALOG_CATEGORY" />
+    <ProdCatalogCategory prodCatalogId="DemoCatalog" productCategoryId="CATALOG_ID_1" fromDate="2022-03-24 16:40:54.794" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" />
+    <ProductCategoryRollup parentProductCategoryId="CATALOG_ID_1" productCategoryId="DEMO_CLOTHES" fromDate="2022-03-24 16:40:54.794"/>
+    <ProductCategoryMember productCategoryId="DEMO_CLOTHES" productId="Demo_Shirt" fromDate="2022-03-24 12:50:54.794"/>
+    <!--========================================================Agreement==================================================================-->
+    <PartyRole partyId="DemoSupplier" roleTypeId="CUSTOMER"/>
+    <Agreement agreementId="Demo_Agreement" agreementTypeId="PRODUCT_AGREEMENT" description="Agreement with DemoCustomer for drop ship" partyIdFrom="DemoCustAgent" partyIdTo="Company" roleTypeIdFrom="CUSTOMER" roleTypeIdTo="INTERNAL_ORGANIZATIO" fromDate="2022-03-25 12:33:00.0"/>
+    <AgreementItem agreementId="Demo_Agreement" agreementItemSeqId="00001" agreementItemTypeId="AGREEMENT_PRICING_PR" currencyUomId="USD"/>
+    <AgreementProductAppl agreementId="Demo_Agreement" agreementItemSeqId="00001" price="8" productId="DEMO_SHIRT_M_B"/>
+</entity-engine-xml>
