@@ -1,0 +1,47 @@
+<entity-engine-xml>
+                                <!--Create a Customer-->
+<Party partyId="Demo_User" partyTypeId="PERSON" statusId="PARTY_ENABLED"/>
+<Person partyId="Demo_User" firstName="Mark" lastName="Tailor"/>
+<UserLogin partyId="Demo_User" userLoginId="Demo_User"/>
+<PartyRole partyId="Demo_User" roleTypeId="CUSTOMER"/>
+<PartyRole partyId="Demo_User" roleTypeId="AGENT"/>
+<PartyRole partyId="Demo_User" roleTypeId="_NA_"/>
+<PartyStatus partyId="Demo_User" statusId="PARTY_ENABLED" statusDate="2022-03-29 12:50:00.0"/>
+<ContactMech contactMechId="7671" contactMechTypeId="POSTAL_ADDRESS"/>
+<PostalAddress contactMechId="7671" toName="Mark Tailor" address1="2004 Factory Blvd" city="Orem" stateProvinceGeoId="UT" postalCode="84057" countryGeoId="USA" geoPointId="9000"/>
+<PartyContactMech partyId="Demo_User" contactMechId="7671" fromDate="2022-03-29 00:00:00.000" allowSolicitation="Y"/>
+<PartyContactMechPurpose partyId="Demo_User" contactMechId="7671" contactMechPurposeTypeId="SHIPPING_LOCATION" fromDate="2022-03-29 00:00:00.000"/>
+<PartyContactMechPurpose partyId="Demo_User" contactMechId="7671" contactMechPurposeTypeId="GENERAL_LOCATION" fromDate="2022-03-29 00:00:00.000"/>
+<ContactMech contactMechId="7672" contactMechTypeId="TELECOM_NUMBER"/>
+<TelecomNumber contactMechId="7672" areaCode="801" contactNumber="555-5555"/>
+<PartyContactMech partyId="Demo_User" contactMechId="7672" fromDate="2022-03-29 00:00:00.000" allowSolicitation="Y"/>
+<PartyContactMechPurpose partyId="Demo_User" contactMechId="7672" contactMechPurposeTypeId="PHONE_WORK" fromDate="2022-03-29 00:00:00.000"/>
+<ContactMech contactMechId="7673" contactMechTypeId="EMAIL_ADDRESS" infoString="ofbiztest@example.com"/>
+<PartyContactMech partyId="Demo_User" contactMechId="7673" fromDate="2022-03-29 00:00:00.000" allowSolicitation="Y"/>
+<PartyContactMechPurpose partyId="Demo_User" contactMechId="7673" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2022-03-29 00:00:00.000"/>
+<PaymentMethod paymentMethodId="0767" paymentMethodTypeId="CREDIT_CARD" partyId="Demo_User" fromDate="2022-03-29 00:00:00.000"/>
+<CreditCard paymentMethodId="0767" cardType="CCT_VISA" cardNumber="4111111111111111" expireDate="02/2025" firstNameOnCard="Mark" lastNameOnCard="Tailor" contactMechId="7671"/>
+                                                    <!--Create Sales Order-->
+<OrderHeader orderId="Demo_Order" orderTypeId="SALES_ORDER" orderName="Shirt" salesChannelEnumId="WEB_SALES_CHANNEL" orderDate="2022-03-29 02:51:00.0" priority="2" entryDate="2022-03-29 02:52:00.0" statusId="ORDER_CREATED" currencyUom="USD" originFacilityId="WebStoreWarehouse" productStoreId="9000" remainingSubTotal="15" grandTotal="15" />
+<OrderItem orderId="Demo_Order" orderItemSeqId="00001" orderItemTypeId="PRODUCT_ORDER_ITEM" productId="DEMO_SHIRT_L_B" prodCatelogId="DemoCatelog" isPromo="N" quantity="1" selectedAmount="0" unitPrice="15" itemDescription="It is a Black Shirt and this shirt Size is Large" statusId="ITEM_CREATED" />
+<OrderItemShipGroup orderId="Demo_Order" shipGroupSeqId="00001" shipmentMethodTypeId="NEXT_DAY" carrierPartyId="UPS" carrierRoleTypeId="CARRIER" contactMechId="7671" shipAfterDate="2022-03-31 15:43:53.0"/>
+<OrderItemShipGroupAssoc orderId="Demo_Order" orderItemSeqId="00001" shipGroupSeqId="00001" quantity="1" />
+<OrderPaymentPreference orderPaymentPreferenceId="Demo_Pmt" orderId="Demo_Order" paymentMethodTypeId="EXT_COD"  presentFlag="N"  maxAmount="15"  statusId="PMNT_NOT_PAID" />
+
+<OrderContactMech orderId="Demo_Order" contactMechPurposeTypeId="PHONE_BILLING" contactMechId="7672"/>
+<OrderContactMech orderId="Demo_Order" contactMechPurposeTypeId="PHONE_SHIPPING" contactMechId="7672"/>
+<OrderContactMech orderId="Demo_Order" contactMechPurposeTypeId="ORDER_EMAIL" contactMechId="7673"/>
+<OrderContactMech orderId="Demo_Order" contactMechPurposeTypeId="SHIPPING_LOCATION" contactMechId="7671" />
+<OrderContactMech orderId="Demo_Order" contactMechPurposeTypeId="BILLING_LOCATION" contactMechId="7671" />
+
+<OrderRole orderId="Demo_Order" partyId="Demo_User" roleTypeId="BILL_FROM_VENDOR" />
+<OrderRole orderId="Demo_Order" partyId="Demo_User" roleTypeId="BILL_TO_CUSTOMER" />
+<OrderRole orderId="Demo_Order" partyId="Demo_User" roleTypeId="SHIP_TO_CUSTOMER" />
+<OrderRole orderId="Demo_Order" partyId="Demo_User" roleTypeId="END_USER_CUSTOMER" />
+<OrderRole orderId="Demo_Order" partyId="Demo_User" roleTypeId="PLACING_CUSTOMER" />
+
+<OrderStatus orderStatusId="0420" statusId="ORDER_CREATED" orderId="Demo_Order" statusDatetime="2022-03-29 03:58:00" statusUserLogin="admin" />
+<OrderStatus orderStatusId="0421" statusId="ITEM_CREATED" orderId="Demo_Order" orderItemSeqId="00001" statusDatetime="2022-03-29 03:58:00" statusUserLogin="admin" />
+</entity-engine-xml>
+
+
