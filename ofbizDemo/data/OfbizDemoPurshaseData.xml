@@ -1,0 +1,58 @@
+<entity-engine-xml>
+                                                <!--Created Order Header -->
+<OrderHeader orderId="Demo_Pur_Data" orderTypeId="PURCHASE_ORDER" orderName="Shirt Purchase Order" salesChannelEnumId="WEB_SALES_CHANNEL" orderDate="2022-03-29 02:51:00.0" priority="2" entryDate="2022-03-29 02:52:00.0" statusId="ORDER_CREATED" currencyUom="USD" originFacilityId="WebStoreWarehouse" productStoreId="9000" remainingSubTotal="15" grandTotal="15" />
+<OrderItem orderId="Demo_Pur_Data" orderItemSeqId="00002" orderItemTypeId="PRODUCT_ORDER_ITEM" productId="Demo_Shirt"  isPromo="N" quantity="20.0" selectedAmount="0.0" unitPrice="15" unitListPrice="0.0" isModifiedPrice="N" itemDescription="It is a  Shirt and this shirt size and color available" statusId="ITEM_CREATED"/>
+<OrderItemShipGroup orderId="Demo_Pur_Data" shipGroupSeqId="00001" shipmentMethodTypeId="NO_SHIPPING" carrierPartyId="_NA_" carrierRoleTypeId="CARRIER" contactMechId="9200" maySplit="N" isGift="N" estimatedDeliveryDate="2022-03-31 00:00:00.0"/>
+<OrderItemShipGroupAssoc orderId="Demo_Pur_Data" orderItemSeqId="00002" shipGroupSeqId="00001" quantity="20"/>
+<OrderPaymentPreference orderPaymentPreferenceId="Demo_Pmt" orderId="Demo_Pur_Data" paymentMethodTypeId="CREDIT_CARD"  presentFlag="N"  maxAmount="15"  statusId="PMNT_NOT_PAID" />
+                                                    <!--Order ContactMech-->
+<OrderContactMech orderId="Demo_Pur_Data" contactMechPurposeTypeId="PHONE_BILLING" contactMechId="7672"/>
+<OrderContactMech orderId="Demo_Pur_Data" contactMechPurposeTypeId="PHONE_SHIPPING" contactMechId="7672"/>
+<OrderContactMech orderId="Demo_Pur_Data" contactMechPurposeTypeId="ORDER_EMAIL" contactMechId="7673"/>
+<OrderContactMech orderId="Demo_Pur_Data" contactMechPurposeTypeId="SHIPPING_LOCATION" contactMechId="7671" />
+<OrderContactMech orderId="Demo_Pur_Data" contactMechPurposeTypeId="BILLING_LOCATION" contactMechId="7671" />
+                                                        <!--Order Role-->
+<OrderRole orderId="Demo_Pur_Data" partyId="Company" roleTypeId="BILL_TO_CUSTOMER"/>
+<OrderRole orderId="Demo_Pur_Data" partyId="Demo_User" roleTypeId="BILL_FROM_VENDOR"/>
+<OrderRole orderId="Demo_Pur_Data" partyId="Demo_User" roleTypeId="SHIP_FROM_VENDOR"/>
+<OrderRole orderId="Demo_Pur_Data" partyId="Demo_User" roleTypeId="SUPPLIER_AGENT"/>
+                                                        <!--Order Tax Adjustment-->
+<OrderTerm termTypeId="FIN_PAYMENT_TERM" orderId="Demo_Pur_Data" orderItemSeqId="_NA_" termDays="7" textValue="Payment Duefor 7 days " description="payment for Shirt" />
+<OrderAdjustment orderAdjustmentId="Odr_Adj_ID" orderAdjustmentTypeId="SALES_TAX" orderId="Demo_Pur_Data" orderItemSeqId="00002" shipGroupSeqId="00001" comments="Utah State Sales Tax" amount="0" taxAuthorityRate="9004" sourcePercentage="4.75" customerRefrenceId="12-3456789" primaryGeoId="UT" exemptAmount="_NA_" taxAuthGeoId="UT" taxAuthPartyId="UT_TAXMAN" createdDate="2022-03-31 00:00:00"/>
+<OrderAdjustment orderAdjustmentId="Odr_Adj_ID" orderAdjustmentTypeId="SALES_TAX" orderId="Demo_Pur_Data" orderItemSeqId="00002" shipGroupSeqId="00001" comments="1% OFB _NA_ Tax" amount="7.5" taxAuthorityRate="9000" sourcePercentage="1" primaryGeoId="_NA_" taxAuthGeoId="_NA_" taxAuthPartyId="_NA_" createdDate="2022-03-31 00:00:00"/>
+                                                        <!--Shipment Data-->
+<Shipment shipmentId="Ship_Id" shipmentTypeId="PURCHASE_SHIPMENT" statusId="PURCH_SHIP_RECEIVED" primaryOrderId="Demo_Pur_Data" primaryShipGroupSeqId="00001" estimatedShipCost="0.00" destinationFacilityId="WebStoreWarehouse" destinationContactMechId="9200" destinationTelecomNumberId="9201" partyIdFrom="Demo_User" createdDate="2022-03-31 00:00:00.0"/>
+<ShipmentItem shipmentId="Ship_Id" shipmentItemSeqId="00001" productId="Demo_Shirt" quantity="20"/>
+<ShipmentRouteSegment shipmentId="Ship_Id" shipmentRouteSegmentId="00001" destFacilityId="WebStoreWarehouse" destContactMechId="9200" destTelecomNumberId="9201" carrierPartyId="_NA_" shipmentMethodTypeId="NO_SHIPPING" carrierServiceStatusId="SHRSCS_NOT_STARTED"/>
+<ShipmentStatus statusId="PURCH_SHIP_CREATED" shipmentId="Ship_Id" statusDate="2022-03-31 00:00:00.0"/>
+<ShipmentStatus statusId="PURCH_SHIP_RECEIVED" shipmentId="Ship_Id" statusDate="2022-03-31 00:00:00.0"/>
+<ShipmentStatus statusId="PURCH_SHIP_SHIPPED" shipmentId="Ship_Id" statusDate="2022-03-31 00:00:00.0"/>
+                                                <!--Inventory And shipment receipt-->
+    <InventoryItem inventoryItemId="70001" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Demo_Shirt" ownerPartyId="Company" datetimeReceived="2022-04-04 00:00:00.0" facilityId="WebStoreWarehouse" locationSeqId="TLTLTLLL01" quantityOnHandTotal="20" availableToPromiseTotal="20" unitCost="15" currencyUomId="USD"/>
+    <ShipmentReceipt receiptId="9000" inventoryItemId="9025" productId="GZ-2644" shipmentId="9997" orderId="Demo1001" orderItemSeqId="00001" datetimeReceived="2009-08-13 17:47:31.095" quantityAccepted="2.000000" quantityRejected="0.000000"/>
+    <InventoryItemDetail inventoryItemId="9025" inventoryItemDetailSeqId="00001" effectiveDate="2009-08-13 17:47:46.78" quantityOnHandDiff="2.000000" availableToPromiseDiff="2.000000" accountingQuantityDiff="2.000000" unitCost="24.000000" orderId="Demo1001" orderItemSeqId="00001" shipmentId="9997" receiptId="9000"/>
+    <ItemIssuance itemIssuanceId="9000" orderId="Demo1001" orderItemSeqId="00001" shipGroupSeqId="00001" shipmentId="9997" shipmentItemSeqId="00001" issuedDateTime="2009-08-13 17:46:29.603" quantity="2.000000"/>
+
+    <!-- Invoice Data -->
+    <Invoice invoiceId="INV_100" invoiceTypeId="PURCHASE_INVOICE" description="Purchase Order Invoice" partyIdFrom="Demo_User" partyId="Company" statusId="INVOICE_PAID" invoiceDate="2022-04-04 00:00:00.000" currencyUomId="USD"/>
+    <InvoiceItem invoiceId="INV_100" invoiceItemSeqId="00001" invoiceItemTypeId="PINV_FPROD_ITEM" productId="Demo_Shirt" quantity="20.000000" amount="15.000" description="Shirt Invoice"/>
+    <!-- invoice status -->
+    <InvoiceStatus statusId="INVOICE_IN_PROCESS" invoiceId="INV_100" statusDate="2022-4-04 00:00:00.000"/>
+    <InvoiceStatus statusId="INVOICE_APPROVED" invoiceId="INV_100" statusDate="2022-04-04 00:00:00.000"/>
+    <InvoiceStatus statusId="INVOICE_READY" invoiceId="INV_100" statusDate="2022-04-04 00:00:00.000"/>
+    <InvoiceStatus statusId="INVOICE_PAID" invoiceId="INV_100" statusDate="2022-04-04 00:00:00.000"/>
+    <!-- invoice roles -->
+    <InvoiceRole invoiceId="INV_100" partyId="Company" roleTypeId="BILL_TO_CUSTOMER" datetimePerformed="2022-04-04 00:00:00.000"/>
+    <InvoiceRole invoiceId="INV_100" partyId="Demo_User" roleTypeId="BILL_FROM_VENDOR" datetimePerformed="2022-04-04 00:00:00.000"/>
+    <InvoiceRole invoiceId="INV_100" partyId="Demo_User" roleTypeId="SHIP_FROM_VENDOR" datetimePerformed="2022-04-04 00:00:00.000"/>
+    <InvoiceRole invoiceId="INV_100" partyId="Demo_User" roleTypeId="SUPPLIER_AGENT" datetimePerformed="2022-04-04 00:00:00.000"/>
+    <!-- payment data -->
+    <Payment paymentId="8000" paymentTypeId="VENDOR_PAYMENT" paymentPreferenceId="Demo_Pmt" paymentMethodTypeId="COMPANY_CHECK" partyIdFrom="Company" partyIdTo="Demo_User" statusId="PMNT_SENT"  amount="307.50" currencyUomId="USD"/>
+    <PaymentApplication paymentApplicationId="PMTAPP_ID_01" paymentId="8000" invoiceId="INV_100" amountApplied="307.50"/>
+    <!--Order Item Billing-->
+    <OrderItemBilling orderId="Demo_Pur_Data" orderItemSeqId="00002" invoiceId="INV_100" invoiceItemSeqId="00001" shipmentReceiptId="RECEIPT_1" quantity="20.000000" amount="9.00"/>
+    <!-- Accounting Data -->
+    <AcctgTrans acctgTransId="8001" acctgTransTypeId="PURCHASE_INVOICE" transactionDate="2022-04-04 00:00:00.000" isPosted="Y" postedDate="2022-04-04 00:00:00.000" glFiscalTypeId="ACTUAL" partyId="Demo_User" roleTypeId="BILL_FROM_VENDOR" invoiceId="INV_100"/>
+    <AcctgTransEntry acctgTransId="8001" acctgTransEntrySeqId="00001" acctgTransEntryTypeId="_NA_" partyId="Demo_User" roleTypeId="BILL_FROM_VENDOR" productId="Demo_Shirt" glAccountId="214000" organizationPartyId="Company" amount="307.50" currencyUomId="USD" origAmount="307.50" origCurrencyUomId="USD" debitCreditFlag="D" reconcileStatusId="AES_NOT_RECONCILED"/>
+    <AcctgTransEntry acctgTransId="8001" acctgTransEntrySeqId="00002" acctgTransEntryTypeId="_NA_" partyId="Demo_User" roleTypeId="BILL_FROM_VENDOR" glAccountTypeId="ACCOUNTS_PAYABLE" glAccountId="210000" organizationPartyId="Company" amount="307.50" currencyUomId="USD" origAmount="307.00" origCurrencyUomId="USD" debitCreditFlag="C" reconcileStatusId="AES_NOT_RECONCILED"/>
+</entity-engine-xml>
