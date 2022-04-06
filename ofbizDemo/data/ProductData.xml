@@ -30,7 +30,7 @@
     <ProductFacilityLocation productId="Demo_Shirt" facilityId="WebStoreWarehouse" locationSeqId="TLTLTLLL01"/>
     <ProductFacilityLocation productId="Demo_Shirt" facilityId="WebStoreWarehouse" locationSeqId="TLTLTLLL01" minimumStock="10" moveQuantity="5"/>
     <!--==========================================================ProductSupplier==================================================================================================================================================================-->
-    <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="0" currencyUomId="USD" productId="Demo_Shirt" lastPrice="14.00" supplierProductId="Shirt" supplierProductName="Shirt" availableFromDate="2022-03-17 00:00:00.000" canDropShip="N"/>
+    <SupplierProduct partyId="DemoSupplier" minimumOrderQuantity="10" currencyUomId="USD" productId="Demo_Shirt" lastPrice="14.00" supplierProductId="Shirt" supplierProductName="Shirt" availableFromDate="2022-03-17 00:00:00.000" canDropShip="N"/>
     <!--========================================================ProductPrice===========================================================================================================================================================================================================-->
     <ProductPrice productId="Demo_Shirt" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2022-03-17 12:00:00.0" price="15.00" createdDate="2022-03-17 12:00:00.0"  lastModifiedDate="2022-03-17 12:00:00.0"/>
     <!--========================================================ProductFeaturesCategory==================================================================-->

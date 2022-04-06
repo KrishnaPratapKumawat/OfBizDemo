@@ -28,10 +28,10 @@
 <ShipmentStatus statusId="PURCH_SHIP_RECEIVED" shipmentId="Ship_Id" statusDate="2022-03-31 00:00:00.0"/>
 <ShipmentStatus statusId="PURCH_SHIP_SHIPPED" shipmentId="Ship_Id" statusDate="2022-03-31 00:00:00.0"/>
                                                 <!--Inventory And shipment receipt-->
-    <InventoryItem inventoryItemId="70001" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Demo_Shirt" ownerPartyId="Company" datetimeReceived="2022-04-04 00:00:00.0" facilityId="WebStoreWarehouse" locationSeqId="TLTLTLLL01" quantityOnHandTotal="20" availableToPromiseTotal="20" unitCost="15" currencyUomId="USD"/>
-    <ShipmentReceipt receiptId="9000" inventoryItemId="9025" productId="GZ-2644" shipmentId="9997" orderId="Demo1001" orderItemSeqId="00001" datetimeReceived="2009-08-13 17:47:31.095" quantityAccepted="2.000000" quantityRejected="0.000000"/>
-    <InventoryItemDetail inventoryItemId="9025" inventoryItemDetailSeqId="00001" effectiveDate="2009-08-13 17:47:46.78" quantityOnHandDiff="2.000000" availableToPromiseDiff="2.000000" accountingQuantityDiff="2.000000" unitCost="24.000000" orderId="Demo1001" orderItemSeqId="00001" shipmentId="9997" receiptId="9000"/>
-    <ItemIssuance itemIssuanceId="9000" orderId="Demo1001" orderItemSeqId="00001" shipGroupSeqId="00001" shipmentId="9997" shipmentItemSeqId="00001" issuedDateTime="2009-08-13 17:46:29.603" quantity="2.000000"/>
+<InventoryItem inventoryItemId="70001" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="Demo_Shirt" ownerPartyId="Company" datetimeReceived="2022-04-04 00:00:00.0" facilityId="WebStoreWarehouse" locationSeqId="TLTLTLLL01" quantityOnHandTotal="20" availableToPromiseTotal="20" unitCost="15" currencyUomId="USD"/>
+<ShipmentReceipt receiptId="9000" inventoryItemId="9025" productId="GZ-2644" shipmentId="9997" orderId="Demo1001" orderItemSeqId="00001" datetimeReceived="2009-08-13 17:47:31.095" quantityAccepted="2.000000" quantityRejected="0.000000"/>
+<InventoryItemDetail inventoryItemId="9025" inventoryItemDetailSeqId="00001" effectiveDate="2009-08-13 17:47:46.78" quantityOnHandDiff="2.000000" availableToPromiseDiff="2.000000" accountingQuantityDiff="2.000000" unitCost="24.000000" orderId="Demo1001" orderItemSeqId="00001" shipmentId="9997" receiptId="9000"/>
+<ItemIssuance itemIssuanceId="9000" orderId="Demo1001" orderItemSeqId="00001" shipGroupSeqId="00001" shipmentId="9997" shipmentItemSeqId="00001" issuedDateTime="2009-08-13 17:46:29.603" quantity="2.000000"/>
 
     <!-- Invoice Data -->
     <Invoice invoiceId="INV_100" invoiceTypeId="PURCHASE_INVOICE" description="Purchase Order Invoice" partyIdFrom="Demo_User" partyId="Company" statusId="INVOICE_PAID" invoiceDate="2022-04-04 00:00:00.000" currencyUomId="USD"/>
@@ -50,7 +50,7 @@
     <Payment paymentId="8000" paymentTypeId="VENDOR_PAYMENT" paymentPreferenceId="Demo_Pmt" paymentMethodTypeId="COMPANY_CHECK" partyIdFrom="Company" partyIdTo="Demo_User" statusId="PMNT_SENT"  amount="307.50" currencyUomId="USD"/>
     <PaymentApplication paymentApplicationId="PMTAPP_ID_01" paymentId="8000" invoiceId="INV_100" amountApplied="307.50"/>
     <!--Order Item Billing-->
-    <OrderItemBilling orderId="Demo_Pur_Data" orderItemSeqId="00002" invoiceId="INV_100" invoiceItemSeqId="00001" shipmentReceiptId="RECEIPT_1" quantity="20.000000" amount="9.00"/>
+<!--    <OrderItemBilling orderId="Demo_Pur_Data" orderItemSeqId="00002" invoiceId="INV_100" invoiceItemSeqId="00001" shipmentReceiptId="RECEIPT_1" quantity="20.000000" amount="9.00"/>-->
     <!-- Accounting Data -->
     <AcctgTrans acctgTransId="8001" acctgTransTypeId="PURCHASE_INVOICE" transactionDate="2022-04-04 00:00:00.000" isPosted="Y" postedDate="2022-04-04 00:00:00.000" glFiscalTypeId="ACTUAL" partyId="Demo_User" roleTypeId="BILL_FROM_VENDOR" invoiceId="INV_100"/>
     <AcctgTransEntry acctgTransId="8001" acctgTransEntrySeqId="00001" acctgTransEntryTypeId="_NA_" partyId="Demo_User" roleTypeId="BILL_FROM_VENDOR" productId="Demo_Shirt" glAccountId="214000" organizationPartyId="Company" amount="307.50" currencyUomId="USD" origAmount="307.50" origCurrencyUomId="USD" debitCreditFlag="D" reconcileStatusId="AES_NOT_RECONCILED"/>
