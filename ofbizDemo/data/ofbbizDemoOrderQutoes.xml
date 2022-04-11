@@ -1,0 +1,7 @@
+<entity-engine-xml>
+    <Quote quoteId="8000" quoteTypeId="PRODUCT_QUOTE" partyId="Demo_User" issueDate="2022-04-08 00:00:00.000" statusId="QUO_CREATED" currencyUomId="USD" productStoreId="9000" salesChannelEnumId="EMAIL_SALES_CHANNEL" validFromDate="2022-04-11 00:00:00.000" quoteName="Shirt Quotes"/>
+    <QuoteItem quoteId="8000" quoteItemSeqId="00001" productId="DEMO_SHIRT_L_B" quantity="1"/>
+    <QuoteTerm quoteId="8000" quoteItemSeqId="00001" termTypeId="FIN_PAYMENT_DISC"  termDays="4" uomId="CNY" description="Shirt Term"/>
+    <QuoteAdjustment quoteAdjustmentId="9001" quoteId="8000" quoteItemSeqId="00001" quoteAdjustmentTypeId="SALES_TAX" amount="1"/>
+    <QuoteRole partyId="Demo_User" quoteId="8000" roleTypeId="REQ_TAKER"/>
+</entity-engine-xml>
