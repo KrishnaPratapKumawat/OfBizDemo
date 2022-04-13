@@ -1,0 +1,9 @@
+<entity-engine-xml>
+    <Requirement requirementId="Req_00001" requirementTypeId="PRODUCT_REQUIREMENT" facilityId="WebStoreWarehouse" productId="Demo_Shirt" statusId="REQ_CREATED" description="Demo Electric switch FinishGood Product" requirementStartDate="2022-04-11 00:00:00.00" requiredByDate="2022-04-11 00:00:00.00" quantity="20" createdDate="2022-04-11 00:00:00.00" createdByUserLogin="admin" lastModifiedDate="2022-04-11 00:00:00.00" lastModifiedByUserLogin="admin"/>
+    <RequirementRole requirementId="Req_00001" partyId="DemoSupplier" roleTypeId="SUPPLIER" fromDate="2022-04-11 00:00:00.00" thruDate="2022-04-11 00:00:00.00"/>
+    <OrderRequirementCommitment orderId="Demo_Pur_Data" orderItemSeqId="00002" requirementId="Req_00001" quantity="20"/>
+    <RequirementStatus requirementId="Req_00001" statusId="REQ_CREATED" statusDate="2022-04-11 13:01:07.723"/>
+    <RequirementStatus requirementId="Req_00001" statusId="REQ_PROPOSED" statusDate="2022-04-11 13:01:07.723"/>
+    <RequirementStatus requirementId="Req_00001" statusId="REQ_APPROVED" statusDate="2022-04-11 13:01:07.723"/>
+    <RequirementStatus requirementId="Req_00001" statusId="REQ_ORDERED" statusDate="2022-04-11 13:01:07.723"/>
+</entity-engine-xml>
